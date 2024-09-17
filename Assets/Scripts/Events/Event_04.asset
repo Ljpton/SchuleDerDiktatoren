@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
+  m_Name: Event_04
+  m_EditorClassIdentifier: 
+  eventDescription: "Die Opposition ruft zu einem landesweiten Massenprotest auf,
+    um gegen deine autorit\xE4re Regierung zu demonstrieren."
+  reaction1:
+    reactionDescription: "Unterdr\xFCcke die Proteste gewaltsam mit dem Milit\xE4r."
+    effect:
+      civilRights: -15
+      freedomOfSpeech: 0
+      separationOfPowers: 0
+      participation: -20
+      science: 0
+      military: 10
+      culture: -5
+      economy: 0
+  reaction2:
+    reactionDescription: Tritt in Dialog mit der Opposition und gebe leichte Reformen
+      nach.
+    effect:
+      civilRights: 10
+      freedomOfSpeech: 0
+      separationOfPowers: -5
+      participation: 5
+      science: 0
+      military: -5
+      culture: 0
+      economy: 0

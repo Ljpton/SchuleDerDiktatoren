@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
+  m_Name: Event_03
+  m_EditorClassIdentifier: 
+  eventDescription: "Forscher haben einen Durchbruch bei erneuerbaren Energien erzielt.
+    Die Technologie k\xF6nnte langfristig der Wirtschaft n\xFCtzen, erfordert aber
+    hohe Anfangsinvestitionen."
+  reaction1:
+    reactionDescription: "F\xF6rdere die Forschung mit staatlichen Geldern und baue
+      entsprechende Infrastruktur auf."
+    effect:
+      civilRights: 0
+      freedomOfSpeech: 0
+      separationOfPowers: 0
+      participation: 0
+      science: 15
+      military: 0
+      culture: 5
+      economy: -10
+  reaction2:
+    reactionDescription: Ignoriere die Entdeckung und halte an traditionellen Energiequellen
+      fest.
+    effect:
+      civilRights: 0
+      freedomOfSpeech: 0
+      separationOfPowers: 0
+      participation: 0
+      science: -10
+      military: 0
+      culture: 0
+      economy: 5
