@@ -22,6 +22,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text participationText;
     [SerializeField] private TMP_Text freedomOfSpeechText;
     [SerializeField] private TMP_Text separationOfPowerText;
+    
+    [SerializeField] private TMP_Text consultant1Reaction1Text;
+    [SerializeField] private TMP_Text consultant1Reaction2Text;
+    [SerializeField] private TMP_Text consultant2Reaction1Text;
+    [SerializeField] private TMP_Text consultant2Reaction2Text;
 
     [SerializeField] private Button reactionButton1;
     [SerializeField] private Button reactionButton2;
@@ -104,5 +109,25 @@ public class UIManager : MonoBehaviour
     public void PressReactionButton2()
     {
         gameManager.Reaction2();
+    }
+
+    public void SetConsultant1Reaction1Text(string text)
+    {
+        consultant1Reaction1Text.SetText(text);
+    }
+    
+    public void SetConsultant1Reaction2Text(string text)
+    {
+        consultant1Reaction2Text.SetText(text);
+    }
+    
+    public void SetConsultant2Reaction1Text(string text)
+    {
+        consultant2Reaction1Text.SetText(text);
+    }
+    
+    public void SetConsultant2Reaction2Text(string text)
+    {
+        consultant2Reaction2Text.SetText(text);
     }
 }
