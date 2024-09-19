@@ -40,9 +40,10 @@ public class GameManager : MonoBehaviour
         }
 
         consultant1 = new ConsultantData();
-        Debug.Log(consultant1.ToString());
         consultant2 = new ConsultantData();
-        Debug.Log(consultant2.ToString());
+        
+        uiManager.SetConsultantDescriptionText1(consultant1.ToString());
+        uiManager.SetConsultantDescriptionText2(consultant2.ToString());
         
         StartRound();
     }
@@ -112,5 +113,23 @@ public class GameManager : MonoBehaviour
         culture += effect.culture;
 
         EndRound();
+    }
+
+    public void ExchangeConsultant1()
+    {
+        consultant1 = new ConsultantData();
+        uiManager.SetConsultantDescriptionText1(consultant1.ToString());
+        
+        uiManager.SetConsultant1Reaction1Text(consultant1.Consult(currentEvent.reaction1.effect)); 
+        uiManager.SetConsultant1Reaction2Text(consultant1.Consult(currentEvent.reaction2.effect));
+    }
+
+    public void ExchangeConsultant2()
+    {
+        consultant2 = new ConsultantData();
+        uiManager.SetConsultantDescriptionText2(consultant2.ToString());
+        
+        uiManager.SetConsultant2Reaction1Text(consultant2.Consult(currentEvent.reaction1.effect)); 
+        uiManager.SetConsultant2Reaction2Text(consultant2.Consult(currentEvent.reaction2.effect));
     }
 }

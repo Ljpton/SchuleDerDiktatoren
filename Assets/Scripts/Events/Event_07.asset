@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: Event_07
   m_EditorClassIdentifier: 
-  eventDescription: " Angesichts einer drohenden Wirtschaftskrise wird \xFCberlegt,
+  eventDescription: "Angesichts einer drohenden Wirtschaftskrise wird \xFCberlegt,
     das Budget f\xFCr Kulturf\xF6rderung stark zu k\xFCrzen, um andere Bereiche zu
     finanzieren."
   reaction1:
@@ -21,7 +21,7 @@ MonoBehaviour:
     effect:
       civilRights: 0
       freedomOfSpeech: 0
-      separationOfPowers: 0
+      separationOfPower: 0
       participation: 0
       science: 5
       military: 0
@@ -33,7 +33,7 @@ MonoBehaviour:
     effect:
       civilRights: 0
       freedomOfSpeech: 0
-      separationOfPowers: 0
+      separationOfPower: 0
       participation: 0
       science: 0
       military: 0

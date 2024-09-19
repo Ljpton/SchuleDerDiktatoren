@@ -1,30 +1,45 @@
 using System;
 using System.ComponentModel;
 using System.Reflection;
-using UnityEngine;
+using Unity.VisualScripting;
 using Random = System.Random;
 
 public class ConsultantData
 {
+    private Categories category1;
+    private Categories category2;
+    private bool malePronouns;
+    
     public ConsultantData(Categories category1, Categories category2)
     {
-        this.Category1 = category1;
-        this.Category2 = category2;
+        Random random = new Random();
+        
+        this.category1 = category1;
+        this.category2 = category2;
+        this.malePronouns = random.NextDouble() > 0.5; // Random bool
     }
 
     public ConsultantData()
     {
-        Category1 = EnumUtils.GetRandomEnumValue<Categories>();
-        Category2 = EnumUtils.GetRandomEnumValue<Categories>();
-    }
-
-    public string ToString()
-    {
-        return "Berater:in für " + Category1.GetDescription() + " und " + Category2.GetDescription();
+        Random random = new Random();
+        
+        category1 = EnumUtils.GetRandomEnumValue<Categories>();
+        category2 = EnumUtils.GetRandomEnumValue<Categories>();
+        malePronouns = random.NextDouble() > 0.5; // Random bool
     }
     
-    public Categories Category1;
-    public Categories Category2;
+    public override string ToString()
+    {
+        if (malePronouns)
+        {
+            return "Berater für " + category1.GetDescription() + " und " + category2.GetDescription();
+        }
+        else
+        {
+            return "Beraterin für " + category1.GetDescription() + " und " + category2.GetDescription();
+        }
+        
+    }
 
     public string Consult(Effect effect)
     {
@@ -50,7 +65,7 @@ public class ConsultantData
 
     public string ConsultSingleCategory(string response, int value, Categories category)
     {
-        if (Category1 == category || Category2 == category)
+        if (category1 == category || category2 == category)
         {
             if (value > 0)
             {

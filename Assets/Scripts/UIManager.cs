@@ -27,9 +27,14 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text consultant1Reaction2Text;
     [SerializeField] private TMP_Text consultant2Reaction1Text;
     [SerializeField] private TMP_Text consultant2Reaction2Text;
-
+    [SerializeField] private TMP_Text consultantDescriptionText1;
+    [SerializeField] private TMP_Text consultantDescriptionText2;
+    
     [SerializeField] private Button reactionButton1;
     [SerializeField] private Button reactionButton2;
+
+    [SerializeField] private Button exchangeConsultantButton1;
+    [SerializeField] private Button exchangeConsultantButton2;
 
     private void Start()
     {
@@ -111,6 +116,16 @@ public class UIManager : MonoBehaviour
         gameManager.Reaction2();
     }
 
+    public void PressExchangeConsultantButton1()
+    {
+        gameManager.ExchangeConsultant1();
+    }
+
+    public void PressExchangeConsultantButton2()
+    {
+        gameManager.ExchangeConsultant2();
+    }
+
     public void SetConsultant1Reaction1Text(string text)
     {
         consultant1Reaction1Text.SetText(text);
@@ -129,5 +144,15 @@ public class UIManager : MonoBehaviour
     public void SetConsultant2Reaction2Text(string text)
     {
         consultant2Reaction2Text.SetText(text);
+    }
+
+    public void SetConsultantDescriptionText1(string text)
+    {
+        consultantDescriptionText1.SetText(text);
+    }
+
+    public void SetConsultantDescriptionText2(string text)
+    {
+        consultantDescriptionText2.SetText(text);
     }
 }
