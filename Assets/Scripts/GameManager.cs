@@ -23,6 +23,16 @@ public class GameManager : MonoBehaviour
     public int science = 50;
     public int culture = 50;
     
+    public int civilRightsBalance = 50;
+    public int participationBalance = 50;
+    public int freedomOfSpeechBalance = 50;
+    public int separationOfPowerBalance = 50;
+
+    public int economyBalance = 50;
+    public int militaryBalance = 50;
+    public int scienceBalance = 50;
+    public int cultureBalance = 50;
+    
     private EventData currentEvent;
     private ConsultantData consultant1;
     private ConsultantData consultant2;
@@ -77,7 +87,58 @@ public class GameManager : MonoBehaviour
         uiManager.SetParticipationText(participation);
         uiManager.SetFreedomOfSpeechText(freedomOfSpeech);
         uiManager.SetSeparationOfPowerText(separationOfPower);
+
+        if (currentRound > 0 && currentRound % legislatureTerm == 0)
+        {
+            StartBalance();
+        }
+        else
+        {
+            StartRound();
+        }
+    }
+
+    private void StartBalance()
+    {
+        uiManager.SetBalanceScreenVisible(true);
         
+        uiManager.SetEconomyBalanceSlider(economy);
+        uiManager.SetEconomyDeltaText(economy - economyBalance);
+        economyBalance = economy;
+        
+        uiManager.SetMilitaryBalanceSlider(military);
+        uiManager.SetMilitaryDeltaText(military - militaryBalance);
+        militaryBalance = military;
+        
+        uiManager.SetScienceBalanceSlider(science);
+        uiManager.SetScienceDeltaText(science - scienceBalance);
+        scienceBalance = science;
+        
+        uiManager.SetCultureBalanceSlider(culture);
+        uiManager.SetCultureDeltaText(culture - cultureBalance);
+        cultureBalance = culture;
+        
+        uiManager.SetCivilRightsBalanceSlider(civilRights);
+        uiManager.SetCivilRightsDeltaText(civilRights - civilRightsBalance);
+        civilRightsBalance = civilRights;
+        
+        uiManager.SetParticipationBalanceSlider(participation);
+        uiManager.SetParticipationDeltaText(participation - participationBalance);
+        participationBalance = participation;
+        
+        uiManager.SetFreedomOfSpeechBalanceSlider(freedomOfSpeech);
+        uiManager.SetFreedomOfSpeechDeltaText(freedomOfSpeech - freedomOfSpeechBalance);
+        freedomOfSpeechBalance = freedomOfSpeech;
+        
+        uiManager.SetSeparationOfPowerBalanceSlider(separationOfPower);
+        uiManager.SetSeparationOfPowerDeltaText(separationOfPower - separationOfPowerBalance);
+        separationOfPowerBalance = separationOfPower;
+    }
+
+    public void EndBalance()
+    {
+        uiManager.SetBalanceScreenVisible(false);
+
         StartRound();
     }
 

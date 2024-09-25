@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +8,7 @@ public class UIManager : MonoBehaviour
     
     [SerializeField] private TMP_Text roundCounter;
     
+    // GAME SCREEN
     [SerializeField] private TMP_Text eventDescription;
     [SerializeField] private TMP_Text reactionText1;
     [SerializeField] private TMP_Text reactionText2;
@@ -36,6 +36,32 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button exchangeConsultantButton1;
     [SerializeField] private Button exchangeConsultantButton2;
 
+    // BALANCE SCREEN
+
+    [SerializeField] private GameObject balanceScreen;
+    
+    [SerializeField] private Slider economyBalanceSlider;
+    [SerializeField] private Slider militaryBalanceSlider;
+    [SerializeField] private Slider scienceBalanceSlider;
+    [SerializeField] private Slider cultureBalanceSlider;
+
+    [SerializeField] private Slider civilRightsBalanceSlider;
+    [SerializeField] private Slider participationBalanceSlider;
+    [SerializeField] private Slider freedomOfSpeechBalanceSlider;
+    [SerializeField] private Slider separationOfPowerBalanceSlider;
+
+    [SerializeField] private TMP_Text economyDeltaText;
+    [SerializeField] private TMP_Text militaryDeltaText;
+    [SerializeField] private TMP_Text scienceDeltaText;
+    [SerializeField] private TMP_Text cultureDeltaText;
+
+    [SerializeField] private TMP_Text civilRightsDeltaText;
+    [SerializeField] private TMP_Text participationDeltaText;
+    [SerializeField] private TMP_Text freedomOfSpeechDeltaText;
+    [SerializeField] private TMP_Text separationOfPowerDeltaText;
+    
+    [SerializeField] private Button continueButton;
+    
     private void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
@@ -154,5 +180,167 @@ public class UIManager : MonoBehaviour
     public void SetConsultantDescriptionText2(string text)
     {
         consultantDescriptionText2.SetText(text);
+    }
+
+    public void SetEconomyBalanceSlider(int value)
+    {
+        economyBalanceSlider.value = value;
+    }
+    
+    public void SetMilitaryBalanceSlider(int value)
+    {
+        militaryBalanceSlider.value = value;
+    }
+    
+    public void SetScienceBalanceSlider(int value)
+    {
+        scienceBalanceSlider.value = value;
+    }
+    
+    public void SetCultureBalanceSlider(int value)
+    {
+        cultureBalanceSlider.value = value;
+    }
+    
+    public void SetCivilRightsBalanceSlider(int value)
+    {
+        civilRightsBalanceSlider.value = value;
+    }
+    
+    public void SetParticipationBalanceSlider(int value)
+    {
+        participationBalanceSlider.value = value;
+    }
+    
+    public void SetFreedomOfSpeechBalanceSlider(int value)
+    {
+        freedomOfSpeechBalanceSlider.value = value;
+    }
+    
+    public void SetSeparationOfPowerBalanceSlider(int value)
+    {
+        separationOfPowerBalanceSlider.value = value;
+    }
+
+    public void SetEconomyDeltaText(int delta)
+    {
+        string str = "";
+        
+        if (delta >= 0)
+        {
+            str += "+";
+        }
+
+        str += delta.ToString();
+        
+        economyDeltaText.SetText(str);
+    }
+    
+    public void SetMilitaryDeltaText(int delta)
+    {
+        string str = "";
+        
+        if (delta >= 0)
+        {
+            str += "+";
+        }
+
+        str += delta.ToString();
+        
+        militaryDeltaText.SetText(str);
+    }
+    
+    public void SetScienceDeltaText(int delta)
+    {
+        string str = "";
+        
+        if (delta >= 0)
+        {
+            str += "+";
+        }
+
+        str += delta.ToString();
+
+        scienceDeltaText.SetText(str);
+    }
+    
+    public void SetCultureDeltaText(int delta)
+    {
+        string str = "";
+        
+        if (delta >= 0)
+        {
+            str += "+";
+        }
+
+        str += delta.ToString();
+
+        cultureDeltaText.SetText(str);
+    }
+    
+    public void SetCivilRightsDeltaText(int delta)
+    {
+        string str = "";
+        
+        if (delta >= 0)
+        {
+            str += "+";
+        }
+
+        str += delta.ToString();
+
+        civilRightsDeltaText.SetText(str);
+    }
+    
+    public void SetParticipationDeltaText(int delta)
+    {
+        string str = "";
+        
+        if (delta >= 0)
+        {
+            str += "+";
+        }
+
+        str += delta.ToString();
+
+        participationDeltaText.SetText(str);
+    }
+    
+    public void SetFreedomOfSpeechDeltaText(int delta)
+    {
+        string str = "";
+        
+        if (delta >= 0)
+        {
+            str += "+";
+        }
+
+        str += delta.ToString();
+
+        freedomOfSpeechDeltaText.SetText(str);
+    }
+    
+    public void SetSeparationOfPowerDeltaText(int delta)
+    {
+        string str = "";
+        
+        if (delta >= 0)
+        {
+            str += "+";
+        }
+
+        str += delta.ToString();
+
+        separationOfPowerDeltaText.SetText(str);
+    }
+
+    public void SetBalanceScreenVisible(bool visible)
+    { 
+        balanceScreen.SetActive(visible);
+    }
+
+    public void PressContinueButton()
+    {
+        gameManager.EndBalance();
     }
 }
