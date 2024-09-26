@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     private GameManager gameManager;
     
     [SerializeField] private TMP_Text roundCounter;
+    [SerializeField] private TMP_Text healthText;
     
     // GAME SCREEN
     [SerializeField] private TMP_Text eventDescription;
@@ -293,6 +294,11 @@ public class UIManager : MonoBehaviour
 
         civilRightsDeltaText.SetText(str);
     }
+
+    public void ClearCivilRightsDeltaText()
+    {
+        civilRightsDeltaText.SetText("");
+    }
     
     public void SetParticipationDeltaText(int delta)
     {
@@ -306,6 +312,11 @@ public class UIManager : MonoBehaviour
         str += delta.ToString();
 
         participationDeltaText.SetText(str);
+    }
+    
+    public void ClearParticipationDeltaText()
+    {
+        participationDeltaText.SetText("");
     }
     
     public void SetFreedomOfSpeechDeltaText(int delta)
@@ -322,6 +333,11 @@ public class UIManager : MonoBehaviour
         freedomOfSpeechDeltaText.SetText(str);
     }
     
+    public void ClearFreedomOfSpeechDeltaText()
+    {
+        freedomOfSpeechDeltaText.SetText("");
+    }
+    
     public void SetSeparationOfPowerDeltaText(int delta)
     {
         string str = "";
@@ -334,6 +350,11 @@ public class UIManager : MonoBehaviour
         str += delta.ToString();
 
         separationOfPowerDeltaText.SetText(str);
+    }
+    
+    public void ClearSeparationOfPowerDeltaText()
+    {
+        separationOfPowerDeltaText.SetText("");
     }
 
     public void SetBalanceScreenVisible(bool visible)
@@ -372,5 +393,10 @@ public class UIManager : MonoBehaviour
         str += value.ToString();
 
         resourcesSumText.SetText(str);
+    }
+
+    public void SetHealthText(int value)
+    {
+        healthText.SetText("Gesetzesverstöße: " + value);
     }
 }

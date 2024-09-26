@@ -1,7 +1,6 @@
 using System;
 using System.ComponentModel;
 using System.Reflection;
-using Unity.VisualScripting;
 using Random = System.Random;
 
 public class ConsultantData
@@ -41,14 +40,85 @@ public class ConsultantData
         
     }
 
-    public string Consult(Effect effect)
+    public string Consult(Effect effect, bool civilRightsEnshrined, bool participationEnshrined, bool freedomOfSpeechEnshrined, bool separationOfPowerEnshrined)
     {
         string response = "";
 
-        response = ConsultSingleCategory(response, effect.civilRights, Categories.CivilRights);
-        response = ConsultSingleCategory(response, effect.participation, Categories.Participation);
-        response = ConsultSingleCategory(response, effect.freedomOfSpeech, Categories.FreedomOfSpeech);
-        response = ConsultSingleCategory(response, effect.separationOfPower, Categories.SeparationOfPower);
+        if (civilRightsEnshrined)
+        {
+            if (effect.civilRights < 0)
+            {
+                if (response.Length == 0)
+                {
+                    response += "Verstößt gegen Bürgerrecht";
+                }
+                else
+                {
+                    response += ", verstößt gegen Bürgerrecht";
+                }
+            }
+        }
+        else
+        {
+            response = ConsultSingleCategory(response, effect.civilRights, Categories.CivilRights);
+        }
+        
+        if (participationEnshrined)
+        {
+            if (effect.participation < 0)
+            {
+                if (response.Length == 0)
+                {
+                    response += "Verstößt gegen Polit. Partizipation";
+                }
+                else
+                {
+                    response += ", verstößt gegen Polit. Partizipation";
+                }
+            }
+        }
+        else
+        {
+            response = ConsultSingleCategory(response, effect.participation, Categories.Participation);
+        }
+        
+        if (freedomOfSpeechEnshrined)
+        {
+            if (effect.freedomOfSpeech < 0)
+            {
+                if (response.Length == 0)
+                {
+                    response += "Verstößt gegen Meinungsfreiheit";
+                }
+                else
+                {
+                    response += ", verstößt gegen Meinungsfreiheit";
+                }
+            }
+        }
+        else
+        {
+            response = ConsultSingleCategory(response, effect.freedomOfSpeech, Categories.FreedomOfSpeech);
+        }
+        
+        if (separationOfPowerEnshrined)
+        {
+            if (effect.separationOfPower < 0)
+            {
+                if (response.Length == 0)
+                {
+                    response += "Verstößt gegen Gewaltenteilung";
+                }
+                else
+                {
+                    response += ", verstößt gegen Gewaltenteilung";
+                }  
+            }
+        }
+        else
+        {
+            response = ConsultSingleCategory(response, effect.separationOfPower, Categories.SeparationOfPower);   
+        }
         
         response = ConsultSingleCategory(response, effect.economy, Categories.Economy);
         response = ConsultSingleCategory(response, effect.military, Categories.Military);

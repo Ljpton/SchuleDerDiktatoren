@@ -2830,6 +2830,10 @@ MonoBehaviour:
   military: 50
   science: 50
   culture: 50
+  civilRightsEnshrined: 0
+  participationEnshrined: 0
+  freedomOfSpeechEnshrined: 0
+  separationOfPowerEnshrined: 0
   civilRightsBalance: 50
   participationBalance: 50
   freedomOfSpeechBalance: 50
@@ -9716,6 +9720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roundCounter: {fileID: 615106531}
+  healthText: {fileID: 784395820}
   eventDescription: {fileID: 1861961439}
   reactionText1: {fileID: 371838738}
   reactionText2: {fileID: 1945305066}

@@ -23,6 +23,11 @@ public class GameManager : MonoBehaviour
     public int science = 50;
     public int culture = 50;
     
+    public bool civilRightsEnshrined;
+    public bool participationEnshrined;
+    public bool freedomOfSpeechEnshrined;
+    public bool separationOfPowerEnshrined;
+    
     public int civilRightsBalance = 50;
     public int participationBalance = 50;
     public int freedomOfSpeechBalance = 50;
@@ -70,10 +75,14 @@ public class GameManager : MonoBehaviour
         uiManager.SetReactionText1(currentEvent.reaction1.reactionDescription);
         uiManager.SetReactionText2(currentEvent.reaction2.reactionDescription);
         
-        uiManager.SetConsultant1Reaction1Text(consultant1.Consult(currentEvent.reaction1.effect)); 
-        uiManager.SetConsultant1Reaction2Text(consultant1.Consult(currentEvent.reaction2.effect)); 
-        uiManager.SetConsultant2Reaction1Text(consultant2.Consult(currentEvent.reaction1.effect)); 
-        uiManager.SetConsultant2Reaction2Text(consultant2.Consult(currentEvent.reaction2.effect)); 
+        uiManager.SetConsultant1Reaction1Text(consultant1.Consult(currentEvent.reaction1.effect,
+            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 
+        uiManager.SetConsultant1Reaction2Text(consultant1.Consult(currentEvent.reaction2.effect,
+            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 
+        uiManager.SetConsultant2Reaction1Text(consultant2.Consult(currentEvent.reaction1.effect,
+            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 
+        uiManager.SetConsultant2Reaction2Text(consultant2.Consult(currentEvent.reaction2.effect,
+            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 
     }
 
     private void EndRound()
@@ -136,6 +145,17 @@ public class GameManager : MonoBehaviour
         democracySum += civilRightsDelta;
         uiManager.SetCivilRightsDeltaText(civilRightsDelta);
         civilRightsBalance = civilRights;
+
+        if (civilRights >= 100)
+        {
+            if (!civilRightsEnshrined)
+            {
+                Debug.Log("Civil Rights got enshrined into our constitution.");
+                civilRightsEnshrined = true;
+            }
+            
+            uiManager.ClearCivilRightsDeltaText();
+        }
         
         uiManager.SetParticipationBalanceSlider(participation);
         int participationDelta = participation - participationBalance;
@@ -143,17 +163,50 @@ public class GameManager : MonoBehaviour
         uiManager.SetParticipationDeltaText(participationDelta);
         participationBalance = participation;
         
+        if (participation >= 100)
+        {
+            if (!participationEnshrined)
+            {
+                Debug.Log("Political Participation got enshrined into our constitution.");
+                participationEnshrined = true;
+            }
+            
+            uiManager.ClearParticipationDeltaText();
+        }
+        
         uiManager.SetFreedomOfSpeechBalanceSlider(freedomOfSpeech);
         int freedomOfSpeechDelta = freedomOfSpeech - freedomOfSpeechBalance;
         democracySum += freedomOfSpeechDelta;
         uiManager.SetFreedomOfSpeechDeltaText(freedomOfSpeechDelta);
         freedomOfSpeechBalance = freedomOfSpeech;
         
+        if (freedomOfSpeech >= 100)
+        {
+            if (!freedomOfSpeechEnshrined)
+            {
+                Debug.Log("Freedom of Speech got enshrined into our constitution.");
+                freedomOfSpeechEnshrined = true;
+            }
+            
+            uiManager.ClearFreedomOfSpeechDeltaText();
+        }
+        
         uiManager.SetSeparationOfPowerBalanceSlider(separationOfPower);
         int separationOfPowerDelta = separationOfPower - separationOfPowerBalance;
         democracySum += separationOfPowerDelta;
         uiManager.SetSeparationOfPowerDeltaText(separationOfPowerDelta);
         separationOfPowerBalance = separationOfPower;
+        
+        if (separationOfPower >= 100)
+        {
+            if (!separationOfPowerEnshrined)
+            {
+                Debug.Log("Separation of Power got enshrined into our constitution.");
+                separationOfPowerEnshrined = true;
+            }
+            
+            uiManager.ClearSeparationOfPowerDeltaText();
+        }
         
         uiManager.SetDemocracySumText(democracySum);
     }
@@ -168,6 +221,62 @@ public class GameManager : MonoBehaviour
     public void Reaction1()
     {
         Effect effect = currentEvent.reaction1.effect;
+
+        if (effect.civilRights < 0 && civilRightsEnshrined)
+        {
+            Debug.Log("You acted against the law.");
+            currentHealth--;
+            uiManager.SetHealthText(currentHealth);
+        }
+        else
+        {
+            civilRights = Mathf.Clamp(civilRights + effect.civilRights, 0, 100);
+        }
+        
+        if (effect.participation < 0 && participationEnshrined)
+        {
+            Debug.Log("You acted against the law.");
+            currentHealth--;
+            uiManager.SetHealthText(currentHealth);
+        }
+        else
+        {
+            participation = Mathf.Clamp(participation + effect.participation, 0, 100);
+        }
+        
+        if (effect.freedomOfSpeech < 0 && freedomOfSpeechEnshrined)
+        {
+            Debug.Log("You acted against the law.");
+            currentHealth--;
+            uiManager.SetHealthText(currentHealth);
+        }
+        else
+        {
+            freedomOfSpeech = Mathf.Clamp(freedomOfSpeech + effect.freedomOfSpeech, 0, 100); 
+        }
+        
+        if (effect.separationOfPower < 0 && separationOfPowerEnshrined)
+        {
+            Debug.Log("You acted against the law.");
+            currentHealth--;
+            uiManager.SetHealthText(currentHealth);
+        }
+        else
+        {
+            separationOfPower = Mathf.Clamp(separationOfPower + effect.separationOfPower, 0, 100);
+        }
+
+        economy = Mathf.Clamp(economy + effect.economy, 0, 100);
+        military = Mathf.Clamp(military + effect.military, 0, 100);
+        science = Mathf.Clamp(science + effect.science, 0, 100);
+        culture = Mathf.Clamp(culture + effect.culture, 0, 100);
+
+        EndRound();
+    }
+
+    public void Reaction2()
+    { 
+        Effect effect = currentEvent.reaction2.effect;
         
         civilRights = Mathf.Clamp(civilRights + effect.civilRights, 0, 100);
         participation = Mathf.Clamp(participation + effect.participation, 0, 100);
@@ -182,30 +291,15 @@ public class GameManager : MonoBehaviour
         EndRound();
     }
 
-    public void Reaction2()
-    { 
-        Effect effect = currentEvent.reaction2.effect;
-        
-        civilRights += effect.civilRights;
-        participation += effect.participation;
-        freedomOfSpeech += effect.freedomOfSpeech;
-        separationOfPower += effect.separationOfPower;
-
-        economy += effect.economy;
-        military += effect.military;
-        science += effect.science;
-        culture += effect.culture;
-
-        EndRound();
-    }
-
     public void ExchangeConsultant1()
     {
         consultant1 = new ConsultantData();
         uiManager.SetConsultantDescriptionText1(consultant1.ToString());
         
-        uiManager.SetConsultant1Reaction1Text(consultant1.Consult(currentEvent.reaction1.effect)); 
-        uiManager.SetConsultant1Reaction2Text(consultant1.Consult(currentEvent.reaction2.effect));
+        uiManager.SetConsultant1Reaction1Text(consultant1.Consult(currentEvent.reaction1.effect,
+            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 
+        uiManager.SetConsultant1Reaction2Text(consultant1.Consult(currentEvent.reaction2.effect,
+            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined));
     }
 
     public void ExchangeConsultant2()
@@ -213,7 +307,9 @@ public class GameManager : MonoBehaviour
         consultant2 = new ConsultantData();
         uiManager.SetConsultantDescriptionText2(consultant2.ToString());
         
-        uiManager.SetConsultant2Reaction1Text(consultant2.Consult(currentEvent.reaction1.effect)); 
-        uiManager.SetConsultant2Reaction2Text(consultant2.Consult(currentEvent.reaction2.effect));
+        uiManager.SetConsultant2Reaction1Text(consultant2.Consult(currentEvent.reaction1.effect,
+            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 
+        uiManager.SetConsultant2Reaction2Text(consultant2.Consult(currentEvent.reaction2.effect,
+            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined));
     }
 }
