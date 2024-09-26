@@ -37,7 +37,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button exchangeConsultantButton2;
 
     // BALANCE SCREEN
-
     [SerializeField] private GameObject balanceScreen;
     
     [SerializeField] private Slider economyBalanceSlider;
@@ -61,6 +60,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text separationOfPowerDeltaText;
     
     [SerializeField] private Button continueButton;
+
+    [SerializeField] private TMP_Text democracySumText;
+    [SerializeField] private TMP_Text resourcesSumText;
     
     private void Start()
     {
@@ -342,5 +344,33 @@ public class UIManager : MonoBehaviour
     public void PressContinueButton()
     {
         gameManager.EndBalance();
+    }
+
+    public void SetDemocracySumText(int value)
+    {
+        string str = "";
+        
+        if (value >= 0)
+        {
+            str += "+";
+        }
+
+        str += value.ToString();
+
+        democracySumText.SetText(str);
+    }
+    
+    public void SetResourcesSumText(int value)
+    {
+        string str = "";
+        
+        if (value >= 0)
+        {
+            str += "+";
+        }
+
+        str += value.ToString();
+
+        resourcesSumText.SetText(str);
     }
 }

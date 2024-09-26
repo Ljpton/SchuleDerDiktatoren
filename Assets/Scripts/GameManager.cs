@@ -101,38 +101,61 @@ public class GameManager : MonoBehaviour
     private void StartBalance()
     {
         uiManager.SetBalanceScreenVisible(true);
+
+        int resourcesSum = 0;
+        int democracySum = 0;
         
         uiManager.SetEconomyBalanceSlider(economy);
-        uiManager.SetEconomyDeltaText(economy - economyBalance);
+        int economyDelta = economy - economyBalance;
+        resourcesSum += economyDelta;
+        uiManager.SetEconomyDeltaText(economyDelta);
         economyBalance = economy;
         
         uiManager.SetMilitaryBalanceSlider(military);
-        uiManager.SetMilitaryDeltaText(military - militaryBalance);
+        int militaryDelta = military - militaryBalance;
+        resourcesSum += militaryDelta;
+        uiManager.SetMilitaryDeltaText(militaryDelta);
         militaryBalance = military;
         
         uiManager.SetScienceBalanceSlider(science);
-        uiManager.SetScienceDeltaText(science - scienceBalance);
+        int scienceDelta = science - scienceBalance;
+        resourcesSum += scienceDelta;
+        uiManager.SetScienceDeltaText(scienceDelta);
         scienceBalance = science;
         
         uiManager.SetCultureBalanceSlider(culture);
-        uiManager.SetCultureDeltaText(culture - cultureBalance);
+        int cultureDelta = culture - cultureBalance;
+        resourcesSum += cultureDelta;
+        uiManager.SetCultureDeltaText(cultureDelta);
         cultureBalance = culture;
         
+        uiManager.SetResourcesSumText(resourcesSum);
+        
         uiManager.SetCivilRightsBalanceSlider(civilRights);
-        uiManager.SetCivilRightsDeltaText(civilRights - civilRightsBalance);
+        int civilRightsDelta = civilRights - civilRightsBalance;
+        democracySum += civilRightsDelta;
+        uiManager.SetCivilRightsDeltaText(civilRightsDelta);
         civilRightsBalance = civilRights;
         
         uiManager.SetParticipationBalanceSlider(participation);
-        uiManager.SetParticipationDeltaText(participation - participationBalance);
+        int participationDelta = participation - participationBalance;
+        democracySum += participationDelta;
+        uiManager.SetParticipationDeltaText(participationDelta);
         participationBalance = participation;
         
         uiManager.SetFreedomOfSpeechBalanceSlider(freedomOfSpeech);
-        uiManager.SetFreedomOfSpeechDeltaText(freedomOfSpeech - freedomOfSpeechBalance);
+        int freedomOfSpeechDelta = freedomOfSpeech - freedomOfSpeechBalance;
+        democracySum += freedomOfSpeechDelta;
+        uiManager.SetFreedomOfSpeechDeltaText(freedomOfSpeechDelta);
         freedomOfSpeechBalance = freedomOfSpeech;
         
         uiManager.SetSeparationOfPowerBalanceSlider(separationOfPower);
-        uiManager.SetSeparationOfPowerDeltaText(separationOfPower - separationOfPowerBalance);
+        int separationOfPowerDelta = separationOfPower - separationOfPowerBalance;
+        democracySum += separationOfPowerDelta;
+        uiManager.SetSeparationOfPowerDeltaText(separationOfPowerDelta);
         separationOfPowerBalance = separationOfPower;
+        
+        uiManager.SetDemocracySumText(democracySum);
     }
 
     public void EndBalance()
@@ -146,15 +169,15 @@ public class GameManager : MonoBehaviour
     {
         Effect effect = currentEvent.reaction1.effect;
         
-        civilRights += effect.civilRights;
-        participation += effect.participation;
-        freedomOfSpeech += effect.freedomOfSpeech;
-        separationOfPower += effect.separationOfPower;
+        civilRights = Mathf.Clamp(civilRights + effect.civilRights, 0, 100);
+        participation = Mathf.Clamp(participation + effect.participation, 0, 100);
+        freedomOfSpeech = Mathf.Clamp(freedomOfSpeech + effect.freedomOfSpeech, 0, 100);
+        separationOfPower = Mathf.Clamp(separationOfPower + effect.separationOfPower, 0, 100);
 
-        economy += effect.economy;
-        military += effect.military;
-        science += effect.science;
-        culture += effect.culture;
+        economy = Mathf.Clamp(economy + effect.economy, 0, 100);
+        military = Mathf.Clamp(military + effect.military, 0, 100);
+        science = Mathf.Clamp(science + effect.science, 0, 100);
+        culture = Mathf.Clamp(culture + effect.culture, 0, 100);
 
         EndRound();
     }
