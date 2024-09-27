@@ -64,6 +64,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TMP_Text democracySumText;
     [SerializeField] private TMP_Text resourcesSumText;
+
+    [SerializeField] private TMP_Text healthRegenerationText;
     
     private void Start()
     {
@@ -150,9 +152,19 @@ public class UIManager : MonoBehaviour
         gameManager.ExchangeConsultant1();
     }
 
+    public void SetExchangeConsultantButton1Enabled(bool enabled)
+    {
+        exchangeConsultantButton1.interactable = enabled;
+    }
+
     public void PressExchangeConsultantButton2()
     {
         gameManager.ExchangeConsultant2();
+    }
+    
+    public void SetExchangeConsultantButton2Enabled(bool enabled)
+    {
+        exchangeConsultantButton2.interactable = enabled;
     }
 
     public void SetConsultant1Reaction1Text(string text)
@@ -398,5 +410,10 @@ public class UIManager : MonoBehaviour
     public void SetHealthText(int value)
     {
         healthText.SetText("Gesetzesverstöße: " + value);
+    }
+
+    public void SetHealthRegenerationTextVisible(bool visible)
+    {
+        healthRegenerationText.gameObject.SetActive(visible);
     }
 }

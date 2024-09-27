@@ -209,6 +209,15 @@ public class GameManager : MonoBehaviour
         }
         
         uiManager.SetDemocracySumText(democracySum);
+
+        // Add Health
+        uiManager.SetHealthRegenerationTextVisible(currentHealth < 3);
+        currentHealth = Mathf.Clamp(currentHealth + 1, 0, maxHealth);
+        uiManager.SetHealthText(currentHealth);
+        
+        // Reenable ExchangeConsultantButtons
+        uiManager.SetExchangeConsultantButton1Enabled(true);
+        uiManager.SetExchangeConsultantButton2Enabled(true);
     }
 
     public void EndBalance()
@@ -278,10 +287,49 @@ public class GameManager : MonoBehaviour
     { 
         Effect effect = currentEvent.reaction2.effect;
         
-        civilRights = Mathf.Clamp(civilRights + effect.civilRights, 0, 100);
-        participation = Mathf.Clamp(participation + effect.participation, 0, 100);
-        freedomOfSpeech = Mathf.Clamp(freedomOfSpeech + effect.freedomOfSpeech, 0, 100);
-        separationOfPower = Mathf.Clamp(separationOfPower + effect.separationOfPower, 0, 100);
+        if (effect.civilRights < 0 && civilRightsEnshrined)
+        {
+            Debug.Log("You acted against the law.");
+            currentHealth--;
+            uiManager.SetHealthText(currentHealth);
+        }
+        else
+        {
+            civilRights = Mathf.Clamp(civilRights + effect.civilRights, 0, 100);
+        }
+        
+        if (effect.participation < 0 && participationEnshrined)
+        {
+            Debug.Log("You acted against the law.");
+            currentHealth--;
+            uiManager.SetHealthText(currentHealth);
+        }
+        else
+        {
+            participation = Mathf.Clamp(participation + effect.participation, 0, 100);
+        }
+        
+        if (effect.freedomOfSpeech < 0 && freedomOfSpeechEnshrined)
+        {
+            Debug.Log("You acted against the law.");
+            currentHealth--;
+            uiManager.SetHealthText(currentHealth);
+        }
+        else
+        {
+            freedomOfSpeech = Mathf.Clamp(freedomOfSpeech + effect.freedomOfSpeech, 0, 100); 
+        }
+        
+        if (effect.separationOfPower < 0 && separationOfPowerEnshrined)
+        {
+            Debug.Log("You acted against the law.");
+            currentHealth--;
+            uiManager.SetHealthText(currentHealth);
+        }
+        else
+        {
+            separationOfPower = Mathf.Clamp(separationOfPower + effect.separationOfPower, 0, 100);
+        }
 
         economy = Mathf.Clamp(economy + effect.economy, 0, 100);
         military = Mathf.Clamp(military + effect.military, 0, 100);
@@ -300,6 +348,8 @@ public class GameManager : MonoBehaviour
             civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 
         uiManager.SetConsultant1Reaction2Text(consultant1.Consult(currentEvent.reaction2.effect,
             civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined));
+        
+        uiManager.SetExchangeConsultantButton1Enabled(false);
     }
 
     public void ExchangeConsultant2()
@@ -311,5 +361,7 @@ public class GameManager : MonoBehaviour
             civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 
         uiManager.SetConsultant2Reaction2Text(consultant2.Consult(currentEvent.reaction2.effect,
             civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined));
+        
+        uiManager.SetExchangeConsultantButton2Enabled(false);
     }
 }
