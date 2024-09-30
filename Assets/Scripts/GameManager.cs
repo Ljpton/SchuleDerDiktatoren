@@ -211,9 +211,23 @@ public class GameManager : MonoBehaviour
         uiManager.SetDemocracySumText(democracySum);
 
         // Add Health
-        uiManager.SetHealthRegenerationTextVisible(currentHealth < 3);
-        currentHealth = Mathf.Clamp(currentHealth + 1, 0, maxHealth);
+        if (currentHealth is < 3 and > 0)
+        {
+            currentHealth++;
+            uiManager.SetHealthRegenerationTextVisible(true);
+        }
+        else
+        {
+            uiManager.SetHealthRegenerationTextVisible(false);
+        }
+        
         uiManager.SetHealthText(currentHealth);
+        
+        // Exchange Consultants
+        consultant1 = new ConsultantData();
+        uiManager.SetConsultantDescriptionText1(consultant1.ToString());
+        consultant2 = new ConsultantData();
+        uiManager.SetConsultantDescriptionText2(consultant2.ToString());
         
         // Reenable ExchangeConsultantButtons
         uiManager.SetExchangeConsultantButton1Enabled(true);
@@ -224,7 +238,31 @@ public class GameManager : MonoBehaviour
     {
         uiManager.SetBalanceScreenVisible(false);
 
-        StartRound();
+        if (civilRights >= 100 && participation >= 100 && freedomOfSpeech >= 100 && separationOfPower >= 100)
+        {
+            uiManager.SetGameOverScreenVisible(true);
+            
+            uiManager.SetGameOverLabelText("Glückwunsch!");
+            uiManager.SetGameOverText("Du hast alle Grundwerte einer Demokratie etabliert und im Grundgesetz verankert. Natürlich musst du jetzt einem gewählten Parlament Platz machen. Dafür werden du und dieser Tag in die Geschichte dieses Landes eingehen.");
+        }
+        else if (currentHealth <= 0)
+        {
+            uiManager.SetGameOverScreenVisible(true);
+            
+            uiManager.SetGameOverLabelText("Game Over");
+            uiManager.SetGameOverText("Du hast es auf dem Weg zur Demokratie weit gebracht, aber dazu gehört auch, sich an die eigenen Gesetze zu halten. Du musst deinen Posten in der Regierung abgeben und joa.");
+        }
+        else if (civilRights <= 0 || participation <= 0 || freedomOfSpeech <= 0 || separationOfPower <= 0 ||
+            economy <= 0 || military <= 0 || science <= 0 || culture <= 0)
+        {
+            uiManager.SetGameOverScreenVisible(true);
+            
+            // TODO: Set LabelText and GameOverText
+        }
+        else
+        {
+            StartRound();   
+        }
     }
 
     public void Reaction1()

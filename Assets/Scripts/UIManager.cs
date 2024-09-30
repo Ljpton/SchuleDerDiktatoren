@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -66,6 +67,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text resourcesSumText;
 
     [SerializeField] private TMP_Text healthRegenerationText;
+    
+    // GAME OVER SCREEN
+    [SerializeField] private GameObject gameOverScreen;
+
+    [SerializeField] private TMP_Text gameOverText;
+    [SerializeField] private TMP_Text gameOverLabelText;
     
     private void Start()
     {
@@ -415,5 +422,25 @@ public class UIManager : MonoBehaviour
     public void SetHealthRegenerationTextVisible(bool visible)
     {
         healthRegenerationText.gameObject.SetActive(visible);
+    }
+
+    public void SetGameOverScreenVisible(bool visible)
+    {
+        gameOverScreen.SetActive(visible);
+    }
+
+    public void SetGameOverText(string text)
+    {
+        gameOverText.SetText(text);
+    }
+
+    public void SetGameOverLabelText(string text)
+    {
+        gameOverLabelText.SetText(text);
+    }
+
+    public void PressMenuButton()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
