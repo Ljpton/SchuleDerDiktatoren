@@ -7,11 +7,18 @@ public class UIManager : MonoBehaviour
 {
     private GameManager gameManager;
     
+    // INFO SCREEN
     [SerializeField] private TMP_Text roundCounter;
     [SerializeField] private TMP_Text healthText;
+    [SerializeField] private Slider legislativeTermSlider;
     
-    // GAME SCREEN
+    // EVENT SCREEN
     [SerializeField] private TMP_Text eventDescription;
+    [SerializeField] private Button continueEventButton;
+    
+    // DECISION SCREEN
+    [SerializeField] private GameObject decisionScreen;
+    
     [SerializeField] private TMP_Text reactionText1;
     [SerializeField] private TMP_Text reactionText2;
 
@@ -416,7 +423,7 @@ public class UIManager : MonoBehaviour
 
     public void SetHealthText(int value)
     {
-        healthText.SetText("Gesetzesverstöße: " + value);
+        healthText.SetText("Leben: " + value);
     }
 
     public void SetHealthRegenerationTextVisible(bool visible)
@@ -442,5 +449,20 @@ public class UIManager : MonoBehaviour
     public void PressMenuButton()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void SetDecisionScreenVisible(bool visible)
+    {
+        decisionScreen.SetActive(visible);
+    }
+
+    public void SetLegislativeTermSliderValue(int value)
+    {
+        legislativeTermSlider.value = value;
+    }
+
+    public void PressContinueEventButton()
+    {
+        gameManager.ContinueEvent();
     }
 }

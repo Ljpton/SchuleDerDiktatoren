@@ -66,8 +66,15 @@ public class GameManager : MonoBehaviour
     private void StartRound()
     {
         currentRound++;
-
+        
+        if (currentRound > 0)
+        {
+            uiManager.SetLegislativeTermSliderValue(currentRound % legislatureTerm == 0 ? 4 : currentRound % legislatureTerm);
+        }
+        
         currentEvent = allEvents[Random.Range(0, allEvents.Length)];
+        
+        uiManager.SetDecisionScreenVisible(false);
         
         // Update UI
         uiManager.SetRoundCounter(currentRound);
@@ -401,5 +408,10 @@ public class GameManager : MonoBehaviour
             civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined));
         
         uiManager.SetExchangeConsultantButton2Enabled(false);
+    }
+
+    public void ContinueEvent()
+    {
+        uiManager.SetDecisionScreenVisible(true);
     }
 }
