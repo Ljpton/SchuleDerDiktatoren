@@ -3422,7 +3422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentRound: 0
-  maxRounds: 50
+  maxRounds: 64
   currentHealth: 3
   maxHealth: 3
   legislatureTerm: 4
