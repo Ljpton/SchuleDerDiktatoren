@@ -12,29 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: Event_01
   m_EditorClassIdentifier: 
-  eventDescription: "In einem angrenzenden Land ist ein B\xFCrgerkrieg ausgebrochen,
-    und eine gro\xDFe Welle von Fl\xFCchtlingen bittet um Einlass in dein Land."
+  eventDescription: "Eine internationale Konferenz bietet deinem Land die M\xF6glichkeit,
+    neue M\xE4rkte zu erschlie\xDFen, was allerdings politische Spannungen verursachen
+    k\xF6nnte."
   reaction1:
-    reactionDescription: "Lasse die Fl\xFCchtlinge ins Land und sichere ihnen grundlegende
-      Rechte zu."
+    reactionDescription: "Expansion auf neue M\xE4rkte."
     effect:
-      civilRights: 10
-      freedomOfSpeech: 0
-      separationOfPowers: 0
-      participation: 10
+      civilRights: 0
+      freedomOfSpeech: 5
+      separationOfPower: 0
+      participation: -10
       science: 0
       military: 0
       culture: -5
-      economy: -10
+      economy: 10
   reaction2:
-    reactionDescription: "Schlie\xDFe die Grenzen und verst\xE4rke die milit\xE4rische
-      Pr\xE4senz an den Grenz\xFCberg\xE4ngen."
+    reactionDescription: Fokus auf bestehende Handelsbeziehungen.
     effect:
-      civilRights: -10
-      freedomOfSpeech: -10
-      separationOfPowers: 0
-      participation: 0
+      civilRights: 5
+      freedomOfSpeech: 0
+      separationOfPower: 5
+      participation: 10
       science: 0
-      military: 10
-      culture: -5
-      economy: 0
+      military: 0
+      culture: 0
+      economy: -15

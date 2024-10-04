@@ -12,30 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: Event_08
   m_EditorClassIdentifier: 
-  eventDescription: "Kritische Medienberichte \xFCber deine Herrschaft h\xE4ufen
-    sich. Du \xFCberlegst, die Zensurgesetze zu versch\xE4rfen, um die \xF6ffentliche
-    Meinung zu kontrollieren."
+  eventDescription: "Investitionen in digitale Technologien k\xF6nnten das Land modernisieren,
+    bringen jedoch Herausforderungen bei der Freiheit mit sich."
   reaction1:
-    reactionDescription: "Versch\xE4rfe die Zensur und schr\xE4nke die Pressefreiheit
-      ein."
+    reactionDescription: "Durchf\xFChrung umfassender Digitalisierung."
     effect:
-      civilRights: 0
-      freedomOfSpeech: -20
-      separationOfPowers: 10
-      participation: 0
-      science: 0
-      military: 5
-      culture: 0
+      civilRights: -5
+      freedomOfSpeech: 0
+      separationOfPower: 0
+      participation: -10
+      science: 5
+      military: 0
+      culture: 10
       economy: 0
   reaction2:
-    reactionDescription: "Lasse die Medien gew\xE4hren, um den Schein einer freien
-      Gesellschaft zu wahren."
+    reactionDescription: "Zur\xFCckhaltung bei technologischen Neuerungen."
     effect:
       civilRights: 0
-      freedomOfSpeech: 10
-      separationOfPowers: 0
-      participation: 0
+      freedomOfSpeech: 5
+      separationOfPower: 5
+      participation: 10
       science: 0
-      military: -5
-      culture: 0
+      military: 0
+      culture: -10
       economy: 0

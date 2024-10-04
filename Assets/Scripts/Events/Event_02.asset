@@ -12,29 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: Event_02
   m_EditorClassIdentifier: 
-  eventDescription: "Ein hochrangiger Regierungsbeamter wird der Korruption \xFCberf\xFChrt.
-    Die Medien fordern eine transparente Untersuchung."
+  eventDescription: "Ein Gesetzentwurf zur \xDCberwachung interner Kommunikation
+    k\xF6nnte die nationale Sicherheit erh\xF6hen, aber die Meinungsfreiheit gef\xE4hrden."
   reaction1:
-    reactionDescription: "Starte eine \xF6ffentliche Untersuchung und entlasse die
-      Verantwortlichen."
+    reactionDescription: "Implementiere das \xDCberwachungsgesetz."
     effect:
-      civilRights: 0
-      freedomOfSpeech: 5
-      separationOfPowers: 10
-      participation: -10
-      science: 0
-      military: -5
-      culture: -5
-      economy: -10
-  reaction2:
-    reactionDescription: "Decke den Skandal und schr\xE4nke die Medienberichterstattung
-      ein."
-    effect:
-      civilRights: 0
-      freedomOfSpeech: -10
-      separationOfPowers: -5
+      civilRights: -5
+      freedomOfSpeech: -15
+      separationOfPower: 0
       participation: 0
       science: 0
       military: 5
       culture: 0
-      economy: 5
+      economy: 10
+  reaction2:
+    reactionDescription: "Missbillige das \xDCberwachungsgesetz."
+    effect:
+      civilRights: 0
+      freedomOfSpeech: 10
+      separationOfPower: 0
+      participation: 0
+      science: 5
+      military: 0
+      culture: 5
+      economy: -15

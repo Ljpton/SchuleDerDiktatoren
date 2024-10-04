@@ -12,28 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: Event_04
   m_EditorClassIdentifier: 
-  eventDescription: "Die Opposition ruft zu einem landesweiten Massenprotest auf,
-    um gegen deine autorit\xE4re Regierung zu demonstrieren."
+  eventDescription: "Eine neue Sicherheitspolitik soll das Milit\xE4r st\xE4rken,
+    k\xF6nnte jedoch die freien Meinungen der B\xFCrger beeinflussen."
   reaction1:
-    reactionDescription: "Unterdr\xFCcke die Proteste gewaltsam mit dem Milit\xE4r."
+    reactionDescription: Durchsetzung der Sicherheitspolitik.
     effect:
-      civilRights: -15
-      freedomOfSpeech: 0
-      separationOfPowers: 0
-      participation: -20
+      civilRights: -5
+      freedomOfSpeech: -15
+      separationOfPower: 0
+      participation: 0
       science: 0
       military: 10
-      culture: -5
-      economy: 0
+      culture: 0
+      economy: 5
   reaction2:
-    reactionDescription: Tritt in Dialog mit der Opposition und gebe leichte Reformen
-      nach.
+    reactionDescription: Ablehnung der neuen Politik.
     effect:
-      civilRights: 10
-      freedomOfSpeech: 0
-      separationOfPowers: -5
-      participation: 5
-      science: 0
-      military: -5
+      civilRights: 0
+      freedomOfSpeech: 10
+      separationOfPower: 5
+      participation: 0
+      science: 5
+      military: -10
       culture: 0
       economy: 0

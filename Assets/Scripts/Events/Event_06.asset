@@ -12,28 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: Event_06
   m_EditorClassIdentifier: 
-  eventDescription: "Teile des Milit\xE4rs planen einen Putsch gegen deine Herrschaft,
-    um das Land zu \xFCbernehmen und eine Milit\xE4rdiktatur zu errichten."
+  eventDescription: "Debatte um neue Forschungsrichtlinien, die potenziell die Methode
+    der Wissenschaft einschr\xE4nken."
   reaction1:
-    reactionDescription: "Verhandle mit den Milit\xE4rf\xFChrern und biete ihnen
-      wichtige Posten in der Regierung an."
+    reactionDescription: "Einf\xFChrung strikter Richtlinien."
     effect:
       civilRights: 0
-      freedomOfSpeech: 0
-      separationOfPowers: -5
-      participation: -10
-      science: 0
-      military: 10
+      freedomOfSpeech: -5
+      separationOfPower: -15
+      participation: 0
+      science: 10
+      military: 0
       culture: 0
-      economy: 0
+      economy: 5
   reaction2:
-    reactionDescription: Schlage den Putschversuch gewaltsam nieder.
+    reactionDescription: "Flexibilit\xE4t der Richtlinien erhalten."
     effect:
-      civilRights: -10
+      civilRights: 5
       freedomOfSpeech: 0
-      separationOfPowers: 0
+      separationOfPower: 10
       participation: 5
-      science: 0
-      military: -10
+      science: -15
+      military: 0
       culture: 0
       economy: 0
