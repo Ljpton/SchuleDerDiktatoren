@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
+  m_Name: 3_08
+  m_EditorClassIdentifier: 
+  eventDescription: "Eine neue Strategie soll den digitalen Zugang in l\xE4ndlichen
+    Gebieten verbessern."
+  reaction1:
+    reactionDescription: "Anreize f\xFCr Telekommunikationsunternehmen zur Marktexpansion."
+    effect:
+      economy: 10
+      military: 0
+      science: -5
+      culture: 0
+      civilRights: 0
+      freedomOfSpeech: 0
+      participation: -5
+      separationOfPower: 0
+  reaction2:
+    reactionDescription: "Aufbau von kommunalem Breitband unter breiter B\xFCrgerbeteiligung."
+    effect:
+      economy: -5
+      military: 0
+      science: 5
+      culture: 0
+      civilRights: 10
+      freedomOfSpeech: 0
+      participation: 10
+      separationOfPower: 0

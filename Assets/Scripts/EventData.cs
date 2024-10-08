@@ -22,15 +22,15 @@ public struct Reaction
 [System.Serializable]
 public struct Effect
 {
+    public int economy;
+    public int military;
+    public int science;
+    public int culture;
+ 
     public int civilRights;
     public int freedomOfSpeech;
-    public int separationOfPower;
     public int participation;
-
-    public int science;
-    public int military;
-    public int culture;
-    public int economy;
+    public int separationOfPower;
 
     // TODO: How to handle special effects like changing legislative term, activating follow-up Events?
 }

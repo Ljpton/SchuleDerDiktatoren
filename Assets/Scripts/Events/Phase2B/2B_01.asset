@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
+  m_Name: 2B_01
+  m_EditorClassIdentifier: 
+  eventDescription: "Ein Programm zur Unterst\xFCtzung des Technologietransfers zwischen
+    f\xFChrenden Tech-Unternehmen und kleineren Betrieben wird gestartet."
+  reaction1:
+    reactionDescription: "Priorit\xE4t f\xFCr staatliche Partner"
+    effect:
+      civilRights: 0
+      freedomOfSpeech: 0
+      separationOfPower: 0
+      participation: -5
+      science: 0
+      military: 0
+      culture: 0
+      economy: 15
+  reaction2:
+    reactionDescription: "Offener Zugang f\xFCr kleine Unternehmen und Start-ups"
+    effect:
+      civilRights: 0
+      freedomOfSpeech: 0
+      separationOfPower: 0
+      participation: 10
+      science: 0
+      military: 0
+      culture: 0
+      economy: -5

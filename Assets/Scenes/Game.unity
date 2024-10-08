@@ -3446,7 +3446,7 @@ MonoBehaviour:
   militaryBalance: 50
   scienceBalance: 50
   cultureBalance: 50
-  allEvents:
+  eventsPhase1:
   - {fileID: 11400000, guid: daa8c6a57fc1a5b46a4e9289212928a1, type: 2}
   - {fileID: 11400000, guid: 408683cf094d5d948b5327ebe2f46fa9, type: 2}
   - {fileID: 11400000, guid: cf1f8fa7e6d2be44d862a05269aa0209, type: 2}
@@ -3455,6 +3455,39 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2fd5d07652bc996438ca347e3cebd8b2, type: 2}
   - {fileID: 11400000, guid: db13feadc742b2a42823b3d6055ede65, type: 2}
   - {fileID: 11400000, guid: f831f4d5856397d42a27b568f0ca4305, type: 2}
+  eventsPhase2A:
+  - {fileID: 11400000, guid: 772f796e408f72d4fa0570850471fd17, type: 2}
+  - {fileID: 11400000, guid: 298cfc48981cbd2448af3d87aa912062, type: 2}
+  - {fileID: 11400000, guid: bce3445a81dad1c4b99b360a4890f35f, type: 2}
+  - {fileID: 11400000, guid: 5b08e7a34b36edb4c90c567d216e1b8f, type: 2}
+  - {fileID: 11400000, guid: 72518bacc1d5cf34a8496e4c845ce23d, type: 2}
+  - {fileID: 11400000, guid: 6766f2f1afb2d774b97ad237fcbc3c4b, type: 2}
+  - {fileID: 11400000, guid: 3ce9d669386322e4aa25d1818717a029, type: 2}
+  - {fileID: 11400000, guid: 7c769c2c25930f743b6de762200d2c1a, type: 2}
+  - {fileID: 11400000, guid: d32697bc80e65b04bacdfbbe606eb273, type: 2}
+  - {fileID: 11400000, guid: b8c282527f44d714b817ba2d011b79ef, type: 2}
+  eventsPhase2B:
+  - {fileID: 11400000, guid: d9457f269742ead4e9703f45b6cb6240, type: 2}
+  - {fileID: 11400000, guid: 3984934502a12a4488f70bd9dd2cf741, type: 2}
+  - {fileID: 11400000, guid: 5f808482119015e4392632e326a067dc, type: 2}
+  - {fileID: 11400000, guid: 6b1498ebd1b365f43850260dacce925a, type: 2}
+  - {fileID: 11400000, guid: 0f1dcdf0f91ea174cbb948e521feaa17, type: 2}
+  - {fileID: 11400000, guid: 1f9a13ab1756af54198e038dca44c02f, type: 2}
+  - {fileID: 11400000, guid: 05be12350a5e22b408517d2a94810826, type: 2}
+  - {fileID: 11400000, guid: 415994951632cdf40a6d0c45fd51f4b0, type: 2}
+  - {fileID: 11400000, guid: 2954d076637421c42bc22319b2112ac1, type: 2}
+  - {fileID: 11400000, guid: b7e9bd9dd9151d644977568e1f57d5cc, type: 2}
+  eventsPhase3:
+  - {fileID: 11400000, guid: 736ecc34a5adcb546bb990570100cc60, type: 2}
+  - {fileID: 11400000, guid: 31635dbc4c9a9fa4582535ee17e45364, type: 2}
+  - {fileID: 11400000, guid: 8323407fac0a8264b92a695f6b98af27, type: 2}
+  - {fileID: 11400000, guid: bc132f190b77527428f69e0166525d8b, type: 2}
+  - {fileID: 11400000, guid: 9a366dec0ae968940af9a7c918b327f8, type: 2}
+  - {fileID: 11400000, guid: 8e44c17e1c4a0fe4cb35087c00d72d58, type: 2}
+  - {fileID: 11400000, guid: 82689a81d2a0a8247a774e64dc9b07ed, type: 2}
+  - {fileID: 11400000, guid: 97c642326f27a6649bc1fcb50dbb35a7, type: 2}
+  - {fileID: 11400000, guid: 044aba9979d690d4285bf1f44152f33d, type: 2}
+  - {fileID: 11400000, guid: f391eaade04770e4384746be9099c381, type: 2}
 --- !u!1 &534922743
 GameObject:
   m_ObjectHideFlags: 0

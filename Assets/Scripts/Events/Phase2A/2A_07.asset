@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
+  m_Name: 2A_07
+  m_EditorClassIdentifier: 
+  eventDescription: "Ein mutiges milit\xE4risches Kooperationsprojekt mit einem Nachbarland
+    steht zur Diskussion."
+  reaction1:
+    reactionDescription: Fortsetzung geheim ohne parlamentarische Zustimmung
+    effect:
+      civilRights: 0
+      freedomOfSpeech: 0
+      separationOfPower: -10
+      participation: 0
+      science: 5
+      military: 5
+      culture: 0
+      economy: 0
+  reaction2:
+    reactionDescription: "Kooperationsvertrag \xF6ffentlich verhandeln"
+    effect:
+      civilRights: 0
+      freedomOfSpeech: 0
+      separationOfPower: 10
+      participation: 0
+      science: -10
+      military: -10
+      culture: 0
+      economy: 0

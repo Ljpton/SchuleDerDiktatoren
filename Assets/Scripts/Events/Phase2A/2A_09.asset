@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
+  m_Name: 2A_09
+  m_EditorClassIdentifier: 
+  eventDescription: "Eine grundlegende Reform der staatlichen Kulturpolitik soll
+    Innovationen f\xF6rdern."
+  reaction1:
+    reactionDescription: Schaffung kultureller Staatsinstitute
+    effect:
+      civilRights: 0
+      freedomOfSpeech: -10
+      separationOfPower: 0
+      participation: 0
+      science: 0
+      military: 5
+      culture: 5
+      economy: 0
+  reaction2:
+    reactionDescription: "F\xF6rderung unabh\xE4ngiger Kulturorganisationen"
+    effect:
+      civilRights: 0
+      freedomOfSpeech: 10
+      separationOfPower: 0
+      participation: 5
+      science: 0
+      military: -10
+      culture: -10
+      economy: 0

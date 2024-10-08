@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
+  m_Name: 2A_06
+  m_EditorClassIdentifier: 
+  eventDescription: "Eine neue Steuerpolitik f\xFCr hohe Einkommen wird vorgeschlagen,
+    um Konsum und Investitionen zu f\xF6rdern."
+  reaction1:
+    reactionDescription: "Umverteilung und Sozialhilfe st\xE4rken"
+    effect:
+      civilRights: 10
+      freedomOfSpeech: 0
+      separationOfPower: 0
+      participation: 0
+      science: 0
+      military: -10
+      culture: 0
+      economy: -10
+  reaction2:
+    reactionDescription: "Einf\xFChrung der Steuererleichterungen"
+    effect:
+      civilRights: -5
+      freedomOfSpeech: 0
+      separationOfPower: 0
+      participation: 0
+      science: 0
+      military: 5
+      culture: 0
+      economy: 5

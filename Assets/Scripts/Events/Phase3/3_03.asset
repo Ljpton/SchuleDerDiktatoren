@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
+  m_Name: 3_03
+  m_EditorClassIdentifier: 
+  eventDescription: "Um den Verkehrsstau zu reduzieren und die Umwelt zu entlasten,
+    wird ein neuer Plan f\xFCr den \xF6ffentlichen Nahverkehr entwickelt."
+  reaction1:
+    reactionDescription: "Ausbau des \xF6ffentlichen Nahverkehrs mit B\xFCrgerbeteiligung
+      und technologischen L\xF6sungen."
+    effect:
+      economy: -10
+      military: 0
+      science: 5
+      culture: 0
+      civilRights: 0
+      freedomOfSpeech: 0
+      participation: 15
+      separationOfPower: 0
+  reaction2:
+    reactionDescription: "Bau neuer Stra\xDFen in Ballungsr\xE4umen zur F\xF6rderung
+      des Automobilverkehrs."
+    effect:
+      economy: 10
+      military: 5
+      science: 0
+      culture: 0
+      civilRights: 0
+      freedomOfSpeech: 0
+      participation: -5
+      separationOfPower: 0

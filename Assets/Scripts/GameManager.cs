@@ -42,7 +42,10 @@ public class GameManager : MonoBehaviour
     private ConsultantData consultant1;
     private ConsultantData consultant2;
     
-    [SerializeField] private EventData[] allEvents;
+    [SerializeField] private EventData[] eventsPhase1;
+    [SerializeField] private EventData[] eventsPhase2A;
+    [SerializeField] private EventData[] eventsPhase2B;
+    [SerializeField] private EventData[] eventsPhase3;
     
     // Start is called before the first frame update
     void Start()
@@ -71,8 +74,27 @@ public class GameManager : MonoBehaviour
         {
             uiManager.SetLegislativeTermSliderValue(currentRound % legislatureTerm == 0 ? 4 : currentRound % legislatureTerm);
         }
-        
-        currentEvent = allEvents[Random.Range(0, allEvents.Length)];
+
+        if (civilRightsEnshrined || freedomOfSpeechEnshrined || participationEnshrined || separationOfPowerEnshrined)
+        {
+            Debug.Log("We are in Phase 3.");
+            currentEvent = eventsPhase3[Random.Range(0, eventsPhase3.Length)];
+        }
+        else if (civilRights + freedomOfSpeech + participation + separationOfPower >= 275)
+        {
+            Debug.Log("We are in Phase 2B.");
+            currentEvent = eventsPhase2B[Random.Range(0, eventsPhase2B.Length)];
+        }
+        else if (economy + science + culture + military >= 275)
+        {
+            Debug.Log("We are in Phase 2A.");
+            currentEvent = eventsPhase2A[Random.Range(0, eventsPhase2A.Length)];
+        }
+        else
+        {
+            Debug.Log("We are in Phase 1.");
+            currentEvent = eventsPhase1[Random.Range(0, eventsPhase1.Length)];
+        }
         
         uiManager.SetDecisionScreenVisible(false);
         
