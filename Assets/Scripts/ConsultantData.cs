@@ -50,11 +50,11 @@ public class ConsultantData
             {
                 if (response.Length == 0)
                 {
-                    response += "Verstößt gegen Bürgerrecht";
+                    response += "Verstößt gegen Menschrecht";
                 }
                 else
                 {
-                    response += ", verstößt gegen Bürgerrecht";
+                    response += ", verstößt gegen Menschenrecht";
                 }
             }
         }
@@ -171,7 +171,7 @@ public class ConsultantData
 
 public enum Categories
 {
-    [Description("Bürgerrechte")]
+    [Description("Menschenrechte")]
     CivilRights,
     [Description("Polit. Partizipation")]
     Participation,

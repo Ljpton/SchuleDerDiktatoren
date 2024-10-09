@@ -1,4 +1,6 @@
+using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -75,6 +77,17 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TMP_Text healthRegenerationText;
     
+    // NEW LAW SCREEN
+    [SerializeField] private GameObject newLawScreen;
+
+    [SerializeField] private TMP_Text lawText;
+    
+    // NEWS SCREEN
+    [SerializeField] private GameObject newsScreen;
+
+    [SerializeField] private TMP_Text newsText;
+    [SerializeField] private Image newsImage;
+    
     // GAME OVER SCREEN
     [SerializeField] private GameObject gameOverScreen;
 
@@ -133,7 +146,7 @@ public class UIManager : MonoBehaviour
     
     public void SetCivilRightsText(int value)
     {
-        civilRightsText.SetText("Bürgerrechte: " + value);
+        civilRightsText.SetText("Menschenrechte: " + value);
     }
     
     public void SetParticipationText(int value)
@@ -464,5 +477,30 @@ public class UIManager : MonoBehaviour
     public void PressContinueEventButton()
     {
         gameManager.ContinueEvent();
+    }
+
+    public void SetNewLawScreenVisibility(bool visible)
+    {
+        newLawScreen.SetActive(visible);
+    }
+
+    public void SetLawText(string text)
+    {
+        lawText.SetText(text);
+    }
+
+    public void SetNewsScreenVisibility(bool visible)
+    {
+        newsScreen.SetActive(visible);
+    }
+
+    public void SetNewsText(string text)
+    {
+        newsText.SetText(text);
+    }
+
+    public void PressNewsContinueButton()
+    {
+        gameManager.StartRoundAfterNewLaw();
     }
 }
