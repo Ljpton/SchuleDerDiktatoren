@@ -10,30 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
-  m_Name: 2B_10
+  m_Name: 1_09
   m_EditorClassIdentifier: 
-  eventDescription: "Der Aufbau eines Clusters zur F\xF6rderung der kreativen Industrien
-    wird initiiert."
+  eventDescription: "Angesichts der zunehmenden Verbreitung von Fehlinformationen
+    \xFCber soziale Medien plant dein Land, entweder eine strengere Regulierung einzuf\xFChren
+    oder die Plattformen eigenverantwortlich agieren zu lassen."
   reaction1:
-    reactionDescription: "F\xF6rderung durch steuerliche Erleichterungen f\xFCr gro\xDFe
-      Studios."
-    effect:
-      economy: 10
-      military: 0
-      science: 0
-      culture: 5
-      civilRights: 0
-      freedomOfSpeech: 0
-      participation: -5
-      separationOfPower: 0
-  reaction2:
-    reactionDescription: "Vergabe von Mikrokrediten an kleine Projekte und Einzelk\xFCnstler."
+    reactionDescription: "Einf\xFChrung strenger Regulierungen f\xFCr soziale Medien."
     effect:
       economy: -5
       military: 0
       science: 0
+      culture: 5
+      civilRights: 0
+      freedomOfSpeech: -5
+      participation: -5
+      separationOfPower: 0
+  reaction2:
+    reactionDescription: "Beibehaltung der Eigenverantwortung f\xFCr Plattformen."
+    effect:
+      economy: 5
+      military: 0
+      science: 0
       culture: -5
       civilRights: 0
-      freedomOfSpeech: 0
+      freedomOfSpeech: 5
       participation: 5
       separationOfPower: 0

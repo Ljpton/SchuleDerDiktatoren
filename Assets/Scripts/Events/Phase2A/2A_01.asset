@@ -15,25 +15,25 @@ MonoBehaviour:
   eventDescription: "Die Regierung zieht in Betracht, gro\xDFe Industriekonglomerate
     zu subventionieren, um die wirtschaftliche Stabilit\xE4t zu sichern."
   reaction1:
-    reactionDescription: Subventionen bereitstellen
+    reactionDescription: Subventionen bereitstellen.
     effect:
+      economy: 5
+      military: 0
+      science: 0
+      culture: 0
       civilRights: 0
       freedomOfSpeech: 0
-      separationOfPower: 0
       participation: -10
-      science: 0
-      military: 0
-      culture: 0
-      economy: 5
+      separationOfPower: 0
   reaction2:
     reactionDescription: "Subventionen ablehnen, Unterst\xFCtzung f\xFCr kleine Unternehmen
-      f\xF6rdern"
+      f\xF6rdern."
     effect:
+      economy: -15
+      military: 0
+      science: 0
+      culture: 0
       civilRights: 0
       freedomOfSpeech: 0
-      separationOfPower: 0
       participation: 10
-      science: 0
-      military: 0
-      culture: 0
-      economy: -15
+      separationOfPower: 0

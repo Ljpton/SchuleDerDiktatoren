@@ -15,25 +15,25 @@ MonoBehaviour:
   eventDescription: "Ein Festival soll stattfinden, das die Verbindung zwischen Wissenschaft
     und Kultur st\xE4rkt, indem es wissenschaftliche Erkenntnisse kreativ darstellt."
   reaction1:
-    reactionDescription: "Autonomie der Festivalorganisation durch ein gemischtes
-      Komitee aus Wissenschaftlern und K\xFCnstlern"
+    reactionDescription: "Festivalorganisation durch staatliche Kultur- und Forschungsbeh\xF6rden."
     effect:
-      civilRights: 0
-      freedomOfSpeech: 0
-      separationOfPower: 10
-      participation: 0
-      science: -5
-      military: 0
-      culture: -5
       economy: 0
-  reaction2:
-    reactionDescription: "Festivalorganisation durch staatliche Kultur- und Forschungsbeh\xF6rden"
-    effect:
-      civilRights: 0
-      freedomOfSpeech: 0
-      separationOfPower: -5
-      participation: 0
+      military: 0
       science: 10
-      military: 0
-      culture: 10
+      culture: 5
+      civilRights: 0
+      freedomOfSpeech: 0
+      participation: 0
+      separationOfPower: -5
+  reaction2:
+    reactionDescription: "Autonomie der Festivalorganisation durch ein gemischtes
+      Komitee aus Wissenschaftlern und K\xFCnstlern."
+    effect:
       economy: 0
+      military: 0
+      science: -5
+      culture: -5
+      civilRights: 0
+      freedomOfSpeech: 0
+      participation: 0
+      separationOfPower: 10

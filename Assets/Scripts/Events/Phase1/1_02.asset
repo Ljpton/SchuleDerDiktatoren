@@ -10,29 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
-  m_Name: Event_02
+  m_Name: 1_02
   m_EditorClassIdentifier: 
   eventDescription: "Ein Gesetzentwurf zur \xDCberwachung interner Kommunikation
     k\xF6nnte die nationale Sicherheit erh\xF6hen, aber die Meinungsfreiheit gef\xE4hrden."
   reaction1:
     reactionDescription: "Implementiere das \xDCberwachungsgesetz."
     effect:
+      economy: 10
+      military: 5
+      science: 0
+      culture: 0
       civilRights: -5
       freedomOfSpeech: -15
-      separationOfPower: 0
       participation: 0
-      science: 0
-      military: 5
-      culture: 0
-      economy: 10
+      separationOfPower: 0
   reaction2:
     reactionDescription: "Missbillige das \xDCberwachungsgesetz."
     effect:
+      economy: -15
+      military: 0
+      science: 5
+      culture: 5
       civilRights: 0
       freedomOfSpeech: 10
-      separationOfPower: 0
       participation: 0
-      science: 5
-      military: 0
-      culture: 5
-      economy: -15
+      separationOfPower: 0

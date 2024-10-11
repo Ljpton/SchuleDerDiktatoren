@@ -133,6 +133,11 @@ public class GameManager : MonoBehaviour
         uiManager.SetDecisionScreenVisible(false);
         
         // Update UI
+        if (Random.Range(0, 2) == 1)
+        {
+            uiManager.SwapReactionButtons();
+        }
+        
         uiManager.SetRoundCounter(currentRound);
         uiManager.SetEventDescription(currentEvent.eventDescription);
         uiManager.SetReactionText1(currentEvent.reaction1.reactionDescription);

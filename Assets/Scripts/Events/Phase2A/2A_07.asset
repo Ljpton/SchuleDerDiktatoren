@@ -15,24 +15,24 @@ MonoBehaviour:
   eventDescription: "Ein mutiges milit\xE4risches Kooperationsprojekt mit einem Nachbarland
     steht zur Diskussion."
   reaction1:
-    reactionDescription: Fortsetzung geheim ohne parlamentarische Zustimmung
+    reactionDescription: Fortsetzung geheim ohne parlamentarische Zustimmung.
     effect:
-      civilRights: 0
-      freedomOfSpeech: 0
-      separationOfPower: -10
-      participation: 0
-      science: 5
+      economy: 0
       military: 5
+      science: 5
       culture: 0
-      economy: 0
-  reaction2:
-    reactionDescription: "Kooperationsvertrag \xF6ffentlich verhandeln"
-    effect:
       civilRights: 0
       freedomOfSpeech: 0
-      separationOfPower: 10
       participation: 0
-      science: -10
-      military: -10
-      culture: 0
+      separationOfPower: -10
+  reaction2:
+    reactionDescription: "Kooperationsvertrag \xF6ffentlich verhandeln."
+    effect:
       economy: 0
+      military: -10
+      science: -10
+      culture: 0
+      civilRights: 0
+      freedomOfSpeech: 0
+      participation: 0
+      separationOfPower: 10

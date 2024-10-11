@@ -15,24 +15,24 @@ MonoBehaviour:
   eventDescription: "Eine neue Steuerpolitik f\xFCr hohe Einkommen wird vorgeschlagen,
     um Konsum und Investitionen zu f\xF6rdern."
   reaction1:
-    reactionDescription: "Umverteilung und Sozialhilfe st\xE4rken"
+    reactionDescription: "Einf\xFChrung der Steuererleichterungen."
     effect:
-      civilRights: 10
-      freedomOfSpeech: 0
-      separationOfPower: 0
-      participation: 0
+      economy: 5
+      military: 5
       science: 0
-      military: -10
       culture: 0
-      economy: -10
-  reaction2:
-    reactionDescription: "Einf\xFChrung der Steuererleichterungen"
-    effect:
       civilRights: -5
       freedomOfSpeech: 0
-      separationOfPower: 0
       participation: 0
+      separationOfPower: 0
+  reaction2:
+    reactionDescription: "Umverteilung und Sozialhilfe st\xE4rken."
+    effect:
+      economy: -10
+      military: -10
       science: 0
-      military: 5
       culture: 0
-      economy: 5
+      civilRights: 10
+      freedomOfSpeech: 0
+      participation: 0
+      separationOfPower: 0

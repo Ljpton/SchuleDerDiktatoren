@@ -18,23 +18,23 @@ MonoBehaviour:
     reactionDescription: Privatwirtschaftliche Partnerschaften zur Erweiterung der
       Gesundheitsdienste.
     effect:
+      economy: 5
+      military: -5
+      science: 0
+      culture: 0
       civilRights: 0
       freedomOfSpeech: -5
-      separationOfPower: 0
       participation: 0
-      science: 0
-      military: -5
-      culture: 0
-      economy: 5
+      separationOfPower: 0
   reaction2:
     reactionDescription: "Einf\xFChrung von umfassenden Gesundheitsaufkl\xE4rungsprogrammen
       mit wissenschaftlicher Unterst\xFCtzung."
     effect:
+      economy: -5
+      military: 0
+      science: 10
+      culture: 0
       civilRights: 0
       freedomOfSpeech: 15
-      separationOfPower: 0
       participation: 0
-      science: 10
-      military: 0
-      culture: 0
-      economy: -5
+      separationOfPower: 0

@@ -10,29 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
-  m_Name: Event_03
+  m_Name: 1_03
   m_EditorClassIdentifier: 
   eventDescription: "Dein Land kann durch die Kooperation mit einem anderen Staat
     milit\xE4risch profitieren, was jedoch die Unabh\xE4ngigkeit beeinflussen k\xF6nnte."
   reaction1:
     reactionDescription: "St\xE4rkung der milit\xE4rischen Zusammenarbeit."
     effect:
+      economy: 5
+      military: 10
+      science: 0
+      culture: -5
       civilRights: 0
       freedomOfSpeech: 0
-      separationOfPower: -15
       participation: 0
-      science: 0
-      military: 10
-      culture: -5
-      economy: 5
+      separationOfPower: -15
   reaction2:
     reactionDescription: "Bewahrung der milit\xE4rischen Neutralit\xE4t."
     effect:
+      economy: 0
+      military: -10
+      science: 0
+      culture: 0
       civilRights: 5
       freedomOfSpeech: 5
-      separationOfPower: 10
       participation: 0
-      science: 0
-      military: -10
-      culture: 0
-      economy: 0
+      separationOfPower: 10

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
+  m_Name: 2A_12
+  m_EditorClassIdentifier: 
+  eventDescription: "Die Regierung erw\xE4gt, den Ton einer bevorstehenden Rede an
+    das Volk zu versch\xE4rfen, indem sie drastische Begriffe wie \u201Everhaften\u201C,
+    \u201Eenteignen\u201C, \u201Esch\xE4nden\u201C, \u201Efoltern\u201C und \u201Emorden\u201C
+    verwendet. Dies soll zeigen, dass jede Form von Widerstand hart bestraft wird,
+    k\xF6nnte jedoch international kritisiert werden und eine Mobilisierung der Zivilgesellschaft
+    herbeif\xFChren."
+  reaction1:
+    reactionDescription: "Rede mit drastischen Ma\xDFnahmen ank\xFCndigen."
+    effect:
+      economy: 0
+      military: 10
+      science: 0
+      culture: -5
+      civilRights: -5
+      freedomOfSpeech: -5
+      participation: -5
+      separationOfPower: -5
+  reaction2:
+    reactionDescription: "M\xE4\xDFigung durch demokratische Grunds\xE4tze."
+    effect:
+      economy: 0
+      military: 0
+      science: 5
+      culture: 5
+      civilRights: 5
+      freedomOfSpeech: 5
+      participation: 5
+      separationOfPower: 5

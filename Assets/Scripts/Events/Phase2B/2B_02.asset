@@ -15,24 +15,24 @@ MonoBehaviour:
   eventDescription: "Eine Spezialeinheit wird zur Entwicklung neuer Verteidigungstechnologien
     gegr\xFCndet."
   reaction1:
-    reactionDescription: Zusammenarbeit mit zivilen Forschungsinstituten
+    reactionDescription: "Vollst\xE4ndige Geheimhaltung der Projekte."
     effect:
-      civilRights: 0
-      freedomOfSpeech: 10
-      separationOfPower: 0
-      participation: 0
-      science: 5
-      military: -5
-      culture: 0
       economy: 0
-  reaction2:
-    reactionDescription: "Vollst\xE4ndige Geheimhaltung der Projekte"
-    effect:
+      military: 10
+      science: 0
+      culture: 0
       civilRights: 0
       freedomOfSpeech: -5
-      separationOfPower: 0
       participation: 0
-      science: 0
-      military: 15
-      culture: 0
+      separationOfPower: 0
+  reaction2:
+    reactionDescription: Zusammenarbeit mit zivilen Forschungsinstituten.
+    effect:
       economy: 0
+      military: -5
+      science: 5
+      culture: 0
+      civilRights: 0
+      freedomOfSpeech: 10
+      participation: 0
+      separationOfPower: 0

@@ -12,27 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2A_02
   m_EditorClassIdentifier: 
-  eventDescription: "Es wird \xFCberlegt, einen bestehenden Milit\xE4rst\xFCtzpunkt
-    zu erweitern, um regionale Sicherheitsinteressen zu wahren."
+  eventDescription: "Angesichts einer nationalen Krise steht die Regierung vor der
+    Entscheidung, einen Ausnahmezustand auszurufen. Diese Ma\xDFnahme k\xF6nnte weitreichende
+    Folgen f\xFCr die Freiheitsrechte der B\xFCrger und die Wirtschaftsstruktur haben.
+    W\xE4hrend der Ausnahmezustand der Regierung erweiterte Befugnisse zur schnellen
+    Krisenbew\xE4ltigung verleihen k\xF6nnte, besteht die Gefahr signifikanter Einschr\xE4nkungen
+    der B\xFCrgerrechte und wirtschaftlicher Instabilit\xE4t."
   reaction1:
-    reactionDescription: "\xD6ffentliches Forum zur Planung einberufen"
+    reactionDescription: "Ausnahmezustand verh\xE4ngen."
     effect:
-      civilRights: 10
-      freedomOfSpeech: 0
-      separationOfPower: 0
-      participation: 0
-      science: 0
-      military: -15
-      culture: 0
       economy: 0
-  reaction2:
-    reactionDescription: "Erweiterung ohne R\xFCcksprache"
-    effect:
+      military: 5
+      science: 0
+      culture: 0
       civilRights: -10
       freedomOfSpeech: 0
-      separationOfPower: 0
       participation: 0
-      science: 0
-      military: -15
-      culture: 0
+      separationOfPower: 0
+  reaction2:
+    reactionDescription: Ausnahmezustand ablehnen.
+    effect:
       economy: 0
+      military: -15
+      science: 0
+      culture: 0
+      civilRights: 10
+      freedomOfSpeech: 5
+      participation: 0
+      separationOfPower: 0

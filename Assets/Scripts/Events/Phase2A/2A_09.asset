@@ -15,24 +15,24 @@ MonoBehaviour:
   eventDescription: "Eine grundlegende Reform der staatlichen Kulturpolitik soll
     Innovationen f\xF6rdern."
   reaction1:
-    reactionDescription: Schaffung kultureller Staatsinstitute
+    reactionDescription: Schaffung kultureller Staatsinstitute.
     effect:
+      economy: 0
+      military: 5
+      science: 0
+      culture: 5
       civilRights: 0
       freedomOfSpeech: -10
-      separationOfPower: 0
       participation: 0
-      science: 0
-      military: 5
-      culture: 5
-      economy: 0
+      separationOfPower: 5
   reaction2:
-    reactionDescription: "F\xF6rderung unabh\xE4ngiger Kulturorganisationen"
+    reactionDescription: "F\xF6rderung unabh\xE4ngiger Kulturorganisationen."
     effect:
+      economy: 0
+      military: -10
+      science: 0
+      culture: -10
       civilRights: 0
       freedomOfSpeech: 10
-      separationOfPower: 0
       participation: 5
-      science: 0
-      military: -10
-      culture: -10
-      economy: 0
+      separationOfPower: 0

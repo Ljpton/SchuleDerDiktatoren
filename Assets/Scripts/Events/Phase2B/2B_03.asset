@@ -15,24 +15,24 @@ MonoBehaviour:
   eventDescription: Ein nationales Forum zur Diskussion und Umsetzung innovativer
     Bildungskonzepte wird einberufen.
   reaction1:
-    reactionDescription: Festlegung des Themenspektrums durch die Regierung
+    reactionDescription: Festlegung des Themenspektrums durch die Regierung.
     effect:
+      economy: 0
+      military: 0
+      science: 10
+      culture: 0
       civilRights: 0
       freedomOfSpeech: 0
-      separationOfPower: 0
       participation: -5
-      science: 15
-      military: 0
-      culture: 0
-      economy: 0
+      separationOfPower: 0
   reaction2:
-    reactionDescription: "Beitr\xE4ge von Sch\xFCler- und Lehrergruppen f\xF6rdern"
+    reactionDescription: "Beitr\xE4ge von Sch\xFCler- und Lehrergruppen f\xF6rdern."
     effect:
+      economy: 0
+      military: 0
+      science: -5
+      culture: 0
       civilRights: 0
       freedomOfSpeech: 0
+      participation: 5
       separationOfPower: 0
-      participation: 10
-      science: -5
-      military: 0
-      culture: 0
-      economy: 0

@@ -15,24 +15,24 @@ MonoBehaviour:
   eventDescription: Eine Kampagne zur Festlegung einer einheitlichen nationalen Kultur
     wird in Betracht gezogen.
   reaction1:
-    reactionDescription: "Unterst\xFCtzung regionaler Kulturvielfalt"
+    reactionDescription: "Kampagne durchf\xFChren."
     effect:
-      civilRights: 0
-      freedomOfSpeech: 0
-      separationOfPower: 10
-      participation: 0
-      science: 0
-      military: 0
-      culture: -15
       economy: 0
-  reaction2:
-    reactionDescription: "Kampagne durchf\xFChren"
-    effect:
-      civilRights: 0
-      freedomOfSpeech: 0
-      separationOfPower: -10
-      participation: 0
-      science: 0
       military: 0
+      science: 0
       culture: 5
+      civilRights: 0
+      freedomOfSpeech: 0
+      participation: 0
+      separationOfPower: -10
+  reaction2:
+    reactionDescription: "Unterst\xFCtzung regionaler Kulturvielfalt."
+    effect:
       economy: 0
+      military: 0
+      science: 0
+      culture: -15
+      civilRights: 0
+      freedomOfSpeech: 0
+      participation: 0
+      separationOfPower: 10

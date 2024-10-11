@@ -47,6 +47,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button exchangeConsultantButton1;
     [SerializeField] private Button exchangeConsultantButton2;
 
+    [SerializeField] private RectTransform reaction1;
+    [SerializeField] private RectTransform reaction2;
+
     // BALANCE SCREEN
     [SerializeField] private GameObject balanceScreen;
     
@@ -502,5 +505,14 @@ public class UIManager : MonoBehaviour
     public void PressNewsContinueButton()
     {
         gameManager.StartRoundAfterNewLaw();
+    }
+
+    public void SwapReactionButtons()
+    {
+        Vector3 pos1 = reaction1.position;
+        Vector3 pos2 = reaction2.position;
+
+        reaction1.position = pos2;
+        reaction2.position = pos1;
     }
 }

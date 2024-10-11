@@ -15,24 +15,24 @@ MonoBehaviour:
   eventDescription: "Geplante infrastrukturelle Verbesserungen sollen die Wirtschaft
     beleben und die Verkehrswege st\xE4rken."
   reaction1:
-    reactionDescription: "Schnellma\xDFnahmen ohne Ausschreibungen"
+    reactionDescription: "Schnellma\xDFnahmen ohne Ausschreibungen."
     effect:
-      civilRights: 0
-      freedomOfSpeech: 0
-      separationOfPower: 0
-      participation: -10
-      science: 5
-      military: 0
-      culture: 0
       economy: 5
-  reaction2:
-    reactionDescription: "Wettbewerbsverfahren mit B\xFCrgerbeteiligung"
-    effect:
+      military: 0
+      science: 5
+      culture: 0
       civilRights: 0
       freedomOfSpeech: 0
+      participation: -10
       separationOfPower: 0
-      participation: 10
-      science: -10
-      military: 0
-      culture: 0
+  reaction2:
+    reactionDescription: "Wettbewerbsverfahren mit B\xFCrgerbeteiligung."
+    effect:
       economy: -10
+      military: 0
+      science: -10
+      culture: 0
+      civilRights: 0
+      freedomOfSpeech: 0
+      participation: 10
+      separationOfPower: 0

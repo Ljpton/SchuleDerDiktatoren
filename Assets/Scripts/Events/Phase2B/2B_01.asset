@@ -15,24 +15,24 @@ MonoBehaviour:
   eventDescription: "Ein Programm zur Unterst\xFCtzung des Technologietransfers zwischen
     f\xFChrenden Tech-Unternehmen und kleineren Betrieben wird gestartet."
   reaction1:
-    reactionDescription: "Priorit\xE4t f\xFCr staatliche Partner"
+    reactionDescription: "Priorit\xE4t f\xFCr staatliche Partner."
     effect:
+      economy: 10
+      military: 0
+      science: 0
+      culture: 0
       civilRights: 0
       freedomOfSpeech: 0
-      separationOfPower: 0
       participation: -5
-      science: 0
-      military: 0
-      culture: 0
-      economy: 15
+      separationOfPower: 0
   reaction2:
-    reactionDescription: "Offener Zugang f\xFCr kleine Unternehmen und Start-ups"
+    reactionDescription: "Offener Zugang f\xFCr kleine Unternehmen und Start-ups."
     effect:
+      economy: -5
+      military: 0
+      science: 0
+      culture: 0
       civilRights: 0
       freedomOfSpeech: 0
-      separationOfPower: 0
       participation: 10
-      science: 0
-      military: 0
-      culture: 0
-      economy: -5
+      separationOfPower: 0

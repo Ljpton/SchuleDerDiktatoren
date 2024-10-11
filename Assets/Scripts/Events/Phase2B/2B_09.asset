@@ -16,25 +16,25 @@ MonoBehaviour:
     errichten, das sowohl das milit\xE4rische Erbe als auch kulturelle Errungenschaften
     anerkennt."
   reaction1:
-    reactionDescription: Gestaltung und Leitung durch das Verteidigungsministerium
+    reactionDescription: Gestaltung und Leitung durch das Verteidigungsministerium.
     effect:
+      economy: 0
+      military: 5
+      science: 0
+      culture: 5
       civilRights: 0
       freedomOfSpeech: 0
-      separationOfPower: -5
       participation: 0
-      science: 0
-      military: 10
-      culture: 10
-      economy: 0
+      separationOfPower: -5
   reaction2:
     reactionDescription: "Einbindung eines unabh\xE4ngigen Komitees mit Historikern
-      und K\xFCnstlern"
+      und K\xFCnstlern."
     effect:
+      economy: 0
+      military: -5
+      science: 0
+      culture: -5
       civilRights: 0
       freedomOfSpeech: 0
-      separationOfPower: 5
       participation: 0
-      science: 0
-      military: -5
-      culture: -5
-      economy: 0
+      separationOfPower: 5

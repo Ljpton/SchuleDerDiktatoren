@@ -34,7 +34,7 @@ MonoBehaviour:
       military: 0
       science: 0
       culture: 5
-      civilRights: 10
+      civilRights: 5
       freedomOfSpeech: 0
       participation: 0
-      separationOfPower: 10
+      separationOfPower: 5

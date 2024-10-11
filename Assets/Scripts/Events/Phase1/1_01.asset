@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
-  m_Name: Event_01
+  m_Name: 1_01
   m_EditorClassIdentifier: 
   eventDescription: "Eine internationale Konferenz bietet deinem Land die M\xF6glichkeit,
     neue M\xE4rkte zu erschlie\xDFen, was allerdings politische Spannungen verursachen
@@ -18,22 +18,22 @@ MonoBehaviour:
   reaction1:
     reactionDescription: "Expansion auf neue M\xE4rkte."
     effect:
+      economy: 10
+      military: 0
+      science: 0
+      culture: -5
       civilRights: 0
       freedomOfSpeech: 5
-      separationOfPower: 0
       participation: -10
-      science: 0
-      military: 0
-      culture: -5
-      economy: 10
+      separationOfPower: 0
   reaction2:
     reactionDescription: Fokus auf bestehende Handelsbeziehungen.
     effect:
+      economy: -15
+      military: 0
+      science: 0
+      culture: 0
       civilRights: 5
       freedomOfSpeech: 0
-      separationOfPower: 5
       participation: 10
-      science: 0
-      military: 0
-      culture: 0
-      economy: -15
+      separationOfPower: 5

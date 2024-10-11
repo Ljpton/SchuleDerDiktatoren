@@ -16,24 +16,24 @@ MonoBehaviour:
     regionalen und internationalen Partnern gebildet."
   reaction1:
     reactionDescription: "F\xF6rdermittel haupts\xE4chlich an gro\xDFe Energiekonzerne
-      vergeben"
+      vergeben."
     effect:
+      economy: 10
+      military: 0
+      science: 5
+      culture: 0
       civilRights: -5
       freedomOfSpeech: 0
-      separationOfPower: 0
       participation: 0
-      science: 10
-      military: 0
-      culture: 0
-      economy: 10
+      separationOfPower: 0
   reaction2:
-    reactionDescription: "Unterst\xFCtzung lokaler Initiativen und Gemeinden"
+    reactionDescription: "Unterst\xFCtzung lokaler Initiativen und Gemeinden."
     effect:
+      economy: -5
+      military: 0
+      science: -5
+      culture: 0
       civilRights: 5
       freedomOfSpeech: 0
-      separationOfPower: 0
       participation: 0
-      science: -5
-      military: 0
-      culture: 0
-      economy: -5
+      separationOfPower: 0

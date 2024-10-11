@@ -17,23 +17,23 @@ MonoBehaviour:
   reaction1:
     reactionDescription: "Einf\xFChrung von Subventionen f\xFCr nachhaltige Landwirtschaft."
     effect:
+      economy: -10
+      military: 0
+      science: 5
+      culture: 5
       civilRights: 15
       freedomOfSpeech: 0
-      separationOfPower: 0
       participation: 0
-      science: 5
-      military: 0
-      culture: 5
-      economy: -10
+      separationOfPower: 0
   reaction2:
     reactionDescription: "Beibehaltung der aktuellen Landwirtschaftspraktiken zur
       Stabilisierung der M\xE4rkte."
     effect:
+      economy: 5
+      military: 5
+      science: 0
+      culture: 0
       civilRights: -5
       freedomOfSpeech: 0
-      separationOfPower: 0
       participation: 0
-      science: 0
-      military: 5
-      culture: 0
-      economy: 5
+      separationOfPower: 0

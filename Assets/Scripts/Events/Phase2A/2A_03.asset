@@ -15,24 +15,24 @@ MonoBehaviour:
   eventDescription: "Die Regierung erw\xE4gt, die staatliche Kontrolle \xFCber bestimmte
     Forschungsbereiche zu verst\xE4rken."
   reaction1:
-    reactionDescription: "Einschr\xE4nkungen implementieren"
+    reactionDescription: "Einschr\xE4nkungen implementieren."
     effect:
+      economy: 0
+      military: 0
+      science: 5
+      culture: 0
       civilRights: 0
       freedomOfSpeech: -10
-      separationOfPower: 0
       participation: 0
-      science: 5
-      military: 0
-      culture: 0
-      economy: 0
+      separationOfPower: 0
   reaction2:
-    reactionDescription: Autonomie der Forscher erweitern
+    reactionDescription: Autonomie der Forscher erweitern.
     effect:
+      economy: 0
+      military: 0
+      science: -15
+      culture: 0
       civilRights: 0
       freedomOfSpeech: 10
-      separationOfPower: 0
       participation: 0
-      science: -15
-      military: 0
-      culture: 0
-      economy: 0
+      separationOfPower: 0

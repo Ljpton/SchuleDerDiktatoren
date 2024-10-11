@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
+  m_Name: 2A_11
+  m_EditorClassIdentifier: 
+  eventDescription: "In der angespannten politischen Atmosph\xE4re steht die Regierung
+    vor der Entscheidung, ein fingiertes Attentat auf den Diktator zu inszenieren,
+    um die \xF6ffentliche Meinung zu manipulieren und die Kontrolle zu verst\xE4rken.
+    Diese riskante Aktion k\xF6nnte das Bild des Diktators als M\xE4rtyrer st\xE4rken
+    und die nationale Sicherheit betonen, birgt jedoch bei Entlarvung die Gefahr
+    eines dramatischen Vertrauensverlusts in die Regierung."
+  reaction1:
+    reactionDescription: Attentat inszenieren.
+    effect:
+      economy: 5
+      military: 5
+      science: 5
+      culture: 5
+      civilRights: -5
+      freedomOfSpeech: -5
+      participation: -5
+      separationOfPower: -5
+  reaction2:
+    reactionDescription: Attentat ablehnen.
+    effect:
+      economy: 0
+      military: 0
+      science: 0
+      culture: 5
+      civilRights: 5
+      freedomOfSpeech: 5
+      participation: 5
+      separationOfPower: 5

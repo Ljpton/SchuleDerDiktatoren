@@ -16,25 +16,25 @@ MonoBehaviour:
     um Forschung und Entwicklung im Bereich gr\xFCner Technologien zu f\xF6rdern
     und gleichzeitig wirtschaftlichen Nutzen zu ziehen."
   reaction1:
-    reactionDescription: "Unterst\xFCtzung f\xFCr privatwirtschaftliche Start-ups
-      und Universit\xE4tsprojekte"
+    reactionDescription: "Investitionen fokussieren auf staatlich gef\xFChrte Forschungsprogramme."
     effect:
-      civilRights: 0
-      freedomOfSpeech: 0
-      separationOfPower: 0
-      participation: 5
-      science: 0
-      military: -5
-      culture: 0
-      economy: -5
-  reaction2:
-    reactionDescription: "Investitionen fokussieren auf staatlich gef\xFChrte Forschungsprogramme"
-    effect:
-      civilRights: 0
-      freedomOfSpeech: 0
-      separationOfPower: 0
-      participation: -5
-      science: 0
+      economy: 5
       military: 10
+      science: 0
       culture: 0
-      economy: 10
+      civilRights: 0
+      freedomOfSpeech: 0
+      participation: -5
+      separationOfPower: 0
+  reaction2:
+    reactionDescription: "Unterst\xFCtzung f\xFCr privatwirtschaftliche Start-ups
+      und Universit\xE4tsprojekte."
+    effect:
+      economy: -5
+      military: -5
+      science: 0
+      culture: 0
+      civilRights: 0
+      freedomOfSpeech: 0
+      participation: 5
+      separationOfPower: 0

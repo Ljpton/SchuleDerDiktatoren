@@ -10,29 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
-  m_Name: Event_05
+  m_Name: 1_05
   m_EditorClassIdentifier: 
   eventDescription: "Ein Forschungsvorhaben k\xF6nnte Erkenntnisse liefern, wirft
     aber auch ethische Fragen auf."
   reaction1:
     reactionDescription: "Projekt weiterf\xFChren trotz Bedenken."
     effect:
+      economy: 5
+      military: 0
+      science: 10
+      culture: 0
       civilRights: -10
       freedomOfSpeech: 0
-      separationOfPower: 0
       participation: -5
-      science: 10
-      military: 0
-      culture: 0
-      economy: 5
+      separationOfPower: 0
   reaction2:
     reactionDescription: Forschung einstellen bei Bedenken.
     effect:
+      economy: 0
+      military: 0
+      science: -15
+      culture: 5
       civilRights: 10
       freedomOfSpeech: 5
-      separationOfPower: 0
       participation: 0
-      science: -15
-      military: 0
-      culture: 5
-      economy: 0
+      separationOfPower: 0

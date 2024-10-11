@@ -14,24 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDescription: Um die Wohnsituation zu verbessern, plant der Staat massive Wohnungsbauprogramme.
   reaction1:
-    reactionDescription: "\xD6ffentliche Ausschreibung und Mieterrechte st\xE4rken"
+    reactionDescription: Konstruktionen durch staatseigene Firmen.
     effect:
-      civilRights: 10
-      freedomOfSpeech: 0
-      separationOfPower: 0
-      participation: 0
-      science: 0
+      economy: 5
       military: 0
-      culture: -10
-      economy: -10
-  reaction2:
-    reactionDescription: Konstruktionen durch staatseigene Firmen
-    effect:
+      science: 0
+      culture: 5
       civilRights: -10
       freedomOfSpeech: 0
-      separationOfPower: 0
       participation: 0
-      science: 0
+      separationOfPower: 0
+  reaction2:
+    reactionDescription: "\xD6ffentliche Ausschreibung und Mieterrechte st\xE4rken."
+    effect:
+      economy: -10
       military: 0
-      culture: 5
-      economy: 5
+      science: 0
+      culture: -10
+      civilRights: 10
+      freedomOfSpeech: 0
+      participation: 0
+      separationOfPower: 0
