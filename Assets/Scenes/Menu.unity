@@ -725,11 +725,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Du bist das Oberhaupt eines autorit\xE4ren Staates. Deine Aufgabe ist
     es, auf Entwicklungen zu reagieren und Entscheidungen zu treffen, um dieses Land
-    am Laufen zu halten. Sorge daf\xFCr, dass keiner dieser Werte zu niedrig wird:\n\nWirtschaft,
-    Milit\xE4r, Forschung, Kultur & B\xFCrgerrechte, Politische Partizipation, Meinungs-
-    und Pressefreiheit, Gewaltenteilung.\n\nDeine Berater:innen besch\xE4ftigen sich
-    mit bestimmten Bereichen und k\xF6nnen einsch\xE4tzen, ob eine Entscheidung Einfluss
-    auf einen entsprechenden Bereich nehmen wird."
+    am Laufen zu halten und langsam in eine Demokratie zu transformieren.\n\nSorge
+    daf\xFCr, dass keiner dieser Werte zu niedrig wird: Wirtschaft, Milit\xE4r, Forschung,
+    Kultur & Menschenrechte, Politische Partizipation, Meinungs- und Pressefreiheit,
+    Gewaltenteilung.\n\nDeine Berater:innen besch\xE4ftigen sich mit bestimmten Bereichen
+    und k\xF6nnen einsch\xE4tzen, ob eine Entscheidung Einfluss auf einen entsprechenden
+    Bereich nehmen wird."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
