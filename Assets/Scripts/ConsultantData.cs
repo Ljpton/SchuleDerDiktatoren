@@ -1,5 +1,8 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Reflection;
 using Random = System.Random;
 
@@ -18,12 +21,26 @@ public class ConsultantData
         this.malePronouns = random.NextDouble() > 0.5; // Random bool
     }
 
-    public ConsultantData()
+    public ConsultantData(List<Categories> categoriesToSkip = null)
     {
         Random random = new Random();
+
+        List<Categories> validCategories = Enum.GetValues(typeof(Categories)).Cast<Categories>().ToList();
         
-        category1 = EnumUtils.GetRandomEnumValue<Categories>();
-        category2 = EnumUtils.GetRandomEnumValue<Categories>();
+        if (categoriesToSkip is not null)
+        {
+            foreach (var c in categoriesToSkip)
+            {
+                validCategories.Remove(c);
+            }
+        }
+        
+        category1 = validCategories[random.Next(validCategories.Count)];
+
+        validCategories.Remove(category1);
+        
+        category2 = validCategories[random.Next(validCategories.Count)];
+        
         malePronouns = random.NextDouble() > 0.5; // Random bool
     }
     
@@ -164,6 +181,26 @@ public class ConsultantData
         }
 
         return response;
+    }
+
+    public Categories GetCategory1()
+    {
+        return category1;
+    }
+
+    public Categories GetCategory2()
+    {
+        return category2;
+    }
+
+    public List<Categories> GetCategoriesList()
+    {
+        List<Categories> list = new List<Categories>();
+        
+        list.Add(category1);
+        list.Add(category2);
+
+        return list;
     }
     
     // TODO: Add GameObject (?) which will be instantiated and contains visualisation and animation stuff
