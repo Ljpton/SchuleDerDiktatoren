@@ -32,7 +32,7 @@ MonoBehaviour:
       military: 0
       science: 0
       culture: -10
-      civilRights: -10
-      freedomOfSpeech: 5
+      civilRights: 10
+      freedomOfSpeech: -5
       participation: 0
       separationOfPower: 0
