@@ -1,6 +1,4 @@
-using System;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,11 +6,22 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     private GameManager gameManager;
+
+    private bool optionsMenuVisible = false;
     
     // INFO SCREEN
     [SerializeField] private TMP_Text roundCounter;
     [SerializeField] private TMP_Text healthText;
     [SerializeField] private Slider legislativeTermSlider;
+
+    [SerializeField] private Image soundButtonImage;
+    [SerializeField] private Sprite soundOnImage;
+    [SerializeField] private Sprite soundOffImage;
+
+    [SerializeField] private GameObject optionsMenu;
+    [SerializeField] private Image optionsButtonImage;
+    [SerializeField] private Sprite menuImage;
+    [SerializeField] private Sprite closeImage;
     
     // EVENT SCREEN
     [SerializeField] private TMP_Text eventDescription;
@@ -73,6 +82,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text freedomOfSpeechDeltaText;
     [SerializeField] private TMP_Text separationOfPowerDeltaText;
     
+    [SerializeField] private TMP_Text civilRightsLawText;
+    [SerializeField] private TMP_Text participationLawText;
+    [SerializeField] private TMP_Text freedomOfSpeechLawText;
+    [SerializeField] private TMP_Text separationOfPowerLawText;
+    
     [SerializeField] private Button continueButton;
 
     [SerializeField] private TMP_Text democracySumText;
@@ -104,6 +118,19 @@ public class UIManager : MonoBehaviour
         if (gameManager == null)
         {
             Debug.Log("GameManager couldn't be found.");
+        }
+
+        float volume;
+
+        gameManager.audioMixer.GetFloat("MasterVolume", out volume);
+        
+        if (volume > -1)
+        {
+            soundButtonImage.sprite = soundOnImage;
+        }
+        else
+        {
+            soundButtonImage.sprite = soundOffImage;
         }
     }
 
@@ -514,5 +541,59 @@ public class UIManager : MonoBehaviour
 
         reaction1.position = pos2;
         reaction2.position = pos1;
+    }
+
+    public void SetCivilRightsEnshrined()
+    {
+        civilRightsBalanceSlider.gameObject.SetActive(false);
+        civilRightsLawText.gameObject.SetActive(true);
+    }
+    
+    public void SetFreedomOfSpeechEnshrined()
+    {
+        freedomOfSpeechBalanceSlider.gameObject.SetActive(false);
+        freedomOfSpeechLawText.gameObject.SetActive(true);
+    }
+    
+    public void SetParticipationEnshrined()
+    {
+        participationBalanceSlider.gameObject.SetActive(false);
+        participationLawText.gameObject.SetActive(true);
+    }
+    
+    public void SetSeparationOfPowerEnshrined()
+    {
+        separationOfPowerBalanceSlider.gameObject.SetActive(false);
+        separationOfPowerLawText.gameObject.SetActive(true);
+    }
+
+    public void PressSoundButton()
+    {
+        bool audioEnabled = gameManager.ToggleAudioVolume();
+
+        if (audioEnabled)
+        {
+            soundButtonImage.sprite = soundOnImage;
+        }
+        else
+        {
+            soundButtonImage.sprite = soundOffImage;
+        }
+    }
+
+    public void PressOptionsButton()
+    {
+        if (optionsMenuVisible)
+        {
+            optionsButtonImage.sprite = menuImage;
+            optionsMenu.SetActive(false);
+            optionsMenuVisible = false;
+        }
+        else
+        {
+            optionsButtonImage.sprite = closeImage;
+            optionsMenu.SetActive(true);
+            optionsMenuVisible = true;
+        }
     }
 }

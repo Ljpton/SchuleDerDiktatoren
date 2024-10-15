@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
@@ -44,11 +46,14 @@ public class GameManager : MonoBehaviour
     private ConsultantData consultant2;
 
     private bool lawEnshrinedThisRound = false;
+    private bool audioEnabled = true;
     
     [SerializeField] private EventData[] eventsPhase1;
     [SerializeField] private EventData[] eventsPhase2A;
     [SerializeField] private EventData[] eventsPhase2B;
     [SerializeField] private EventData[] eventsPhase3;
+
+    [SerializeField] public AudioMixer audioMixer; 
     
     // Start is called before the first frame update
     void Start()
@@ -65,6 +70,19 @@ public class GameManager : MonoBehaviour
         
         uiManager.SetConsultantDescriptionText1(consultant1.ToString());
         uiManager.SetConsultantDescriptionText2(consultant2.ToString());
+        
+        float volume;
+
+        audioMixer.GetFloat("MasterVolume", out volume);
+        
+        if (volume > -1)
+        {
+            audioEnabled = true;
+        }
+        else
+        {
+            audioEnabled = false;
+        }
         
         StartRound();
     }
@@ -230,6 +248,7 @@ public class GameManager : MonoBehaviour
             }
             
             uiManager.ClearCivilRightsDeltaText();
+            uiManager.SetCivilRightsEnshrined();
         }
         
         uiManager.SetParticipationBalanceSlider(participation);
@@ -252,6 +271,7 @@ public class GameManager : MonoBehaviour
             }
             
             uiManager.ClearParticipationDeltaText();
+            uiManager.SetParticipationEnshrined();
         }
         
         uiManager.SetFreedomOfSpeechBalanceSlider(freedomOfSpeech);
@@ -274,6 +294,7 @@ public class GameManager : MonoBehaviour
             }
             
             uiManager.ClearFreedomOfSpeechDeltaText();
+            uiManager.SetFreedomOfSpeechEnshrined();
         }
         
         uiManager.SetSeparationOfPowerBalanceSlider(separationOfPower);
@@ -296,6 +317,7 @@ public class GameManager : MonoBehaviour
             }
             
             uiManager.ClearSeparationOfPowerDeltaText();
+            uiManager.SetSeparationOfPowerEnshrined();
         }
         
         uiManager.SetDemocracySumText(democracySum);
@@ -550,5 +572,21 @@ public class GameManager : MonoBehaviour
             uiManager.SetNewsScreenVisibility(false);
             StartRound();
         }
+    }
+
+    public bool ToggleAudioVolume()
+    {
+        if (audioEnabled)
+        {
+            audioMixer.SetFloat("MasterVolume", -80);
+            audioEnabled = false;
+        }
+        else
+        {
+            audioMixer.SetFloat("MasterVolume", 0);
+            audioEnabled = true;
+        }
+
+        return audioEnabled;
     }
 }
