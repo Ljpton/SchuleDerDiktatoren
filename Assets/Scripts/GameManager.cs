@@ -235,6 +235,8 @@ public class GameManager : MonoBehaviour
 
         if (civilRights >= 100)
         {
+            uiManager.SetCivilRightsEnshrined();
+            
             if (!civilRightsEnshrined)
             {
                 Debug.Log("Civil Rights got enshrined into our constitution.");
@@ -248,7 +250,6 @@ public class GameManager : MonoBehaviour
             }
             
             uiManager.ClearCivilRightsDeltaText();
-            uiManager.SetCivilRightsEnshrined();
         }
         
         uiManager.SetParticipationBalanceSlider(participation);
@@ -259,6 +260,8 @@ public class GameManager : MonoBehaviour
         
         if (participation >= 100)
         {
+            uiManager.SetParticipationEnshrined();
+            
             if (!participationEnshrined)
             {
                 Debug.Log("Political Participation got enshrined into our constitution.");
@@ -271,7 +274,6 @@ public class GameManager : MonoBehaviour
             }
             
             uiManager.ClearParticipationDeltaText();
-            uiManager.SetParticipationEnshrined();
         }
         
         uiManager.SetFreedomOfSpeechBalanceSlider(freedomOfSpeech);
@@ -282,6 +284,8 @@ public class GameManager : MonoBehaviour
         
         if (freedomOfSpeech >= 100)
         {
+            uiManager.SetFreedomOfSpeechEnshrined();
+            
             if (!freedomOfSpeechEnshrined)
             {
                 Debug.Log("Freedom of Speech got enshrined into our constitution.");
@@ -294,7 +298,6 @@ public class GameManager : MonoBehaviour
             }
             
             uiManager.ClearFreedomOfSpeechDeltaText();
-            uiManager.SetFreedomOfSpeechEnshrined();
         }
         
         uiManager.SetSeparationOfPowerBalanceSlider(separationOfPower);
@@ -305,6 +308,8 @@ public class GameManager : MonoBehaviour
         
         if (separationOfPower >= 100)
         {
+            uiManager.SetSeparationOfPowerEnshrined();
+            
             if (!separationOfPowerEnshrined)
             {
                 Debug.Log("Separation of Power got enshrined into our constitution.");
@@ -317,7 +322,6 @@ public class GameManager : MonoBehaviour
             }
             
             uiManager.ClearSeparationOfPowerDeltaText();
-            uiManager.SetSeparationOfPowerEnshrined();
         }
         
         uiManager.SetDemocracySumText(democracySum);
@@ -349,6 +353,7 @@ public class GameManager : MonoBehaviour
     public void EndBalance()
     {
         uiManager.SetBalanceScreenVisible(false);
+        uiManager.SetHealthRegenerationTextVisible(false);
 
         if (civilRights >= 100 && participation >= 100 && freedomOfSpeech >= 100 && separationOfPower >= 100)
         {
