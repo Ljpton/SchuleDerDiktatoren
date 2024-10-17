@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviour
 {
     private UIManager uiManager;
+    private AudioManager audioManager;
     
     public int currentRound;
     public int maxRounds = 50;
@@ -46,19 +47,17 @@ public class GameManager : MonoBehaviour
     private ConsultantData consultant2;
 
     private bool lawEnshrinedThisRound = false;
-    private bool audioEnabled = true;
     
     [SerializeField] private EventData[] eventsPhase1;
     [SerializeField] private EventData[] eventsPhase2A;
     [SerializeField] private EventData[] eventsPhase2B;
     [SerializeField] private EventData[] eventsPhase3;
-
-    [SerializeField] public AudioMixer audioMixer; 
     
     // Start is called before the first frame update
     void Start()
     {
         uiManager = FindObjectOfType<UIManager>();
+        audioManager = FindObjectOfType<AudioManager>();
 
         if (uiManager == null)
         {
@@ -70,19 +69,6 @@ public class GameManager : MonoBehaviour
         
         uiManager.SetConsultantDescriptionText1(consultant1.ToString());
         uiManager.SetConsultantDescriptionText2(consultant2.ToString());
-        
-        float volume;
-
-        audioMixer.GetFloat("MasterVolume", out volume);
-        
-        if (volume > -1)
-        {
-            audioEnabled = true;
-        }
-        else
-        {
-            audioEnabled = false;
-        }
         
         StartRound();
     }
@@ -404,9 +390,7 @@ public class GameManager : MonoBehaviour
 
         if (effect.civilRights < 0 && civilRightsEnshrined)
         {
-            Debug.Log("You acted against the law.");
-            currentHealth--;
-            uiManager.SetHealthText(currentHealth);
+            LoseHealth();
         }
         else
         {
@@ -415,9 +399,7 @@ public class GameManager : MonoBehaviour
         
         if (effect.participation < 0 && participationEnshrined)
         {
-            Debug.Log("You acted against the law.");
-            currentHealth--;
-            uiManager.SetHealthText(currentHealth);
+            LoseHealth();
         }
         else
         {
@@ -426,9 +408,7 @@ public class GameManager : MonoBehaviour
         
         if (effect.freedomOfSpeech < 0 && freedomOfSpeechEnshrined)
         {
-            Debug.Log("You acted against the law.");
-            currentHealth--;
-            uiManager.SetHealthText(currentHealth);
+            LoseHealth();
         }
         else
         {
@@ -437,9 +417,7 @@ public class GameManager : MonoBehaviour
         
         if (effect.separationOfPower < 0 && separationOfPowerEnshrined)
         {
-            Debug.Log("You acted against the law.");
-            currentHealth--;
-            uiManager.SetHealthText(currentHealth);
+            LoseHealth();
         }
         else
         {
@@ -579,19 +557,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public bool ToggleAudioVolume()
+    private void LoseHealth()
     {
-        if (audioEnabled)
-        {
-            audioMixer.SetFloat("MasterVolume", -80);
-            audioEnabled = false;
-        }
-        else
-        {
-            audioMixer.SetFloat("MasterVolume", 0);
-            audioEnabled = true;
-        }
-
-        return audioEnabled;
+        Debug.Log("You acted against the law.");
+        currentHealth--;
+        audioManager.PlayLoseHealthSound();
+        uiManager.SetHealthText(currentHealth);
     }
 }

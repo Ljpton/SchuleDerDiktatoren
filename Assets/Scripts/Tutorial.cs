@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
+    private AudioManager audioManager;
+    
     private int currentScreenIndex = 0;
 
     [SerializeField] private TMP_Text backButtonText; 
@@ -13,18 +15,23 @@ public class Tutorial : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
+        
         backButtonText.text = "Menü";
         ShowTutorialScreen(currentScreenIndex);
     }
 
     public void PressContinueButton()
     {
+        audioManager.PlayButtonSound();
         currentScreenIndex++;
         ShowTutorialScreen(currentScreenIndex);
     }
 
     public void PressBackButton()
     {
+        audioManager.PlayButtonSound();
+        
         if (currentScreenIndex <= 0)
         {
             SceneManager.LoadScene("Menu");

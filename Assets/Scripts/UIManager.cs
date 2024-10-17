@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,10 +7,12 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     private GameManager gameManager;
-
+    private AudioManager audioManager;
+    
     private bool optionsMenuVisible = false;
     
     // INFO SCREEN
+    [Category("Info Screen")]
     [SerializeField] private TMP_Text roundCounter;
     [SerializeField] private TMP_Text healthText;
     [SerializeField] private Slider legislativeTermSlider;
@@ -24,10 +27,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Sprite closeImage;
     
     // EVENT SCREEN
+    [Category("Event Screen")]
     [SerializeField] private TMP_Text eventDescription;
     [SerializeField] private Button continueEventButton;
     
     // DECISION SCREEN
+    [Category("Decision Screen")]
     [SerializeField] private GameObject decisionScreen;
     
     [SerializeField] private TMP_Text reactionText1;
@@ -60,6 +65,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private RectTransform reaction2;
 
     // BALANCE SCREEN
+    [Category("Balance Screen")]
     [SerializeField] private GameObject balanceScreen;
     
     [SerializeField] private Slider economyBalanceSlider;
@@ -95,17 +101,20 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text healthRegenerationText;
     
     // NEW LAW SCREEN
+    [Category("New Law Screen")]
     [SerializeField] private GameObject newLawScreen;
 
     [SerializeField] private TMP_Text lawText;
     
     // NEWS SCREEN
+    [Category("News Screen")]
     [SerializeField] private GameObject newsScreen;
 
     [SerializeField] private TMP_Text newsText;
     [SerializeField] private Image newsImage;
     
     // GAME OVER SCREEN
+    [Category("Game Over Screen")]
     [SerializeField] private GameObject gameOverScreen;
 
     [SerializeField] private TMP_Text gameOverText;
@@ -114,17 +123,14 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        audioManager = FindObjectOfType<AudioManager>();
 
         if (gameManager == null)
         {
             Debug.Log("GameManager couldn't be found.");
         }
-
-        float volume;
-
-        gameManager.audioMixer.GetFloat("MasterVolume", out volume);
         
-        if (volume > -1)
+        if (audioManager.GetMasterVolume() > -1)
         {
             soundButtonImage.sprite = soundOnImage;
         }
@@ -196,16 +202,19 @@ public class UIManager : MonoBehaviour
 
     public void PressReactionButton1()
     {
+        audioManager.PlayButtonSound();
         gameManager.Reaction1();
     }
 
     public void PressReactionButton2()
     {
+        audioManager.PlayButtonSound();
         gameManager.Reaction2();
     }
 
     public void PressExchangeConsultantButton1()
     {
+        audioManager.PlayButtonSound();
         gameManager.ExchangeConsultant1();
     }
 
@@ -216,6 +225,7 @@ public class UIManager : MonoBehaviour
 
     public void PressExchangeConsultantButton2()
     {
+        audioManager.PlayButtonSound();
         gameManager.ExchangeConsultant2();
     }
     
@@ -433,6 +443,7 @@ public class UIManager : MonoBehaviour
 
     public void PressContinueButton()
     {
+        audioManager.PlayButtonSound();
         gameManager.EndBalance();
     }
 
@@ -491,6 +502,7 @@ public class UIManager : MonoBehaviour
 
     public void PressMenuButton()
     {
+        audioManager.PlayButtonSound();
         SceneManager.LoadScene("Menu");
     }
 
@@ -506,6 +518,7 @@ public class UIManager : MonoBehaviour
 
     public void PressContinueEventButton()
     {
+        audioManager.PlayButtonSound();
         gameManager.ContinueEvent();
     }
 
@@ -531,6 +544,7 @@ public class UIManager : MonoBehaviour
 
     public void PressNewsContinueButton()
     {
+        audioManager.PlayButtonSound();
         gameManager.StartRoundAfterNewLaw();
     }
 
@@ -569,7 +583,7 @@ public class UIManager : MonoBehaviour
 
     public void PressSoundButton()
     {
-        bool audioEnabled = gameManager.ToggleAudioVolume();
+        bool audioEnabled = audioManager.ToggleAudioVolume();
 
         if (audioEnabled)
         {
@@ -579,10 +593,14 @@ public class UIManager : MonoBehaviour
         {
             soundButtonImage.sprite = soundOffImage;
         }
+        
+        audioManager.PlayButtonSound();
     }
 
     public void PressOptionsButton()
     {
+        audioManager.PlayButtonSound();
+        
         if (optionsMenuVisible)
         {
             optionsButtonImage.sprite = menuImage;

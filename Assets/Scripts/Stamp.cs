@@ -6,6 +6,7 @@ public class Stamp : MonoBehaviour, IPointerClickHandler
     private GameObject spawnedStamp;
     
     private GameManager gameManager;
+    private AudioManager audioManager;
     private UIManager uiManager;
 
     [SerializeField] private GameObject stampObject;
@@ -14,6 +15,7 @@ public class Stamp : MonoBehaviour, IPointerClickHandler
     void Start()
     {
         uiManager = FindObjectOfType<UIManager>();
+        audioManager = FindObjectOfType<AudioManager>();
         gameManager = FindObjectOfType<GameManager>();
     }
 
