@@ -219,10 +219,13 @@ public class GameManager : MonoBehaviour
         uiManager.SetCivilRightsDeltaText(civilRightsDelta);
         civilRightsBalance = civilRights;
 
-        if (civilRights >= 100)
+        if(civilRightsEnshrined)
         {
             uiManager.SetCivilRightsEnshrined();
-            
+        }
+        
+        if (civilRights >= 100)
+        {
             if (!civilRightsEnshrined)
             {
                 Debug.Log("Civil Rights got enshrined into our constitution.");
@@ -243,11 +246,14 @@ public class GameManager : MonoBehaviour
         democracySum += participationDelta;
         uiManager.SetParticipationDeltaText(participationDelta);
         participationBalance = participation;
+
+        if (participationEnshrined)
+        {
+            uiManager.SetParticipationEnshrined();
+        }
         
         if (participation >= 100)
         {
-            uiManager.SetParticipationEnshrined();
-            
             if (!participationEnshrined)
             {
                 Debug.Log("Political Participation got enshrined into our constitution.");
@@ -267,11 +273,14 @@ public class GameManager : MonoBehaviour
         democracySum += freedomOfSpeechDelta;
         uiManager.SetFreedomOfSpeechDeltaText(freedomOfSpeechDelta);
         freedomOfSpeechBalance = freedomOfSpeech;
+
+        if (freedomOfSpeechEnshrined)
+        {
+            uiManager.SetFreedomOfSpeechEnshrined();
+        }
         
         if (freedomOfSpeech >= 100)
         {
-            uiManager.SetFreedomOfSpeechEnshrined();
-            
             if (!freedomOfSpeechEnshrined)
             {
                 Debug.Log("Freedom of Speech got enshrined into our constitution.");
@@ -291,11 +300,14 @@ public class GameManager : MonoBehaviour
         democracySum += separationOfPowerDelta;
         uiManager.SetSeparationOfPowerDeltaText(separationOfPowerDelta);
         separationOfPowerBalance = separationOfPower;
+
+        if (separationOfPowerEnshrined)
+        {
+            uiManager.SetSeparationOfPowerEnshrined();
+        }
         
         if (separationOfPower >= 100)
         {
-            uiManager.SetSeparationOfPowerEnshrined();
-            
             if (!separationOfPowerEnshrined)
             {
                 Debug.Log("Separation of Power got enshrined into our constitution.");
