@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Audio;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
@@ -135,7 +133,7 @@ public class GameManager : MonoBehaviour
             currentEvent = nextEvent;
         }
         
-        uiManager.SetDecisionScreenVisible(false);
+        uiManager.SetEventScreenActive();
         
         // Update UI
         if (Random.Range(0, 2) == 1)
@@ -160,16 +158,6 @@ public class GameManager : MonoBehaviour
 
     private void EndRound()
     {
-        // Update UI
-        uiManager.SetEconomyText(economy);
-        uiManager.SetMilitaryText(military);
-        uiManager.SetScienceText(science);
-        uiManager.SetCultureText(culture);
-        uiManager.SetCivilRightsText(civilRights);
-        uiManager.SetParticipationText(participation);
-        uiManager.SetFreedomOfSpeechText(freedomOfSpeech);
-        uiManager.SetSeparationOfPowerText(separationOfPower);
-
         if (currentRound > 0 && currentRound % legislatureTerm == 0)
         {
             StartBalance();
@@ -182,7 +170,7 @@ public class GameManager : MonoBehaviour
 
     private void StartBalance()
     {
-        uiManager.SetBalanceScreenVisible(true);
+        uiManager.SetBalanceScreenActive();
 
         int resourcesSum = 0;
         int democracySum = 0;
@@ -233,7 +221,7 @@ public class GameManager : MonoBehaviour
 
                 uiManager.SetLawText(
                     "Menschenrechtsgesetz\n\nArtikel 1: Die Würde des Menschen ist unantastbar. Sie zu achten und zu schützen ist Verpflichtung aller staatlichen Gewalt.\n\nArtikel 2: Jeder hat das Recht auf Leben und körperliche Unversehrtheit. Die Freiheit der Person ist unverletzlich.");
-                uiManager.SetNewsText("In einem bedeutenden Schritt hat die Regierung das Menschenrechtsgesetz verabschiedet, das die Würde und Unversehrtheit des Einzelnen zum höchsten Gut erklärt. Menschenrechtsorganisationen loben das klare Bekenntnis zu den grundlegenden Werten und hoffen auf eine konsequente Umsetzung. Viele Bürger fühlen sich durch das Gesetz ermutigt, ihre Rechte einzufordern, und erwarten eine neue Ära des Respekts und der Menschlichkeit.");
+                uiManager.SetNewsText("Die Regierung hat ein Menschenrechtsgesetz verabschiedet, das die grundlegende Bürgerrechte sichern soll. Menschenrechts-gruppen feiern dies als Fortschritt, doch die Bevölkerung bleibt skeptisch. Internationale Beobachter betonen, dass jetzt Taten folgen müssen.");
 
                 lawEnshrinedThisRound = true;
             }
@@ -260,7 +248,7 @@ public class GameManager : MonoBehaviour
                 participationEnshrined = true;
                 
                 uiManager.SetLawText("Gesetz für Politische Partizipation\n\nArtikel 1: Alle Bürger haben das Recht, an der politischen Willensbildung des Staates durch Wahlen und Abstimmungen mitzuwirken.\n\nArtikel 2: Das aktive und passive Wahlrecht steht allen volljährigen Bürgern gleichermaßen zu. Diskriminierung ist unzulässig.");
-                uiManager.SetNewsText("Das neue Gesetz für politische Partizipation erweitert die Möglichkeiten der Bürger, aktiv an Wahlen und politischen Prozessen teilzunehmen. Wahlrechtsexperten begrüßen die Maßnahme als Stärkung der Demokratie. In der Bevölkerung ist ein Aufschwung politischer Aktivität spürbar, denn viele Bürger fühlen sich nun motiviert, ihre Stimme zu erheben und am politischen Leben teilzuhaben.");
+                uiManager.SetNewsText("Das Gesetz zur politischen Partizipation erweitert die Möglichkeiten der Bürger, an Wahlen teilzunehmen. Experten sehen darin eine Stärkung der Demokratie. Bürger sind motiviert, aktiv am politischen Leben teilzuhaben.");
                 
                 lawEnshrinedThisRound = true;
             }
@@ -287,7 +275,7 @@ public class GameManager : MonoBehaviour
                 freedomOfSpeechEnshrined = true;
                 
                 uiManager.SetLawText("Gesetz für Meinungs- und Pressefreiheit\n\nArtikel 1: Jeder hat das Recht, seine Meinung in Wort, Schrift und Bild frei zu äußern und zu verbreiten.\n\nArtikel 2: Die Pressefreiheit und die Freiheit der Berichterstattung durch Rundfunk und Film werden gewährleistet. Eine Zensur findet nicht statt.");
-                uiManager.SetNewsText("Die Verabschiedung des Gesetzes für Meinungs- und Pressefreiheit wird in der Gesellschaft als Meilenstein für die individuelle Freiheit gefeiert. Journalisten und Medienhäuser atmen auf, da ihre Arbeit nun rechtlich abgesichert wird. Viele Bürger nutzen die Gelegenheit, offen ihre Meinung zu äußern, und sehen in dem Gesetz einen Schritt hin zu mehr Transparenz und freier Meinungsbildung.");
+                uiManager.SetNewsText("Das Gesetz für Meinungs- und Pressefreiheit wird als Meilenstein gefeiert. Journalisten fühlen sich rechtlich abgesichert, und Bürger äußern freier ihre Meinung. Es wird als Schritt zu mehr Transparenz gesehen.");
                 
                 lawEnshrinedThisRound = true;
             }
@@ -314,7 +302,7 @@ public class GameManager : MonoBehaviour
                 separationOfPowerEnshrined = true;
                 
                 uiManager.SetLawText("Gesetz zur Gewaltenteilung\n\nArtikel 1: Die Staatsgewalt ist in Legislative, Exekutive und Judikative unterteilt. Sie wirken eigenständig und kontrollieren sich gegenseitig.\n\nArtikel 2: Keine der Gewaltenteilungsinstanzen darf die Aufgaben einer anderen dauerhaft und vollumfänglich übernehmen.");
-                uiManager.SetNewsText("Mit der Einführung des Gesetzes zur Gewaltenteilung setzt die Regierung ein starkes Zeichen für eine gerechte Machtverteilung. Die klare Trennung von Legislative, Exekutive und Judikative wird von Verfassungsexperten als wesentlicher Schritt hin zu einem demokratischeren System gewertet. In der Bevölkerung herrscht Hoffnung auf eine Stärkung der demokratischen Prozesse, wobei Skeptiker gespannt beobachten, ob die Gewaltenteilung in der Praxis greift.");
+                uiManager.SetNewsText("Das Gesetz zur Gewaltenteilung fördert eine gerechte Machtverteilung. Experten sehen dies als wichtigen Schritt zu einem demokratischeren System. In der Bevölkerung gibt es Hoffnung auf stärkere demokratische Prozesse, während Skeptiker die Umsetzung abwarten.");
                 
                 lawEnshrinedThisRound = true;
             }
@@ -328,11 +316,11 @@ public class GameManager : MonoBehaviour
         if (currentHealth is < 3 and > 0)
         {
             currentHealth++;
-            uiManager.SetHealthRegenerationTextVisible(true);
+            uiManager.SetHealthRegenerationTextVisibility(true);
         }
         else
         {
-            uiManager.SetHealthRegenerationTextVisible(false);
+            uiManager.SetHealthRegenerationTextVisibility(false);
         }
         
         uiManager.SetHealthText(currentHealth);
@@ -350,19 +338,18 @@ public class GameManager : MonoBehaviour
 
     public void EndBalance()
     {
-        uiManager.SetBalanceScreenVisible(false);
-        uiManager.SetHealthRegenerationTextVisible(false);
+        uiManager.SetHealthRegenerationTextVisibility(false);
 
         if (civilRights >= 100 && participation >= 100 && freedomOfSpeech >= 100 && separationOfPower >= 100)
         {
             if (lawEnshrinedThisRound)
             {
-                uiManager.SetNewLawScreenVisibility(true);
+                uiManager.SetNewLawScreenActive();
                 lawEnshrinedThisRound = false;
             }
             else
             {
-                uiManager.SetGameOverScreenVisible(true);
+                uiManager.SetGameOverScreenActive();
             
                 uiManager.SetGameOverLabelText("Glückwunsch!");
                 uiManager.SetGameOverText("Du hast alle Grundwerte einer Demokratie etabliert und im Grundgesetz verankert. Natürlich musst du jetzt einem gewählten Parlament Platz machen. Dafür werden du und dieser Tag in die Geschichte dieses Landes eingehen.");
@@ -370,7 +357,7 @@ public class GameManager : MonoBehaviour
         }
         else if (currentHealth <= 0)
         {
-            uiManager.SetGameOverScreenVisible(true);
+            uiManager.SetGameOverScreenActive();
             
             uiManager.SetGameOverLabelText("Game Over");
             uiManager.SetGameOverText("Du hast es auf dem Weg zur Demokratie weit gebracht, aber dazu gehört auch, sich an die eigenen Gesetze zu halten. Du musst deinen Posten in der Regierung abgeben und joa.");
@@ -378,7 +365,7 @@ public class GameManager : MonoBehaviour
         else if (civilRights <= 0 || participation <= 0 || freedomOfSpeech <= 0 || separationOfPower <= 0 ||
             economy <= 0 || military <= 0 || science <= 0 || culture <= 0)
         {
-            uiManager.SetGameOverScreenVisible(true);
+            uiManager.SetGameOverScreenActive();
             
             // TODO: Set LabelText and GameOverText
         }
@@ -386,7 +373,7 @@ public class GameManager : MonoBehaviour
         {
             if (lawEnshrinedThisRound)
             {
-                uiManager.SetNewLawScreenVisibility(true);
+                uiManager.SetNewLawScreenActive();
                 lawEnshrinedThisRound = false;
             }
             else
@@ -544,27 +531,26 @@ public class GameManager : MonoBehaviour
 
     public void ContinueEvent()
     {
-        uiManager.SetDecisionScreenVisible(true);
+        uiManager.SetDecisionScreenActive();
     }
 
     public void Stamped()
     {
-        uiManager.SetNewsScreenVisibility(true);
-        uiManager.SetNewLawScreenVisibility(false);
+        uiManager.SetNewLawScreenActive();
     }
 
     public void StartRoundAfterNewLaw()
     {
         if (civilRights >= 100 && participation >= 100 && freedomOfSpeech >= 100 && separationOfPower >= 100)
         {
-            uiManager.SetGameOverScreenVisible(true);
+            uiManager.SetGameOverScreenActive();
             
             uiManager.SetGameOverLabelText("Glückwunsch!");
             uiManager.SetGameOverText("Du hast alle Grundwerte einer Demokratie etabliert und im Grundgesetz verankert. Natürlich musst du jetzt einem gewählten Parlament Platz machen. Dafür werden du und dieser Tag in die Geschichte dieses Landes eingehen.");
         }
         else
         {
-            uiManager.SetNewsScreenVisibility(false);
+            uiManager.SetNewsScreenActive();
             StartRound();
         }
     }

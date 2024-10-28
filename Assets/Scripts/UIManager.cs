@@ -28,6 +28,7 @@ public class UIManager : MonoBehaviour
     
     // EVENT SCREEN
     [Category("Event Screen")]
+    [SerializeField] private GameObject eventScreen;
     [SerializeField] private TMP_Text eventDescription;
     [SerializeField] private Button continueEventButton;
     
@@ -140,6 +141,18 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void SetEventScreenActive()
+    {
+        balanceScreen.SetActive(false);
+        decisionScreen.SetActive(false);
+        
+        eventScreen.SetActive(true);
+        
+        newsScreen.SetActive(false);
+        gameOverScreen.SetActive(false);
+        newLawScreen.SetActive(false);
+    }
+    
     public void SetRoundCounter(int round)
     {
         roundCounter.SetText("Runde: " + round);
@@ -158,46 +171,6 @@ public class UIManager : MonoBehaviour
     public void SetReactionText2(string text)
     {
         reactionText2.SetText(text);
-    }
-
-    public void SetEconomyText(int value)
-    {
-        economyText.SetText("Wirtschaft: " + value);
-    }
-    
-    public void SetMilitaryText(int value)
-    {
-        militaryText.SetText("Militär: " + value);
-    }
-    
-    public void SetScienceText(int value)
-    {
-        scienceText.SetText("Forschung: " + value);
-    }
-    
-    public void SetCultureText(int value)
-    {
-        cultureText.SetText("Kultur: " + value);
-    }
-    
-    public void SetCivilRightsText(int value)
-    {
-        civilRightsText.SetText("Menschenrechte: " + value);
-    }
-    
-    public void SetParticipationText(int value)
-    {
-        participationText.SetText("Polit. Partizipation: " + value);
-    }
-    
-    public void SetFreedomOfSpeechText(int value)
-    {
-        freedomOfSpeechText.SetText("Meinungsfreiheit: " + value);
-    }
-    
-    public void SetSeparationOfPowerText(int value)
-    {
-        separationOfPowerText.SetText("Gewaltenteilung: " + value);
     }
 
     public void PressReactionButton1()
@@ -436,9 +409,15 @@ public class UIManager : MonoBehaviour
         separationOfPowerDeltaText.SetText("");
     }
 
-    public void SetBalanceScreenVisible(bool visible)
+    public void SetBalanceScreenActive()
     { 
-        balanceScreen.SetActive(visible);
+        balanceScreen.SetActive(true);
+        
+        decisionScreen.SetActive(false);
+        eventScreen.SetActive(false);
+        newsScreen.SetActive(false);
+        gameOverScreen.SetActive(false);
+        newLawScreen.SetActive(false);
     }
 
     public void PressContinueButton()
@@ -480,14 +459,21 @@ public class UIManager : MonoBehaviour
         healthText.SetText("Leben: " + value);
     }
 
-    public void SetHealthRegenerationTextVisible(bool visible)
+    public void SetHealthRegenerationTextVisibility(bool visible)
     {
         healthRegenerationText.gameObject.SetActive(visible);
     }
 
-    public void SetGameOverScreenVisible(bool visible)
+    public void SetGameOverScreenActive()
     {
-        gameOverScreen.SetActive(visible);
+        balanceScreen.SetActive(false);
+        decisionScreen.SetActive(false);
+        eventScreen.SetActive(false);
+        newsScreen.SetActive(false);
+        
+        gameOverScreen.SetActive(true);
+        
+        newLawScreen.SetActive(false);
     }
 
     public void SetGameOverText(string text)
@@ -506,9 +492,16 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    public void SetDecisionScreenVisible(bool visible)
+    public void SetDecisionScreenActive()
     {
-        decisionScreen.SetActive(visible);
+        balanceScreen.SetActive(false);
+        
+        decisionScreen.SetActive(true);
+        
+        eventScreen.SetActive(false);
+        newsScreen.SetActive(false);
+        gameOverScreen.SetActive(false);
+        newLawScreen.SetActive(false);
     }
 
     public void SetLegislativeTermSliderValue(int value)
@@ -522,9 +515,15 @@ public class UIManager : MonoBehaviour
         gameManager.ContinueEvent();
     }
 
-    public void SetNewLawScreenVisibility(bool visible)
+    public void SetNewLawScreenActive()
     {
-        newLawScreen.SetActive(visible);
+        balanceScreen.SetActive(false);
+        decisionScreen.SetActive(false);
+        eventScreen.SetActive(false);
+        newsScreen.SetActive(false);
+        gameOverScreen.SetActive(false);
+        
+        newLawScreen.SetActive(true);
     }
 
     public void SetLawText(string text)
@@ -532,9 +531,16 @@ public class UIManager : MonoBehaviour
         lawText.SetText(text);
     }
 
-    public void SetNewsScreenVisibility(bool visible)
+    public void SetNewsScreenActive()
     {
-        newsScreen.SetActive(visible);
+        balanceScreen.SetActive(false);
+        decisionScreen.SetActive(false);
+        eventScreen.SetActive(false);
+        
+        newsScreen.SetActive(true);
+        
+        gameOverScreen.SetActive(false);
+        newLawScreen.SetActive(false);
     }
 
     public void SetNewsText(string text)
