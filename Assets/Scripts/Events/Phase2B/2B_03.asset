@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2B_03
   m_EditorClassIdentifier: 
-  eventDescription: Ein nationales Forum zur Diskussion und Umsetzung innovativer
-    Bildungskonzepte wird einberufen.
+  eventDescription: "In der Debatte \xFCber das nationale Forum zur Umsetzung innovativer
+    Bildungskonzepte weist die Presse darauf hin, dass eine durch die Regierung festgelegte
+    Themenvorgabe zwar schneller zu Ergebnissen f\xFChren k\xF6nnte, jedoch ohne
+    die Einbeziehung von Beitr\xE4gen der Sch\xFCler- und Lehrergruppen wichtige
+    Einsichten der direkt Betroffenen verloren gehen w\xFCrden."
   reaction1:
     reactionDescription: Festlegung des Themenspektrums durch die Regierung.
     effect:

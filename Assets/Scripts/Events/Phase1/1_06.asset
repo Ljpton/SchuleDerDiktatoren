@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 1_06
   m_EditorClassIdentifier: 
-  eventDescription: "Debatte um neue Forschungsrichtlinien, die potenziell die Methode
-    der Wissenschaft einschr\xE4nken."
+  eventDescription: "Neue Forschungsrichtlinien fordern eine detaillierte ethische
+    Pr\xFCfung und Transparenzberichte f\xFCr alle Projekte, um \xF6ffentliche Sicherheit
+    und moralische Standards zu gew\xE4hrleisten. Diese Auflagen k\xF6nnten die Wissenschaft
+    verlangsamen und innovative Ans\xE4tze erschweren, da b\xFCrokratische H\xFCrden
+    den Forschungsprozess komplexer und langwieriger gestalten."
   reaction1:
-    reactionDescription: "Einf\xFChrung strikter Richtlinien."
+    reactionDescription: "Flexibilit\xE4t der Richtlinien erhalten."
     effect:
       economy: 0
       military: 0
@@ -26,7 +29,7 @@ MonoBehaviour:
       participation: 0
       separationOfPower: -15
   reaction2:
-    reactionDescription: "Flexibilit\xE4t der Richtlinien erhalten."
+    reactionDescription: "Einf\xFChrung strikter Richtlinien."
     effect:
       economy: 0
       military: 0

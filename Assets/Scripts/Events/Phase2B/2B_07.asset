@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2B_07
   m_EditorClassIdentifier: 
-  eventDescription: Ein Sicherheitsnetzwerk zur Verbesserung der Katastrophenhilfe
-    wird aufgebaut.
+  eventDescription: "Ein Sicherheitsnetzwerk zur Verbesserung der Katastrophenhilfe
+    wird aufgebaut. Dazu k\xF6nnten \xFCberwiegend milit\xE4rische Ressourcen eingesetzt
+    werden, um schnelle und koordinierte Reaktionen auf Notlagen sicherzustellen.
+    Eine andere Herangehensweise sieht den Aufbau eines zivilen Katastrophenschutzkorps
+    vor, \xE4hnlich zur freiwilligen Feuerwehr, der lokal agieren kann, jedoch weniger
+    effizient ist."
   reaction1:
     reactionDescription: "Einsatz von \xFCberwiegend milit\xE4rischen Ressourcen."
     effect:

@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 1_01
   m_EditorClassIdentifier: 
-  eventDescription: "Eine internationale Konferenz bietet deinem Land die M\xF6glichkeit,
-    neue M\xE4rkte zu erschlie\xDFen, was allerdings politische Spannungen verursachen
-    k\xF6nnte."
+  eventDescription: "Auf einer internationalen Konferenz kannst du in den Erneuerbare-Energien-Sektor
+    Afrikas investieren. Das w\xE4re wirtschaftlich vorteilhaft, aber die Umverteilung
+    von Subventionen k\xF6nnte im Inland zu Spannungen und Protesten f\xFChren, da
+    von K\xFCrzungen betroffene Sektoren Widerstand leisten und die gesellschaftliche
+    Stabilit\xE4t gef\xE4hrden."
   reaction1:
     reactionDescription: "Expansion auf neue M\xE4rkte."
     effect:

@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 1_02
   m_EditorClassIdentifier: 
-  eventDescription: "Ein Gesetzentwurf zur \xDCberwachung interner Kommunikation
-    k\xF6nnte die nationale Sicherheit erh\xF6hen, aber die Meinungsfreiheit gef\xE4hrden."
+  eventDescription: "Ein Gesetzentwurf sieht vor, das Abh\xF6ren von Telefonaten
+    \xFCber Online-Plattformen zur Erh\xF6hung der nationalen Sicherheit zu erlauben.
+    Dies k\xF6nnte Terroranschl\xE4ge verhindern, doch durch die umfassende Datensammlung
+    k\xF6nnten B\xFCrger sich weniger frei f\xFChlen, ihre Ansichten \xF6ffentlich
+    zu \xE4u\xDFern."
   reaction1:
     reactionDescription: "Implementiere das \xDCberwachungsgesetz."
     effect:

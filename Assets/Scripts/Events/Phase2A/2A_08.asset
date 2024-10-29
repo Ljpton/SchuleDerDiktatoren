@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2A_08
   m_EditorClassIdentifier: 
-  eventDescription: "Der Staat \xFCberlegt, ein Monopol auf bestimmte wissenschaftliche
-    Dienstleistungen einzurichten."
+  eventDescription: "Der Staat plant, ein Monopol auf die Sammlung und Analyse biometrischer
+    Daten zu etablieren, um gesellschaftliche Entscheidungen zentral zu steuern und
+    Verhaltensprognosen zu erstellen. Dies k\xF6nnte zwar effiziente Verwaltung f\xF6rdern,
+    k\xF6nnte aber auch gesellschaftliche Partizipation einschr\xE4nken, da der Einfluss
+    auf individuelle Entfaltung und Mitbestimmung beschnitten wird."
   reaction1:
     reactionDescription: "Monopol einf\xFChren."
     effect:
@@ -26,7 +29,7 @@ MonoBehaviour:
       participation: -10
       separationOfPower: 0
   reaction2:
-    reactionDescription: "Wettbewerbsf\xF6rderung im Wissenschaftssektor."
+    reactionDescription: Keinen Einfluss nehmen.
     effect:
       economy: 0
       military: 0

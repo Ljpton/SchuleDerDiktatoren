@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 3_05
   m_EditorClassIdentifier: 
-  eventDescription: "Ein B\xFCrgergremium soll in Bildungspolitik eingebunden werden,
-    um Lehrpl\xE4ne und Bildungsziele zu \xFCberarbeiten."
+  eventDescription: "In einem bahnbrechenden Versuch, die Bildungspolitik zu demokratisieren,
+    plant die Regierung die Einbindung eines B\xFCrgergremiums. Ziel ist es, Lehrpl\xE4ne
+    und Bildungsziele durch regelm\xE4\xDFige Treffen kreativ zu \xFCberarbeiten
+    und frischen Wind in die Klassenzimmer zu bringen. W\xE4hrend einige die Innovation
+    begr\xFC\xDFen, pl\xE4dieren andere daf\xFCr, Entscheidungen Bildungsexperten
+    zu \xFCberlassen, um fachliche Kontinuit\xE4t zu sichern."
   reaction1:
     reactionDescription: "Regelm\xE4\xDFige B\xFCrgergremien zur F\xF6rderung innovativer
       Lehrpl\xE4ne."

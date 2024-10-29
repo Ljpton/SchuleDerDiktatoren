@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2B_08
   m_EditorClassIdentifier: 
-  eventDescription: "Ein Festival soll stattfinden, das die Verbindung zwischen Wissenschaft
-    und Kultur st\xE4rkt, indem es wissenschaftliche Erkenntnisse kreativ darstellt."
+  eventDescription: "Ein Festival wird organisiert, um die Verbindung zwischen Wissenschaft
+    und Kultur zu st\xE4rken. Geplant ist, wissenschaftliche Erkenntnisse kreativ
+    darzustellen. Dabei k\xF6nnte der Fokus auf der Zusammenarbeit mit Bildungseinrichtungen
+    liegen, um akademische Forschung k\xFCnstlerisch zu pr\xE4sentieren, oder es
+    k\xF6nnte ein offener Aufruf an K\xFCnstler erfolgen, die wissenschaftliche Themen
+    innovativ interpretieren."
   reaction1:
-    reactionDescription: "Festivalorganisation durch staatliche Kultur- und Forschungsbeh\xF6rden."
+    reactionDescription: "Zusammenarbeit mit \xF6ffentlichen Bildungseinrichtungen."
     effect:
       economy: 0
       military: 0
@@ -26,8 +30,7 @@ MonoBehaviour:
       participation: 0
       separationOfPower: -5
   reaction2:
-    reactionDescription: "Autonomie der Festivalorganisation durch ein gemischtes
-      Komitee aus Wissenschaftlern und K\xFCnstlern."
+    reactionDescription: "Offener Aufruf an K\xFCnstler und Wissenschafts-Influencer."
     effect:
       economy: 0
       military: 0

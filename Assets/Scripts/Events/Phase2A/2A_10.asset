@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2A_10
   m_EditorClassIdentifier: 
-  eventDescription: Um die Wohnsituation zu verbessern, plant der Staat massive Wohnungsbauprogramme.
+  eventDescription: "Zur Verbesserung der Wohnsituation gr\xFCndet der Staat neue,
+    staatseigene Firmen. Diese k\xF6nnten direkt Wohnungen bauen und vermieten, um
+    schnelle L\xF6sungen zu bieten und die Mietpreise zu kontrollieren. Alternativ
+    k\xF6nnten sie Grundst\xFCcke erwerben und diese g\xFCnstig ausschreiben, um
+    private Vermieter zum Bau zu ermutigen, wobei Mietrechtvorgaben die Mieter sch\xFCtzen
+    sollen."
   reaction1:
     reactionDescription: Konstruktionen durch staatseigene Firmen.
     effect:

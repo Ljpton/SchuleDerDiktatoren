@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 3_09
   m_EditorClassIdentifier: 
-  eventDescription: "Die Stadt plant neue Kulturprojekte, um das soziale Gef\xFCge
-    und die Identit\xE4t der Gemeinschaft zu st\xE4rken."
+  eventDescription: "Um den Glauben an die Demokratie zu st\xE4rken, plant die Stadt
+    ein Theaterprojekt, das integrative Werte f\xF6rdert. St\xE4dtische F\xF6rderungen
+    k\xF6nnten lokalen K\xFCnstlern helfen, das St\xFCck zu entwickeln und Gemeinschaftsbindung
+    zu st\xE4rken. Allerdings k\xF6nnte eine gro\xDFe Auff\xFChrung durch Privatpartnerschaften
+    mehr Publikum erreichen und das Thema weiter verbreiten."
   reaction1:
     reactionDescription: "Unterst\xFCtzung f\xFCr K\xFCnstler durch st\xE4dtische
       Kulturf\xF6rderungen."

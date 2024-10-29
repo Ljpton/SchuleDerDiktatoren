@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2B_04
   m_EditorClassIdentifier: 
-  eventDescription: "Ein gro\xDFes Festival, das die kulturelle Vielfalt des Landes
-    feiert, wird geplant."
+  eventDescription: "Das Kultusministerium plant ein gro\xDFes Festival zur Feier
+    der kulturellen Vielfalt des Landes. W\xE4hrend die Regierung eine Konzentration
+    auf traditionelle Kulturinstitutionen bevorzugt, um bekannten K\xFCnsten Raum
+    zu geben, schlagen Kritiker vor, auch einen Aufruf an Minderheiten und diverse
+    K\xFCnstlergruppen zu richten, um aktuelle Themen und vielf\xE4ltige Ausdrucksformen
+    zu integrieren."
   reaction1:
     reactionDescription: Konzentration auf traditionelle Kulturinstitutionen.
     effect:
@@ -26,7 +30,7 @@ MonoBehaviour:
       participation: 0
       separationOfPower: 0
   reaction2:
-    reactionDescription: "Einbindung unabh\xE4ngiger K\xFCnstlergruppen."
+    reactionDescription: "Aufruf an Minderheiten und diverse K\xFCnstlergruppen."
     effect:
       economy: 0
       military: 0

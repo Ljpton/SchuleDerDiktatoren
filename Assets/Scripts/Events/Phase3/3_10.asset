@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 3_10
   m_EditorClassIdentifier: 
-  eventDescription: "Um die Sicherheit in der Gemeinde zu erh\xF6hen, sind Partnerschaften
-    zwischen B\xFCrgern und Polizei geplant."
+  eventDescription: "Die Polizeif\xFChrung bem\xE4ngelt mangelndes Vertrauen der
+    Bev\xF6lkerung in die Polizei und fordert, staatliche Sicherheitsma\xDFnahmen
+    besser mit der Bev\xF6lkerung zu kommunizieren. Ein unkonventioneller Ansatz,
+    schl\xE4gt regelm\xE4\xDFige Dialogrunden zwischen Polizei und B\xFCrgern vor,
+    um das gegenseitige Vertrauen zu st\xE4rken."
   reaction1:
     reactionDescription: "Umsetzung staatlicher Sicherheitsma\xDFnahmen in Abstimmung
       mit der lokalen Bev\xF6lkerung."

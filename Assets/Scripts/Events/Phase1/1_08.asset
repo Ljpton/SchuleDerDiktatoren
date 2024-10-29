@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 1_08
   m_EditorClassIdentifier: 
-  eventDescription: "Investitionen in digitale Technologien k\xF6nnten das Land modernisieren,
-    bringen jedoch Herausforderungen bei der Freiheit mit sich."
+  eventDescription: "Investitionen in Breitbandausbau und KI-Entwicklung k\xF6nnten
+    das Land modernisieren, jedoch mit Herausforderungen f\xFCr Freiheitsrechte,
+    da erweiterter Zugang zu Informationen staatliche Kontrolle erschwert. Die Durchf\xFChrung
+    f\xF6rdert kulturelle Vielfalt, indem sie digitalen Zugang zu Bildung, Kunst
+    und globalem Austausch erm\xF6glicht und kreative Innovationen unterst\xFCtzt."
   reaction1:
     reactionDescription: "Durchf\xFChrung umfassender Digitalisierung."
     effect:

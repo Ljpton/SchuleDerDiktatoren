@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2A_07
   m_EditorClassIdentifier: 
-  eventDescription: "Ein mutiges milit\xE4risches Kooperationsprojekt mit einem Nachbarland
-    steht zur Diskussion."
+  eventDescription: "Ein gemeinsames Projekt zur Entwicklung fortschrittlicher Drohnentechnologie
+    mit einem Nachbarland ger\xE4t in den Fokus, nachdem investigative Journalisten
+    Details enth\xFCllt haben. Das Parlament fordert nun, den Kooperationsvertrag
+    \xF6ffentlich zu verhandeln, um Transparenz zu gew\xE4hrleisten, was jedoch Verz\xF6gerungen
+    mit sich bringen k\xF6nnte."
   reaction1:
     reactionDescription: Fortsetzung geheim ohne parlamentarische Zustimmung.
     effect:

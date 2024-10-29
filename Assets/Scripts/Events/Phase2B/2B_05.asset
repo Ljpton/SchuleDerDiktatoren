@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: 2B_05
   m_EditorClassIdentifier: 
   eventDescription: "Ein B\xFCndnis zur F\xF6rderung erneuerbarer Energien wird mit
-    regionalen und internationalen Partnern gebildet."
+    regionalen und internationalen Partnern gebildet. F\xF6rdermittel k\xF6nnten
+    gro\xDFe Energiekonzerne unterst\xFCtzen, um schnelle Projekte zu realisieren,
+    oder auf individuelle Energiegewinnung durch Solarsubventionen setzen, um lokale
+    Beteiligung und Unabh\xE4ngigkeit zu st\xE4rken."
   reaction1:
     reactionDescription: "F\xF6rdermittel haupts\xE4chlich an gro\xDFe Energiekonzerne
       vergeben."

@@ -12,16 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2B_09
   m_EditorClassIdentifier: 
-  eventDescription: "Ein Projekt wird ins Leben gerufen, um ein neues Denkmal zu
-    errichten, das sowohl das milit\xE4rische Erbe als auch kulturelle Errungenschaften
-    anerkennt."
+  eventDescription: "Ein Projekt zur Errichtung eines Denkmals, das sowohl das milit\xE4rische
+    Erbe als auch kulturelle Errungenschaften w\xFCrdigt, wird ins Leben gerufen.
+    Das Verteidigungsministerium k\xF6nnte die Gestaltung und Leitung \xFCbernehmen
+    und den Fokus auf milit\xE4rische Historie legen. Ein Komitee aus Historikern
+    und K\xFCnstlern w\xFCrde kulturelle Aspekte und historischen Kontext in den
+    Vordergrund stellen."
   reaction1:
     reactionDescription: Gestaltung und Leitung durch das Verteidigungsministerium.
     effect:
       economy: 0
       military: 5
       science: 0
-      culture: 5
+      culture: -5
       civilRights: 0
       freedomOfSpeech: 0
       participation: 0
@@ -33,7 +36,7 @@ MonoBehaviour:
       economy: 0
       military: -5
       science: 0
-      culture: -5
+      culture: 5
       civilRights: 0
       freedomOfSpeech: 0
       participation: 0

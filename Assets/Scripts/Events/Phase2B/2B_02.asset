@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2B_02
   m_EditorClassIdentifier: 
-  eventDescription: "Eine Spezialeinheit wird zur Entwicklung neuer Verteidigungstechnologien
-    gegr\xFCndet."
+  eventDescription: "Eine Spezialeinheit zur Entwicklung neuer Verteidigungstechnologien
+    wird gegr\xFCndet. Zivile Forschungsinstitute dr\xE4ngen auf eine Zusammenarbeit,
+    um ihre Expertise einzubringen und von staatlicher Unterst\xFCtzung zu profitieren.
+    Allerdings besteht auch die M\xF6glichkeit, dass die Projekte unter vollst\xE4ndiger
+    Geheimhaltung ablaufen, was uns im Ernstfall einen strategischen Vorteil verschaffen
+    w\xFCrde."
   reaction1:
     reactionDescription: "Vollst\xE4ndige Geheimhaltung der Projekte."
     effect:

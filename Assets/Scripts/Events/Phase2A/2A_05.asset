@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2A_05
   m_EditorClassIdentifier: 
-  eventDescription: "Geplante infrastrukturelle Verbesserungen sollen die Wirtschaft
-    beleben und die Verkehrswege st\xE4rken."
+  eventDescription: "Die Regierung plant Infrastrukturprojekte, um Wirtschaft und
+    Forschung zu st\xE4rken. Schnellma\xDFnahmen ohne Ausschreibungen k\xF6nnten
+    den Fortschritt beschleunigen, f\xFChren jedoch zu Bedenken hinsichtlich Transparenz.
+    Alternativ k\xF6nnten Wettbewerbsverfahren mit B\xFCrgerbeteiligung die lokale
+    Mitbestimmung f\xF6rdern, aber das Tempo und die Wirtschaft verlangsamen."
   reaction1:
     reactionDescription: "Schnellma\xDFnahmen ohne Ausschreibungen."
     effect:

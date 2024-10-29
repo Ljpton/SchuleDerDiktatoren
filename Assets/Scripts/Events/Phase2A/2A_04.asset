@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2A_04
   m_EditorClassIdentifier: 
-  eventDescription: Eine Kampagne zur Festlegung einer einheitlichen nationalen Kultur
-    wird in Betracht gezogen.
+  eventDescription: "Es wird erwogen, eine Kampagne zur F\xF6rderung einer einheitlichen
+    nationalen Kultur zu starten, die Bildungsinhalte, Medien- und Kunstf\xF6rderung
+    zentralisiert, um die kulturelle Einheit zu st\xE4rken. Kritiker bef\xFCrchten,
+    dass dies regionale Traditionen und Minderheitenkulturen unterdr\xFCcken und
+    eine vielf\xE4ltige kulturelle Landschaft einschr\xE4nken k\xF6nnte."
   reaction1:
     reactionDescription: "Kampagne durchf\xFChren."
     effect:

@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 3_07
   m_EditorClassIdentifier: 
-  eventDescription: "Ein gro\xDFes Infrastrukturprojekt zur F\xF6rderung erneuerbarer
-    Energien soll die Umweltentlastung vorantreiben."
+  eventDescription: "Ein riesiger Windpark soll die Rolle des Landes in erneuerbaren
+    Energien st\xE4rken. Nachhaltige Materialien und lokale Einbindung k\xF6nnten
+    Umweltsch\xE4den vermeiden und Unterst\xFCtzung sichern. Alternativ k\xF6nnten
+    Gro\xDFunternehmen den schnellen Bau garantieren, um die klimafreundliche Stromproduktion
+    rasch zu steigern und wirtschaftliche Vorteile zu nutzen."
   reaction1:
     reactionDescription: Investitionen in nachhaltige Materialien und Planung mit
       lokaler Gemeinschaft.

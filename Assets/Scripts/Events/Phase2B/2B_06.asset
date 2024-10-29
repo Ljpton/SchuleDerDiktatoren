@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2B_06
   m_EditorClassIdentifier: 
-  eventDescription: "Die Regierung plant die Einrichtung eines Innovationszentrums,
-    um Forschung und Entwicklung im Bereich gr\xFCner Technologien zu f\xF6rdern
-    und gleichzeitig wirtschaftlichen Nutzen zu ziehen."
+  eventDescription: "Die Regierung plant die Schaffung eines Energieproduktionszentrums
+    f\xFCr Verteidigungszwecke, um die Wirtschaft zu st\xE4rken. Die Beteiligung
+    ausl\xE4ndischer Firmen k\xF6nnte Wirtschaft und Milit\xE4r f\xF6rdern, aber
+    lokale Interessen vernachl\xE4ssigen. Eine Entwicklung durch lokale Unternehmen
+    w\xFCrde diesen Interessen Rechnung tragen, k\xF6nnte jedoch das Wachstum und
+    die milit\xE4rische Effizienz verz\xF6gern."
   reaction1:
-    reactionDescription: "Investitionen fokussieren auf staatlich gef\xFChrte Forschungsprogramme."
+    reactionDescription: "Ausl\xE4ndische Firmen beteiligen."
     effect:
       economy: 5
       military: 10
@@ -27,8 +30,7 @@ MonoBehaviour:
       participation: -5
       separationOfPower: 0
   reaction2:
-    reactionDescription: "Unterst\xFCtzung f\xFCr privatwirtschaftliche Start-ups
-      und Universit\xE4tsprojekte."
+    reactionDescription: Entwicklung durch lokale Unternehmen.
     effect:
       economy: -5
       military: -5

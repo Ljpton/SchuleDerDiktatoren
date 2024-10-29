@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 1_07
   m_EditorClassIdentifier: 
-  eventDescription: "F\xF6rderung kultureller Projekte zur St\xE4rkung regionaler
-    Identit\xE4ten."
+  eventDescription: "Die Regierung erw\xE4gt, verf\xFCgbare Haushaltsmittel f\xFCr
+    regionale Kunstfestivals, traditionelle Handwerksworkshops und historische Ausstellungen
+    bereitzustellen, um lokale Identit\xE4ten zu f\xF6rdern. Diese Initiative st\xF6\xDFt
+    auf Debatten, da Bedenken bestehen, dass die Mittel anderen dringlichen Bereichen
+    entzogen werden k\xF6nnten."
   reaction1:
     reactionDescription: Finanzierung von Kulturprojekten.
     effect:

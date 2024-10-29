@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2B_01
   m_EditorClassIdentifier: 
-  eventDescription: "Ein Programm zur Unterst\xFCtzung des Technologietransfers zwischen
-    f\xFChrenden Tech-Unternehmen und kleineren Betrieben wird gestartet."
+  eventDescription: "Ein Programm zur F\xF6rderung des Technologietransfers zwischen
+    f\xFChrenden Tech-Unternehmen und kleineren Betrieben wird gestartet. Die Priorit\xE4t
+    k\xF6nnte auf staatliche Partner gesetzt werden, um strategische Projekte zu
+    f\xF6rdern. Ein offener Zugang f\xFCr kleine Unternehmen und Start-ups k\xF6nnte
+    jedoch Innovationen st\xE4rker unterst\xFCtzen und die Wettbewerbsf\xE4higkeit
+    steigern."
   reaction1:
     reactionDescription: "Priorit\xE4t f\xFCr staatliche Partner."
     effect:

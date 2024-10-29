@@ -536,7 +536,7 @@ public class GameManager : MonoBehaviour
 
     public void Stamped()
     {
-        uiManager.SetNewLawScreenActive();
+        uiManager.SetNewsScreenActive();
     }
 
     public void StartRoundAfterNewLaw()

@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 1_09
   m_EditorClassIdentifier: 
-  eventDescription: "Angesichts der zunehmenden Verbreitung von Fehlinformationen
-    \xFCber soziale Medien plant dein Land, entweder eine strengere Regulierung einzuf\xFChren
-    oder die Plattformen eigenverantwortlich agieren zu lassen."
+  eventDescription: "Aufgrund der zunehmenden Verbreitung von Fehlinformationen \xFCber
+    soziale Medien erw\xE4gt dein Land strengere Regulierungen, die Plattformen zwingen,
+    Inhalte zu moderieren und Algorithmen zur Blockierung von Falschinformationen
+    zu implementieren, w\xE4hrend sie f\xFCr die Verbreitung problematischer Inhalte
+    haftbar gemacht werden k\xF6nnten."
   reaction1:
     reactionDescription: "Einf\xFChrung strenger Regulierungen f\xFCr soziale Medien."
     effect:
