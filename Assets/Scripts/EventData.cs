@@ -32,5 +32,30 @@ public struct Effect
     public int participation;
     public int separationOfPower;
 
+    public int GetCategoryValue(Categories category)
+    {
+        switch (category)
+        {
+            case Categories.Culture:
+                return culture;
+            case Categories.Economy:
+                return economy;
+            case Categories.Military:
+                return military;
+            case Categories.Participation:
+                return participation;
+            case Categories.Science:
+                return science;
+            case Categories.FreedomOfSpeech:
+                return freedomOfSpeech;
+            case Categories.CivilRights:
+                return civilRights;
+            case Categories.SeparationOfPower:
+                return separationOfPower;
+            default:
+                return 0;
+        }
+    }
+
     // TODO: How to handle special effects like changing legislative term, activating follow-up Events?
 }

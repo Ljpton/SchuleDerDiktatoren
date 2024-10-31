@@ -40,9 +40,9 @@ public class GameManager : MonoBehaviour
     public int scienceBalance = 50;
     public int cultureBalance = 50;
     
-    private EventData currentEvent;
-    private ConsultantData consultant1;
-    private ConsultantData consultant2;
+    public EventData currentEvent;
+    public ConsultantData consultant1;
+    public ConsultantData consultant2;
 
     private bool lawEnshrinedThisRound = false;
     
@@ -147,13 +147,548 @@ public class GameManager : MonoBehaviour
         uiManager.SetReactionText2(currentEvent.reaction2.reactionDescription);
         
         uiManager.SetConsultant1Reaction1Text(consultant1.Consult(currentEvent.reaction1.effect,
-            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 
+            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined));
+
+        SetConsultant1Reaction1Icons(currentEvent.reaction1.effect);
+        
         uiManager.SetConsultant1Reaction2Text(consultant1.Consult(currentEvent.reaction2.effect,
-            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 
+            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined));
+        
+        SetConsultant1Reaction2Icons(currentEvent.reaction2.effect);
+        
         uiManager.SetConsultant2Reaction1Text(consultant2.Consult(currentEvent.reaction1.effect,
-            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 
+            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined));
+        
+        SetConsultant2Reaction1Icons(currentEvent.reaction1.effect);
+        
         uiManager.SetConsultant2Reaction2Text(consultant2.Consult(currentEvent.reaction2.effect,
-            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 
+            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined));
+        
+        SetConsultant2Reaction2Icons(currentEvent.reaction2.effect);
+    }
+
+    private void SetConsultant1Reaction1Icons(Effect reactionEffect)
+    {
+        // Set both icons invisible
+        uiManager.SetReaction1Consultant1Icon1(Categories.Culture, false, false);
+        uiManager.SetReaction1Consultant1Icon2(Categories.Culture, false, false);
+        
+        // Skip first icon?
+        if (civilRightsEnshrined && consultant1.GetCategory1() == Categories.CivilRights ||
+            participationEnshrined && consultant1.GetCategory1() == Categories.Participation ||
+            freedomOfSpeechEnshrined && consultant1.GetCategory1() == Categories.FreedomOfSpeech ||
+            separationOfPowerEnshrined && consultant1.GetCategory1() == Categories.SeparationOfPower)
+        {
+            // Skip second icon?
+            if (civilRightsEnshrined && consultant1.GetCategory2() == Categories.CivilRights ||
+                participationEnshrined && consultant1.GetCategory2() == Categories.Participation ||
+                freedomOfSpeechEnshrined && consultant1.GetCategory2() == Categories.FreedomOfSpeech ||
+                separationOfPowerEnshrined && consultant1.GetCategory2() == Categories.SeparationOfPower)
+            {
+                // Skipped
+            }
+            else if (reactionEffect.GetCategoryValue(consultant1.GetCategory2()) != 0)
+            {
+                // Set second icon as first icon
+                bool isPositive = reactionEffect.GetCategoryValue(consultant1.GetCategory2()) > 0;
+                
+                switch (consultant1.GetCategory2())
+                {
+                    case Categories.Culture:
+                        uiManager.SetReaction1Consultant1Icon1(Categories.Culture, isPositive, true);
+                        break;
+                    case Categories.CivilRights:
+                        uiManager.SetReaction1Consultant1Icon1(Categories.CivilRights, isPositive, true);
+                        break;
+                    case Categories.Participation:
+                        uiManager.SetReaction1Consultant1Icon1(Categories.Participation, isPositive, true);
+                        break;
+                    case Categories.FreedomOfSpeech:
+                        uiManager.SetReaction1Consultant1Icon1(Categories.FreedomOfSpeech, isPositive, true);
+                        break;
+                    case Categories.SeparationOfPower:
+                        uiManager.SetReaction1Consultant1Icon1(Categories.SeparationOfPower, isPositive, true);
+                        break;
+                    case Categories.Economy:
+                        uiManager.SetReaction1Consultant1Icon1(Categories.Economy, isPositive, true);
+                        break;
+                    case Categories.Military:
+                        uiManager.SetReaction1Consultant1Icon1(Categories.Military, isPositive, true);
+                        break;
+                    case Categories.Science:
+                        uiManager.SetReaction1Consultant1Icon1(Categories.Science, isPositive, true);
+                        break;
+                }   
+            }
+        }
+        else if (reactionEffect.GetCategoryValue(consultant1.GetCategory1()) != 0)
+        {
+            // Set first icon
+            bool isPositive = reactionEffect.GetCategoryValue(consultant1.GetCategory1()) > 0;
+                
+            switch (consultant1.GetCategory1())
+            {
+                case Categories.Culture:
+                    uiManager.SetReaction1Consultant1Icon1(Categories.Culture, isPositive, true);
+                    break;
+                case Categories.CivilRights:
+                    uiManager.SetReaction1Consultant1Icon1(Categories.CivilRights, isPositive, true);
+                    break;
+                case Categories.Participation:
+                    uiManager.SetReaction1Consultant1Icon1(Categories.Participation, isPositive, true);
+                    break;
+                case Categories.FreedomOfSpeech:
+                    uiManager.SetReaction1Consultant1Icon1(Categories.FreedomOfSpeech, isPositive, true);
+                    break;
+                case Categories.SeparationOfPower:
+                    uiManager.SetReaction1Consultant1Icon1(Categories.SeparationOfPower, isPositive, true);
+                    break;
+                case Categories.Economy:
+                    uiManager.SetReaction1Consultant1Icon1(Categories.Economy, isPositive, true);
+                    break;
+                case Categories.Military:
+                    uiManager.SetReaction1Consultant1Icon1(Categories.Military, isPositive, true);
+                    break;
+                case Categories.Science:
+                    uiManager.SetReaction1Consultant1Icon1(Categories.Science, isPositive, true);
+                    break;
+            }   
+        }
+        
+        // Skip second icon?
+        if (civilRightsEnshrined && consultant1.GetCategory2() == Categories.CivilRights ||
+            participationEnshrined && consultant1.GetCategory2() == Categories.Participation ||
+            freedomOfSpeechEnshrined && consultant1.GetCategory2() == Categories.FreedomOfSpeech ||
+            separationOfPowerEnshrined && consultant1.GetCategory2() == Categories.SeparationOfPower)
+        {
+            // Skipped
+        }
+        else if (reactionEffect.GetCategoryValue(consultant1.GetCategory2()) != 0)
+        {
+            // Set icon 2
+            bool isPositive = reactionEffect.GetCategoryValue(consultant1.GetCategory2()) > 0;
+                
+            switch (consultant1.GetCategory2())
+            {
+                case Categories.Culture:
+                    uiManager.SetReaction1Consultant1Icon2(Categories.Culture, isPositive, true);
+                    break;
+                case Categories.CivilRights:
+                    uiManager.SetReaction1Consultant1Icon2(Categories.CivilRights, isPositive, true);
+                    break;
+                case Categories.Participation:
+                    uiManager.SetReaction1Consultant1Icon2(Categories.Participation, isPositive, true);
+                    break;
+                case Categories.FreedomOfSpeech:
+                    uiManager.SetReaction1Consultant1Icon2(Categories.FreedomOfSpeech, isPositive, true);
+                    break;
+                case Categories.SeparationOfPower:
+                    uiManager.SetReaction1Consultant1Icon2(Categories.SeparationOfPower, isPositive, true);
+                    break;
+                case Categories.Economy:
+                    uiManager.SetReaction1Consultant1Icon2(Categories.Economy, isPositive, true);
+                    break;
+                case Categories.Military:
+                    uiManager.SetReaction1Consultant1Icon2(Categories.Military, isPositive, true);
+                    break;
+                case Categories.Science:
+                    uiManager.SetReaction1Consultant1Icon2(Categories.Science, isPositive, true);
+                    break;
+            }
+        }
+    }
+    
+    private void SetConsultant1Reaction2Icons(Effect reactionEffect)
+    {
+        // Set both icons invisible
+        uiManager.SetReaction2Consultant1Icon1(Categories.Culture, false, false);
+        uiManager.SetReaction2Consultant1Icon2(Categories.Culture, false, false);
+        
+        // Skip first icon?
+        if (civilRightsEnshrined && consultant1.GetCategory1() == Categories.CivilRights ||
+            participationEnshrined && consultant1.GetCategory1() == Categories.Participation ||
+            freedomOfSpeechEnshrined && consultant1.GetCategory1() == Categories.FreedomOfSpeech ||
+            separationOfPowerEnshrined && consultant1.GetCategory1() == Categories.SeparationOfPower)
+        {
+            // Skip second icon?
+            if (civilRightsEnshrined && consultant1.GetCategory2() == Categories.CivilRights ||
+                participationEnshrined && consultant1.GetCategory2() == Categories.Participation ||
+                freedomOfSpeechEnshrined && consultant1.GetCategory2() == Categories.FreedomOfSpeech ||
+                separationOfPowerEnshrined && consultant1.GetCategory2() == Categories.SeparationOfPower)
+            {
+                // Skipped
+            }
+            else if (reactionEffect.GetCategoryValue(consultant1.GetCategory2()) != 0)
+            {
+                // Set second icon as first icon
+                bool isPositive = reactionEffect.GetCategoryValue(consultant1.GetCategory2()) > 0;
+                
+                switch (consultant1.GetCategory2())
+                {
+                    case Categories.Culture:
+                        uiManager.SetReaction2Consultant1Icon1(Categories.Culture, isPositive, true);
+                        break;
+                    case Categories.CivilRights:
+                        uiManager.SetReaction2Consultant1Icon1(Categories.CivilRights, isPositive, true);
+                        break;
+                    case Categories.Participation:
+                        uiManager.SetReaction2Consultant1Icon1(Categories.Participation, isPositive, true);
+                        break;
+                    case Categories.FreedomOfSpeech:
+                        uiManager.SetReaction2Consultant1Icon1(Categories.FreedomOfSpeech, isPositive, true);
+                        break;
+                    case Categories.SeparationOfPower:
+                        uiManager.SetReaction2Consultant1Icon1(Categories.SeparationOfPower, isPositive, true);
+                        break;
+                    case Categories.Economy:
+                        uiManager.SetReaction2Consultant1Icon1(Categories.Economy, isPositive, true);
+                        break;
+                    case Categories.Military:
+                        uiManager.SetReaction2Consultant1Icon1(Categories.Military, isPositive, true);
+                        break;
+                    case Categories.Science:
+                        uiManager.SetReaction2Consultant1Icon1(Categories.Science, isPositive, true);
+                        break;
+                }   
+            }
+        }
+        else if (reactionEffect.GetCategoryValue(consultant1.GetCategory1()) != 0)
+        {
+            // Set first icon
+            bool isPositive = reactionEffect.GetCategoryValue(consultant1.GetCategory1()) > 0;
+                
+            switch (consultant1.GetCategory1())
+            {
+                case Categories.Culture:
+                    uiManager.SetReaction2Consultant1Icon1(Categories.Culture, isPositive, true);
+                    break;
+                case Categories.CivilRights:
+                    uiManager.SetReaction2Consultant1Icon1(Categories.CivilRights, isPositive, true);
+                    break;
+                case Categories.Participation:
+                    uiManager.SetReaction2Consultant1Icon1(Categories.Participation, isPositive, true);
+                    break;
+                case Categories.FreedomOfSpeech:
+                    uiManager.SetReaction2Consultant1Icon1(Categories.FreedomOfSpeech, isPositive, true);
+                    break;
+                case Categories.SeparationOfPower:
+                    uiManager.SetReaction2Consultant1Icon1(Categories.SeparationOfPower, isPositive, true);
+                    break;
+                case Categories.Economy:
+                    uiManager.SetReaction2Consultant1Icon1(Categories.Economy, isPositive, true);
+                    break;
+                case Categories.Military:
+                    uiManager.SetReaction2Consultant1Icon1(Categories.Military, isPositive, true);
+                    break;
+                case Categories.Science:
+                    uiManager.SetReaction2Consultant1Icon1(Categories.Science, isPositive, true);
+                    break;
+            }   
+        }
+        
+        // Skip second icon?
+        if (civilRightsEnshrined && consultant1.GetCategory2() == Categories.CivilRights ||
+            participationEnshrined && consultant1.GetCategory2() == Categories.Participation ||
+            freedomOfSpeechEnshrined && consultant1.GetCategory2() == Categories.FreedomOfSpeech ||
+            separationOfPowerEnshrined && consultant1.GetCategory2() == Categories.SeparationOfPower)
+        {
+            // Skipped
+        }
+        else if (reactionEffect.GetCategoryValue(consultant1.GetCategory2()) != 0)
+        {
+            // Set icon 2
+            bool isPositive = reactionEffect.GetCategoryValue(consultant1.GetCategory2()) > 0;
+                
+            switch (consultant1.GetCategory2())
+            {
+                case Categories.Culture:
+                    uiManager.SetReaction2Consultant1Icon2(Categories.Culture, isPositive, true);
+                    break;
+                case Categories.CivilRights:
+                    uiManager.SetReaction2Consultant1Icon2(Categories.CivilRights, isPositive, true);
+                    break;
+                case Categories.Participation:
+                    uiManager.SetReaction2Consultant1Icon2(Categories.Participation, isPositive, true);
+                    break;
+                case Categories.FreedomOfSpeech:
+                    uiManager.SetReaction2Consultant1Icon2(Categories.FreedomOfSpeech, isPositive, true);
+                    break;
+                case Categories.SeparationOfPower:
+                    uiManager.SetReaction2Consultant1Icon2(Categories.SeparationOfPower, isPositive, true);
+                    break;
+                case Categories.Economy:
+                    uiManager.SetReaction2Consultant1Icon2(Categories.Economy, isPositive, true);
+                    break;
+                case Categories.Military:
+                    uiManager.SetReaction2Consultant1Icon2(Categories.Military, isPositive, true);
+                    break;
+                case Categories.Science:
+                    uiManager.SetReaction2Consultant1Icon2(Categories.Science, isPositive, true);
+                    break;
+            }
+        }
+    }
+    
+    private void SetConsultant2Reaction1Icons(Effect reactionEffect)
+    {
+        // Set both icons invisible
+        uiManager.SetReaction1Consultant2Icon1(Categories.Culture, false, false);
+        uiManager.SetReaction1Consultant2Icon2(Categories.Culture, false, false);
+        
+        // Skip first icon?
+        if (civilRightsEnshrined && consultant2.GetCategory1() == Categories.CivilRights ||
+            participationEnshrined && consultant2.GetCategory1() == Categories.Participation ||
+            freedomOfSpeechEnshrined && consultant2.GetCategory1() == Categories.FreedomOfSpeech ||
+            separationOfPowerEnshrined && consultant2.GetCategory1() == Categories.SeparationOfPower)
+        {
+            // Skip second icon?
+            if (civilRightsEnshrined && consultant2.GetCategory2() == Categories.CivilRights ||
+                participationEnshrined && consultant2.GetCategory2() == Categories.Participation ||
+                freedomOfSpeechEnshrined && consultant2.GetCategory2() == Categories.FreedomOfSpeech ||
+                separationOfPowerEnshrined && consultant2.GetCategory2() == Categories.SeparationOfPower)
+            {
+                // Skipped
+            }
+            else if (reactionEffect.GetCategoryValue(consultant2.GetCategory2()) != 0)
+            {
+                // Set second icon as first icon
+                bool isPositive = reactionEffect.GetCategoryValue(consultant2.GetCategory2()) > 0;
+                
+                switch (consultant2.GetCategory2())
+                {
+                    case Categories.Culture:
+                        uiManager.SetReaction1Consultant2Icon1(Categories.Culture, isPositive, true);
+                        break;
+                    case Categories.CivilRights:
+                        uiManager.SetReaction1Consultant2Icon1(Categories.CivilRights, isPositive, true);
+                        break;
+                    case Categories.Participation:
+                        uiManager.SetReaction1Consultant2Icon1(Categories.Participation, isPositive, true);
+                        break;
+                    case Categories.FreedomOfSpeech:
+                        uiManager.SetReaction1Consultant2Icon1(Categories.FreedomOfSpeech, isPositive, true);
+                        break;
+                    case Categories.SeparationOfPower:
+                        uiManager.SetReaction1Consultant2Icon1(Categories.SeparationOfPower, isPositive, true);
+                        break;
+                    case Categories.Economy:
+                        uiManager.SetReaction1Consultant2Icon1(Categories.Economy, isPositive, true);
+                        break;
+                    case Categories.Military:
+                        uiManager.SetReaction1Consultant2Icon1(Categories.Military, isPositive, true);
+                        break;
+                    case Categories.Science:
+                        uiManager.SetReaction1Consultant2Icon1(Categories.Science, isPositive, true);
+                        break;
+                }   
+            }
+        }
+        else if (reactionEffect.GetCategoryValue(consultant2.GetCategory1()) != 0)
+        {
+            // Set first icon
+            bool isPositive = reactionEffect.GetCategoryValue(consultant2.GetCategory1()) > 0;
+                
+            switch (consultant2.GetCategory1())
+            {
+                case Categories.Culture:
+                    uiManager.SetReaction1Consultant2Icon1(Categories.Culture, isPositive, true);
+                    break;
+                case Categories.CivilRights:
+                    uiManager.SetReaction1Consultant2Icon1(Categories.CivilRights, isPositive, true);
+                    break;
+                case Categories.Participation:
+                    uiManager.SetReaction1Consultant2Icon1(Categories.Participation, isPositive, true);
+                    break;
+                case Categories.FreedomOfSpeech:
+                    uiManager.SetReaction1Consultant2Icon1(Categories.FreedomOfSpeech, isPositive, true);
+                    break;
+                case Categories.SeparationOfPower:
+                    uiManager.SetReaction1Consultant2Icon1(Categories.SeparationOfPower, isPositive, true);
+                    break;
+                case Categories.Economy:
+                    uiManager.SetReaction1Consultant2Icon1(Categories.Economy, isPositive, true);
+                    break;
+                case Categories.Military:
+                    uiManager.SetReaction1Consultant2Icon1(Categories.Military, isPositive, true);
+                    break;
+                case Categories.Science:
+                    uiManager.SetReaction1Consultant2Icon1(Categories.Science, isPositive, true);
+                    break;
+            }   
+        }
+        
+        // Skip second icon?
+        if (civilRightsEnshrined && consultant2.GetCategory2() == Categories.CivilRights ||
+            participationEnshrined && consultant2.GetCategory2() == Categories.Participation ||
+            freedomOfSpeechEnshrined && consultant2.GetCategory2() == Categories.FreedomOfSpeech ||
+            separationOfPowerEnshrined && consultant2.GetCategory2() == Categories.SeparationOfPower)
+        {
+            // Skipped
+        }
+        else if (reactionEffect.GetCategoryValue(consultant2.GetCategory2()) != 0)
+        {
+            // Set icon 2
+            bool isPositive = reactionEffect.GetCategoryValue(consultant2.GetCategory2()) > 0;
+                
+            switch (consultant2.GetCategory2())
+            {
+                case Categories.Culture:
+                    uiManager.SetReaction1Consultant2Icon2(Categories.Culture, isPositive, true);
+                    break;
+                case Categories.CivilRights:
+                    uiManager.SetReaction1Consultant2Icon2(Categories.CivilRights, isPositive, true);
+                    break;
+                case Categories.Participation:
+                    uiManager.SetReaction1Consultant2Icon2(Categories.Participation, isPositive, true);
+                    break;
+                case Categories.FreedomOfSpeech:
+                    uiManager.SetReaction1Consultant2Icon2(Categories.FreedomOfSpeech, isPositive, true);
+                    break;
+                case Categories.SeparationOfPower:
+                    uiManager.SetReaction1Consultant2Icon2(Categories.SeparationOfPower, isPositive, true);
+                    break;
+                case Categories.Economy:
+                    uiManager.SetReaction1Consultant2Icon2(Categories.Economy, isPositive, true);
+                    break;
+                case Categories.Military:
+                    uiManager.SetReaction1Consultant2Icon2(Categories.Military, isPositive, true);
+                    break;
+                case Categories.Science:
+                    uiManager.SetReaction1Consultant2Icon2(Categories.Science, isPositive, true);
+                    break;
+            }
+        }
+    }
+    
+    private void SetConsultant2Reaction2Icons(Effect reactionEffect)
+    {
+        // Set both icons invisible
+        uiManager.SetReaction2Consultant2Icon1(Categories.Culture, false, false);
+        uiManager.SetReaction2Consultant2Icon2(Categories.Culture, false, false);
+        
+        // Skip first icon?
+        if (civilRightsEnshrined && consultant2.GetCategory1() == Categories.CivilRights ||
+            participationEnshrined && consultant2.GetCategory1() == Categories.Participation ||
+            freedomOfSpeechEnshrined && consultant2.GetCategory1() == Categories.FreedomOfSpeech ||
+            separationOfPowerEnshrined && consultant2.GetCategory1() == Categories.SeparationOfPower)
+        {
+            // Skip second icon?
+            if (civilRightsEnshrined && consultant2.GetCategory2() == Categories.CivilRights ||
+                participationEnshrined && consultant2.GetCategory2() == Categories.Participation ||
+                freedomOfSpeechEnshrined && consultant2.GetCategory2() == Categories.FreedomOfSpeech ||
+                separationOfPowerEnshrined && consultant2.GetCategory2() == Categories.SeparationOfPower)
+            {
+                // Skipped
+            }
+            else if (reactionEffect.GetCategoryValue(consultant2.GetCategory2()) != 0)
+            {
+                // Set second icon as first icon
+                bool isPositive = reactionEffect.GetCategoryValue(consultant2.GetCategory2()) > 0;
+            
+                switch (consultant2.GetCategory2())
+                {
+                    case Categories.Culture:
+                        uiManager.SetReaction2Consultant2Icon1(Categories.Culture, isPositive, true);
+                        break;
+                    case Categories.CivilRights:
+                        uiManager.SetReaction2Consultant2Icon1(Categories.CivilRights, isPositive, true);
+                        break;
+                    case Categories.Participation:
+                        uiManager.SetReaction2Consultant2Icon1(Categories.Participation, isPositive, true);
+                        break;
+                    case Categories.FreedomOfSpeech:
+                        uiManager.SetReaction2Consultant2Icon1(Categories.FreedomOfSpeech, isPositive, true);
+                        break;
+                    case Categories.SeparationOfPower:
+                        uiManager.SetReaction2Consultant2Icon1(Categories.SeparationOfPower, isPositive, true);
+                        break;
+                    case Categories.Economy:
+                        uiManager.SetReaction2Consultant2Icon1(Categories.Economy, isPositive, true);
+                        break;
+                    case Categories.Military:
+                        uiManager.SetReaction2Consultant2Icon1(Categories.Military, isPositive, true);
+                        break;
+                    case Categories.Science:
+                        uiManager.SetReaction2Consultant2Icon1(Categories.Science, isPositive, true);
+                        break;
+                }   
+            }
+        }
+        else if (reactionEffect.GetCategoryValue(consultant2.GetCategory1()) != 0)
+        {
+            // Set first icon
+            bool isPositive = reactionEffect.GetCategoryValue(consultant2.GetCategory1()) > 0;
+                
+            switch (consultant2.GetCategory1())
+            {
+                case Categories.Culture:
+                    uiManager.SetReaction2Consultant2Icon1(Categories.Culture, isPositive, true);
+                    break;
+                case Categories.CivilRights:
+                    uiManager.SetReaction2Consultant2Icon1(Categories.CivilRights, isPositive, true);
+                    break;
+                case Categories.Participation:
+                    uiManager.SetReaction2Consultant2Icon1(Categories.Participation, isPositive, true);
+                    break;
+                case Categories.FreedomOfSpeech:
+                    uiManager.SetReaction2Consultant2Icon1(Categories.FreedomOfSpeech, isPositive, true);
+                    break;
+                case Categories.SeparationOfPower:
+                    uiManager.SetReaction2Consultant2Icon1(Categories.SeparationOfPower, isPositive, true);
+                    break;
+                case Categories.Economy:
+                    uiManager.SetReaction2Consultant2Icon1(Categories.Economy, isPositive, true);
+                    break;
+                case Categories.Military:
+                    uiManager.SetReaction2Consultant2Icon1(Categories.Military, isPositive, true);
+                    break;
+                case Categories.Science:
+                    uiManager.SetReaction2Consultant2Icon1(Categories.Science, isPositive, true);
+                    break;
+            }   
+        }
+        
+        // Skip second icon?
+        if (civilRightsEnshrined && consultant2.GetCategory2() == Categories.CivilRights ||
+            participationEnshrined && consultant2.GetCategory2() == Categories.Participation ||
+            freedomOfSpeechEnshrined && consultant2.GetCategory2() == Categories.FreedomOfSpeech ||
+            separationOfPowerEnshrined && consultant2.GetCategory2() == Categories.SeparationOfPower)
+        {
+            // Skipped
+        }
+        else if (reactionEffect.GetCategoryValue(consultant2.GetCategory2()) != 0)
+        {
+            // Set icon 2
+            bool isPositive = reactionEffect.GetCategoryValue(consultant2.GetCategory2()) > 0;
+                
+            switch (consultant2.GetCategory2())
+            {
+                case Categories.Culture:
+                    uiManager.SetReaction2Consultant2Icon2(Categories.Culture, isPositive, true);
+                    break;
+                case Categories.CivilRights:
+                    uiManager.SetReaction2Consultant2Icon2(Categories.CivilRights, isPositive, true);
+                    break;
+                case Categories.Participation:
+                    uiManager.SetReaction2Consultant2Icon2(Categories.Participation, isPositive, true);
+                    break;
+                case Categories.FreedomOfSpeech:
+                    uiManager.SetReaction2Consultant2Icon2(Categories.FreedomOfSpeech, isPositive, true);
+                    break;
+                case Categories.SeparationOfPower:
+                    uiManager.SetReaction2Consultant2Icon2(Categories.SeparationOfPower, isPositive, true);
+                    break;
+                case Categories.Economy:
+                    uiManager.SetReaction2Consultant2Icon2(Categories.Economy, isPositive, true);
+                    break;
+                case Categories.Military:
+                    uiManager.SetReaction2Consultant2Icon2(Categories.Military, isPositive, true);
+                    break;
+                case Categories.Science:
+                    uiManager.SetReaction2Consultant2Icon2(Categories.Science, isPositive, true);
+                    break;
+            }
+        }
     }
 
     private void EndRound()
@@ -501,9 +1036,14 @@ public class GameManager : MonoBehaviour
         uiManager.SetConsultantDescriptionText1(consultant1.ToString());
         
         uiManager.SetConsultant1Reaction1Text(consultant1.Consult(currentEvent.reaction1.effect,
-            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 
+            civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined));
+
+        SetConsultant1Reaction1Icons(currentEvent.reaction1.effect);
+        
         uiManager.SetConsultant1Reaction2Text(consultant1.Consult(currentEvent.reaction2.effect,
             civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined));
+        
+        SetConsultant1Reaction2Icons(currentEvent.reaction2.effect);
         
         uiManager.SetExchangeConsultantButton1Enabled(false);
     }
@@ -523,8 +1063,13 @@ public class GameManager : MonoBehaviour
         
         uiManager.SetConsultant2Reaction1Text(consultant2.Consult(currentEvent.reaction1.effect,
             civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 
+        
+        SetConsultant2Reaction1Icons(currentEvent.reaction1.effect);
+        
         uiManager.SetConsultant2Reaction2Text(consultant2.Consult(currentEvent.reaction2.effect,
             civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined));
+        
+        SetConsultant2Reaction2Icons(currentEvent.reaction2.effect);
         
         uiManager.SetExchangeConsultantButton2Enabled(false);
     }

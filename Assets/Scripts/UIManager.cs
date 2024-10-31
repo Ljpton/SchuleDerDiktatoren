@@ -38,16 +38,6 @@ public class UIManager : MonoBehaviour
     
     [SerializeField] private TMP_Text reactionText1;
     [SerializeField] private TMP_Text reactionText2;
-
-    [SerializeField] private TMP_Text economyText;
-    [SerializeField] private TMP_Text militaryText;
-    [SerializeField] private TMP_Text scienceText;
-    [SerializeField] private TMP_Text cultureText;
-
-    [SerializeField] private TMP_Text civilRightsText;
-    [SerializeField] private TMP_Text participationText;
-    [SerializeField] private TMP_Text freedomOfSpeechText;
-    [SerializeField] private TMP_Text separationOfPowerText;
     
     [SerializeField] private TMP_Text consultant1Reaction1Text;
     [SerializeField] private TMP_Text consultant1Reaction2Text;
@@ -64,6 +54,33 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private RectTransform reaction1;
     [SerializeField] private RectTransform reaction2;
+    
+    [SerializeField] private Sprite economyUpIcon;
+    [SerializeField] private Sprite economyDownIcon;
+    [SerializeField] private Sprite militaryUpIcon;
+    [SerializeField] private Sprite militaryDownIcon;
+    [SerializeField] private Sprite scienceUpIcon;
+    [SerializeField] private Sprite scienceDownIcon;
+    [SerializeField] private Sprite cultureUpIcon;
+    [SerializeField] private Sprite cultureDownIcon;
+    [SerializeField] private Sprite civilRightsUpIcon;
+    [SerializeField] private Sprite civilRightsDownIcon;
+    [SerializeField] private Sprite freedomOfSpeechUpIcon;
+    [SerializeField] private Sprite freedomOfSpeechDownIcon;
+    [SerializeField] private Sprite participationUpIcon;
+    [SerializeField] private Sprite participationDownIcon;
+    [SerializeField] private Sprite separationOfPowerUpIcon;
+    [SerializeField] private Sprite separationOfPowerDownIcon;
+
+    [SerializeField] private Image reaction1consultant1Icon1;
+    [SerializeField] private Image reaction1consultant1Icon2;
+    [SerializeField] private Image reaction1consultant2Icon1;
+    [SerializeField] private Image reaction1consultant2Icon2;
+    
+    [SerializeField] private Image reaction2consultant1Icon1;
+    [SerializeField] private Image reaction2consultant1Icon2;
+    [SerializeField] private Image reaction2consultant2Icon1;
+    [SerializeField] private Image reaction2consultant2Icon2;
 
     // BALANCE SCREEN
     [Category("Balance Screen")]
@@ -163,6 +180,154 @@ public class UIManager : MonoBehaviour
         eventDescription.SetText(description);
     }
 
+    public void SetReaction1Consultant1Icon1(Categories category, bool isPositive, bool visible)
+    {
+        if (visible)
+        {
+            reaction1consultant1Icon1.gameObject.SetActive(true);
+            reaction1consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+        }
+        else
+        {
+            reaction1consultant1Icon1.gameObject.SetActive(false);
+        }
+    }
+    
+    public void SetReaction1Consultant1Icon2(Categories category, bool isPositive, bool visible)
+    {
+        if (visible)
+        {
+            reaction1consultant1Icon2.gameObject.SetActive(true);
+            reaction1consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+        }
+        else
+        {
+            reaction1consultant1Icon2.gameObject.SetActive(false);
+        }    }
+    
+    public void SetReaction1Consultant2Icon1(Categories category, bool isPositive, bool visible)
+    {
+        if (visible)
+        {
+            reaction1consultant2Icon1.gameObject.SetActive(true);
+            reaction1consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+        }
+        else
+        {
+            reaction1consultant2Icon1.gameObject.SetActive(false);
+        }   
+    }
+    
+    public void SetReaction1Consultant2Icon2(Categories category, bool isPositive, bool visible)
+    {
+        if (visible)
+        {
+            reaction1consultant2Icon2.gameObject.SetActive(true);
+            reaction1consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+        }
+        else
+        {
+            reaction1consultant2Icon2.gameObject.SetActive(false);
+        }   
+    }
+    
+    public void SetReaction2Consultant1Icon1(Categories category, bool isPositive, bool visible)
+    {
+        if (visible)
+        {
+            reaction2consultant1Icon1.gameObject.SetActive(true);
+            reaction2consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+        }
+        else
+        {
+            reaction2consultant1Icon1.gameObject.SetActive(false);
+        }
+    }
+    
+    public void SetReaction2Consultant1Icon2(Categories category, bool isPositive, bool visible)
+    {
+        if (visible)
+        {
+            reaction2consultant1Icon2.gameObject.SetActive(true);
+            reaction2consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+        }
+        else
+        {
+            reaction2consultant1Icon2.gameObject.SetActive(false);
+        }
+    }
+    
+    public void SetReaction2Consultant2Icon1(Categories category, bool isPositive, bool visible)
+    {
+        if (visible)
+        {
+            reaction2consultant2Icon1.gameObject.SetActive(true);
+            reaction2consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+        }
+        else
+        {
+            reaction2consultant2Icon1.gameObject.SetActive(false);
+        }
+    }
+    
+    public void SetReaction2Consultant2Icon2(Categories category, bool isPositive, bool visible)
+    {
+        if (visible)
+        {
+            reaction2consultant2Icon2.gameObject.SetActive(true);
+            reaction2consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+        }
+        else
+        {
+            reaction2consultant2Icon2.gameObject.SetActive(false);
+        }
+    }
+
+    private Sprite ChooseSpriteFromCategoryAndValue(Categories category, bool isPositive)
+    {
+        if (category == Categories.Economy)
+        {
+            return isPositive ? economyUpIcon : economyDownIcon;
+        }
+        
+        if (category == Categories.Military)
+        {
+            return isPositive ? militaryUpIcon : militaryDownIcon;
+        }
+        
+        if (category == Categories.Science)
+        {
+            return isPositive ? scienceUpIcon : scienceDownIcon;
+        }
+        
+        if (category == Categories.Culture)
+        {
+            return isPositive ? cultureUpIcon : cultureDownIcon;
+        }
+        
+        if (category == Categories.CivilRights)
+        {
+            return isPositive ? civilRightsUpIcon : civilRightsDownIcon;
+        }
+        
+        if (category == Categories.FreedomOfSpeech)
+        {
+            return isPositive ? freedomOfSpeechUpIcon : freedomOfSpeechDownIcon;
+        }
+        
+        if (category == Categories.Participation)
+        {
+            return isPositive ? participationUpIcon : participationDownIcon;
+        }
+        
+        if (category == Categories.SeparationOfPower)
+        {
+            return isPositive ? separationOfPowerUpIcon : separationOfPowerDownIcon;
+        }
+
+        return null;
+    }
+    
     public void SetReactionText1(string text)
     {
         reactionText1.SetText(text);

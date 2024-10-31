@@ -60,7 +60,7 @@ public class ConsultantData
     public string Consult(Effect effect, bool civilRightsEnshrined, bool participationEnshrined, bool freedomOfSpeechEnshrined, bool separationOfPowerEnshrined)
     {
         string response = "";
-
+        
         if (civilRightsEnshrined)
         {
             if (effect.civilRights < 0)
@@ -74,10 +74,6 @@ public class ConsultantData
                     response += ", verstößt gegen Menschenrecht";
                 }
             }
-        }
-        else
-        {
-            response = ConsultSingleCategory(response, effect.civilRights, Categories.CivilRights);
         }
         
         if (participationEnshrined)
@@ -94,10 +90,6 @@ public class ConsultantData
                 }
             }
         }
-        else
-        {
-            response = ConsultSingleCategory(response, effect.participation, Categories.Participation);
-        }
         
         if (freedomOfSpeechEnshrined)
         {
@@ -112,10 +104,6 @@ public class ConsultantData
                     response += ", verstößt gegen Meinungsfreiheit";
                 }
             }
-        }
-        else
-        {
-            response = ConsultSingleCategory(response, effect.freedomOfSpeech, Categories.FreedomOfSpeech);
         }
         
         if (separationOfPowerEnshrined)
@@ -132,54 +120,15 @@ public class ConsultantData
                 }  
             }
         }
-        else
-        {
-            response = ConsultSingleCategory(response, effect.separationOfPower, Categories.SeparationOfPower);   
-        }
         
-        response = ConsultSingleCategory(response, effect.economy, Categories.Economy);
-        response = ConsultSingleCategory(response, effect.military, Categories.Military);
-        response = ConsultSingleCategory(response, effect.science, Categories.Science);
-        response = ConsultSingleCategory(response, effect.culture, Categories.Culture);
-
         if (response.Length == 0)
         {
-            response = "Dazu kann ich nichts sagen.";
+            if (effect.GetCategoryValue(category1) == 0 && effect.GetCategoryValue(category2) == 0)
+            {
+                response = "Dazu kann ich nichts sagen.";
+            }
         }
         
-        return response;
-    }
-
-    public string ConsultSingleCategory(string response, int value, Categories category)
-    {
-        if (category1 == category || category2 == category)
-        {
-            if (value > 0)
-            {
-                if (response.Length == 0)
-                {
-                    return response + category.GetDescription() + " steigt";
-                }
-                else
-                {
-                    return response + ", " + category.GetDescription() + " steigt";
-                }
-                
-            }
-
-            if (value < 0)
-            {
-                if (response.Length == 0)
-                {
-                    return response + category.GetDescription() + " sinkt";
-                }
-                else
-                {
-                    return response + ", " + category.GetDescription() + " sinkt";
-                }
-            }
-        }
-
         return response;
     }
 
