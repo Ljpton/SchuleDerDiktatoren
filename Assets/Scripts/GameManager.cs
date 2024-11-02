@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
@@ -65,8 +66,8 @@ public class GameManager : MonoBehaviour
         consultant1 = new ConsultantData();
         consultant2 = new ConsultantData(consultant1.GetCategoriesList());
         
-        uiManager.SetConsultantDescriptionText1(consultant1.ToString());
-        uiManager.SetConsultantDescriptionText2(consultant2.ToString());
+        uiManager.SetConsultant1Icons(consultant1.GetCategory1(), consultant1.GetCategory2());
+        uiManager.SetConsultant2Icons(consultant2.GetCategory1(), consultant2.GetCategory2());
         
         StartRound();
     }
@@ -862,9 +863,9 @@ public class GameManager : MonoBehaviour
         
         // Exchange Consultants
         consultant1 = new ConsultantData();
-        uiManager.SetConsultantDescriptionText1(consultant1.ToString());
         consultant2 = new ConsultantData(consultant1.GetCategoriesList());
-        uiManager.SetConsultantDescriptionText2(consultant2.ToString());
+        uiManager.SetConsultant1Icons(consultant1.GetCategory1(), consultant1.GetCategory2());
+        uiManager.SetConsultant2Icons(consultant2.GetCategory1(), consultant2.GetCategory2());
         
         // Reenable ExchangeConsultantButtons
         uiManager.SetExchangeConsultantButton1Enabled(true);
@@ -1033,7 +1034,7 @@ public class GameManager : MonoBehaviour
         };
 
         consultant1 = new ConsultantData(categoriesToSkip);
-        uiManager.SetConsultantDescriptionText1(consultant1.ToString());
+        uiManager.SetConsultant1Icons(consultant1.GetCategory1(), consultant1.GetCategory2());
         
         uiManager.SetConsultant1Reaction1Text(consultant1.Consult(currentEvent.reaction1.effect,
             civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined));
@@ -1059,7 +1060,7 @@ public class GameManager : MonoBehaviour
         };
 
         consultant2 = new ConsultantData(categoriesToSkip);
-        uiManager.SetConsultantDescriptionText2(consultant2.ToString());
+        uiManager.SetConsultant2Icons(consultant2.GetCategory1(), consultant2.GetCategory2());
         
         uiManager.SetConsultant2Reaction1Text(consultant2.Consult(currentEvent.reaction1.effect,
             civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 

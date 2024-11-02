@@ -2,6 +2,7 @@ using System.ComponentModel;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -43,8 +44,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text consultant1Reaction2Text;
     [SerializeField] private TMP_Text consultant2Reaction1Text;
     [SerializeField] private TMP_Text consultant2Reaction2Text;
-    [SerializeField] private TMP_Text consultantDescriptionText1;
-    [SerializeField] private TMP_Text consultantDescriptionText2;
     
     [SerializeField] private Button reactionButton1;
     [SerializeField] private Button reactionButton2;
@@ -54,6 +53,11 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private RectTransform reaction1;
     [SerializeField] private RectTransform reaction2;
+    
+    [SerializeField] private Image consultant1CategoryIcon1;
+    [SerializeField] private Image consultant1CategoryIcon2;
+    [SerializeField] private Image consultant2CategoryIcon1;
+    [SerializeField] private Image consultant2CategoryIcon2;
     
     [SerializeField] private Sprite economyUpIcon;
     [SerializeField] private Sprite economyDownIcon;
@@ -71,16 +75,25 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Sprite participationDownIcon;
     [SerializeField] private Sprite separationOfPowerUpIcon;
     [SerializeField] private Sprite separationOfPowerDownIcon;
-
-    [SerializeField] private Image reaction1consultant1Icon1;
-    [SerializeField] private Image reaction1consultant1Icon2;
-    [SerializeField] private Image reaction1consultant2Icon1;
-    [SerializeField] private Image reaction1consultant2Icon2;
     
-    [SerializeField] private Image reaction2consultant1Icon1;
-    [SerializeField] private Image reaction2consultant1Icon2;
-    [SerializeField] private Image reaction2consultant2Icon1;
-    [SerializeField] private Image reaction2consultant2Icon2;
+    [SerializeField] private Sprite economyIcon;
+    [SerializeField] private Sprite militaryIcon;
+    [SerializeField] private Sprite scienceIcon;
+    [SerializeField] private Sprite cultureIcon;
+    [SerializeField] private Sprite civilRightsIcon;
+    [SerializeField] private Sprite freedomOfSpeechIcon;
+    [SerializeField] private Sprite participationIcon;
+    [SerializeField] private Sprite separationOfPowerIcon;
+
+    [SerializeField] private Image reaction1Consultant1Icon1;
+    [SerializeField] private Image reaction1Consultant1Icon2;
+    [SerializeField] private Image reaction1Consultant2Icon1;
+    [SerializeField] private Image reaction1Consultant2Icon2;
+    
+    [SerializeField] private Image reaction2Consultant1Icon1;
+    [SerializeField] private Image reaction2Consultant1Icon2;
+    [SerializeField] private Image reaction2Consultant2Icon1;
+    [SerializeField] private Image reaction2Consultant2Icon2;
 
     // BALANCE SCREEN
     [Category("Balance Screen")]
@@ -184,12 +197,12 @@ public class UIManager : MonoBehaviour
     {
         if (visible)
         {
-            reaction1consultant1Icon1.gameObject.SetActive(true);
-            reaction1consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+            reaction1Consultant1Icon1.gameObject.SetActive(true);
+            reaction1Consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
         }
         else
         {
-            reaction1consultant1Icon1.gameObject.SetActive(false);
+            reaction1Consultant1Icon1.gameObject.SetActive(false);
         }
     }
     
@@ -197,24 +210,24 @@ public class UIManager : MonoBehaviour
     {
         if (visible)
         {
-            reaction1consultant1Icon2.gameObject.SetActive(true);
-            reaction1consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+            reaction1Consultant1Icon2.gameObject.SetActive(true);
+            reaction1Consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
         }
         else
         {
-            reaction1consultant1Icon2.gameObject.SetActive(false);
+            reaction1Consultant1Icon2.gameObject.SetActive(false);
         }    }
     
     public void SetReaction1Consultant2Icon1(Categories category, bool isPositive, bool visible)
     {
         if (visible)
         {
-            reaction1consultant2Icon1.gameObject.SetActive(true);
-            reaction1consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+            reaction1Consultant2Icon1.gameObject.SetActive(true);
+            reaction1Consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
         }
         else
         {
-            reaction1consultant2Icon1.gameObject.SetActive(false);
+            reaction1Consultant2Icon1.gameObject.SetActive(false);
         }   
     }
     
@@ -222,12 +235,12 @@ public class UIManager : MonoBehaviour
     {
         if (visible)
         {
-            reaction1consultant2Icon2.gameObject.SetActive(true);
-            reaction1consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+            reaction1Consultant2Icon2.gameObject.SetActive(true);
+            reaction1Consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
         }
         else
         {
-            reaction1consultant2Icon2.gameObject.SetActive(false);
+            reaction1Consultant2Icon2.gameObject.SetActive(false);
         }   
     }
     
@@ -235,12 +248,12 @@ public class UIManager : MonoBehaviour
     {
         if (visible)
         {
-            reaction2consultant1Icon1.gameObject.SetActive(true);
-            reaction2consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+            reaction2Consultant1Icon1.gameObject.SetActive(true);
+            reaction2Consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
         }
         else
         {
-            reaction2consultant1Icon1.gameObject.SetActive(false);
+            reaction2Consultant1Icon1.gameObject.SetActive(false);
         }
     }
     
@@ -248,12 +261,12 @@ public class UIManager : MonoBehaviour
     {
         if (visible)
         {
-            reaction2consultant1Icon2.gameObject.SetActive(true);
-            reaction2consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+            reaction2Consultant1Icon2.gameObject.SetActive(true);
+            reaction2Consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
         }
         else
         {
-            reaction2consultant1Icon2.gameObject.SetActive(false);
+            reaction2Consultant1Icon2.gameObject.SetActive(false);
         }
     }
     
@@ -261,12 +274,12 @@ public class UIManager : MonoBehaviour
     {
         if (visible)
         {
-            reaction2consultant2Icon1.gameObject.SetActive(true);
-            reaction2consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+            reaction2Consultant2Icon1.gameObject.SetActive(true);
+            reaction2Consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
         }
         else
         {
-            reaction2consultant2Icon1.gameObject.SetActive(false);
+            reaction2Consultant2Icon1.gameObject.SetActive(false);
         }
     }
     
@@ -274,12 +287,12 @@ public class UIManager : MonoBehaviour
     {
         if (visible)
         {
-            reaction2consultant2Icon2.gameObject.SetActive(true);
-            reaction2consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
+            reaction2Consultant2Icon2.gameObject.SetActive(true);
+            reaction2Consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
         }
         else
         {
-            reaction2consultant2Icon2.gameObject.SetActive(false);
+            reaction2Consultant2Icon2.gameObject.SetActive(false);
         }
     }
 
@@ -390,16 +403,6 @@ public class UIManager : MonoBehaviour
     public void SetConsultant2Reaction2Text(string text)
     {
         consultant2Reaction2Text.SetText(text);
-    }
-
-    public void SetConsultantDescriptionText1(string text)
-    {
-        consultantDescriptionText1.SetText(text);
-    }
-
-    public void SetConsultantDescriptionText2(string text)
-    {
-        consultantDescriptionText2.SetText(text);
     }
 
     public void SetEconomyBalanceSlider(int value)
@@ -783,6 +786,124 @@ public class UIManager : MonoBehaviour
             optionsButtonImage.sprite = closeImage;
             optionsMenu.SetActive(true);
             optionsMenuVisible = true;
+        }
+    }
+    
+    public void SetConsultant1Icons(Categories category1, Categories category2)
+    {
+        switch (category1)
+        {
+            case Categories.Culture:
+                consultant1CategoryIcon1.sprite = cultureIcon;
+                break;
+            case Categories.CivilRights:
+                consultant1CategoryIcon1.sprite = civilRightsIcon;
+                break;
+            case Categories.FreedomOfSpeech:
+                consultant1CategoryIcon1.sprite = freedomOfSpeechIcon;
+                break;
+            case Categories.Participation:
+                consultant1CategoryIcon1.sprite = participationIcon;
+                break;
+            case Categories.Military:
+                consultant1CategoryIcon1.sprite = militaryIcon;
+                break;
+            case Categories.Economy:
+                consultant1CategoryIcon1.sprite = economyIcon;
+                break;
+            case Categories.Science:
+                consultant1CategoryIcon1.sprite = scienceIcon;
+                break;
+            case Categories.SeparationOfPower:
+                consultant1CategoryIcon1.sprite = separationOfPowerIcon;
+                break;
+        }
+        
+        switch (category2)
+        {
+            case Categories.Culture:
+                consultant1CategoryIcon2.sprite = cultureIcon;
+                break;
+            case Categories.CivilRights:
+                consultant1CategoryIcon2.sprite = civilRightsIcon;
+                break;
+            case Categories.FreedomOfSpeech:
+                consultant1CategoryIcon2.sprite = freedomOfSpeechIcon;
+                break;
+            case Categories.Participation:
+                consultant1CategoryIcon2.sprite = participationIcon;
+                break;
+            case Categories.Military:
+                consultant1CategoryIcon2.sprite = militaryIcon;
+                break;
+            case Categories.Economy:
+                consultant1CategoryIcon2.sprite = economyIcon;
+                break;
+            case Categories.Science:
+                consultant1CategoryIcon2.sprite = scienceIcon;
+                break;
+            case Categories.SeparationOfPower:
+                consultant1CategoryIcon2.sprite = separationOfPowerIcon;
+                break;
+        }
+    }
+    
+    public void SetConsultant2Icons(Categories category1, Categories category2)
+    {
+        switch (category1)
+        {
+            case Categories.Culture:
+                consultant2CategoryIcon1.sprite = cultureIcon;
+                break;
+            case Categories.CivilRights:
+                consultant2CategoryIcon1.sprite = civilRightsIcon;
+                break;
+            case Categories.FreedomOfSpeech:
+                consultant2CategoryIcon1.sprite = freedomOfSpeechIcon;
+                break;
+            case Categories.Participation:
+                consultant2CategoryIcon1.sprite = participationIcon;
+                break;
+            case Categories.Military:
+                consultant2CategoryIcon1.sprite = militaryIcon;
+                break;
+            case Categories.Economy:
+                consultant2CategoryIcon1.sprite = economyIcon;
+                break;
+            case Categories.Science:
+                consultant2CategoryIcon1.sprite = scienceIcon;
+                break;
+            case Categories.SeparationOfPower:
+                consultant2CategoryIcon1.sprite = separationOfPowerIcon;
+                break;
+        }
+        
+        switch (category2)
+        {
+            case Categories.Culture:
+                consultant2CategoryIcon2.sprite = cultureIcon;
+                break;
+            case Categories.CivilRights:
+                consultant2CategoryIcon2.sprite = civilRightsIcon;
+                break;
+            case Categories.FreedomOfSpeech:
+                consultant2CategoryIcon2.sprite = freedomOfSpeechIcon;
+                break;
+            case Categories.Participation:
+                consultant2CategoryIcon2.sprite = participationIcon;
+                break;
+            case Categories.Military:
+                consultant2CategoryIcon2.sprite = militaryIcon;
+                break;
+            case Categories.Economy:
+                consultant2CategoryIcon2.sprite = economyIcon;
+                break;
+            case Categories.Science:
+                consultant2CategoryIcon2.sprite = scienceIcon;
+                break;
+            case Categories.SeparationOfPower:
+                consultant2CategoryIcon2.sprite = separationOfPowerIcon;
+                break;
         }
     }
 }
