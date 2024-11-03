@@ -4559,7 +4559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentRound: 0
-  currentHealth: 3
+  currentHealth: 5
   legislatureTerm: 4
   civilRights: 50
   participation: 50
