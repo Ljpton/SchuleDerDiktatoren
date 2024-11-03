@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
@@ -9,10 +8,8 @@ public class GameManager : MonoBehaviour
     private AudioManager audioManager;
     
     public int currentRound;
-    public int maxRounds = 50;
 
-    public int currentHealth = 3;
-    public int maxHealth = 3;
+    public int currentHealth = 5;
 
     public int legislatureTerm = 4;
 
@@ -68,6 +65,8 @@ public class GameManager : MonoBehaviour
         
         uiManager.SetConsultant1Icons(consultant1.GetCategory1(), consultant1.GetCategory2());
         uiManager.SetConsultant2Icons(consultant2.GetCategory1(), consultant2.GetCategory2());
+        
+        uiManager.SetHealthText(currentHealth);
         
         StartRound();
     }
@@ -847,19 +846,6 @@ public class GameManager : MonoBehaviour
         }
         
         uiManager.SetDemocracySumText(democracySum);
-
-        // Add Health
-        if (currentHealth is < 3 and > 0)
-        {
-            currentHealth++;
-            uiManager.SetHealthRegenerationTextVisibility(true);
-        }
-        else
-        {
-            uiManager.SetHealthRegenerationTextVisibility(false);
-        }
-        
-        uiManager.SetHealthText(currentHealth);
         
         // Exchange Consultants
         consultant1 = new ConsultantData();
@@ -874,8 +860,6 @@ public class GameManager : MonoBehaviour
 
     public void EndBalance()
     {
-        uiManager.SetHealthRegenerationTextVisibility(false);
-
         if (civilRights >= 100 && participation >= 100 && freedomOfSpeech >= 100 && separationOfPower >= 100)
         {
             if (lawEnshrinedThisRound)
@@ -973,9 +957,7 @@ public class GameManager : MonoBehaviour
         
         if (effect.civilRights < 0 && civilRightsEnshrined)
         {
-            Debug.Log("You acted against the law.");
-            currentHealth--;
-            uiManager.SetHealthText(currentHealth);
+            LoseHealth();
         }
         else
         {
@@ -984,9 +966,7 @@ public class GameManager : MonoBehaviour
         
         if (effect.participation < 0 && participationEnshrined)
         {
-            Debug.Log("You acted against the law.");
-            currentHealth--;
-            uiManager.SetHealthText(currentHealth);
+            LoseHealth();
         }
         else
         {
@@ -995,9 +975,7 @@ public class GameManager : MonoBehaviour
         
         if (effect.freedomOfSpeech < 0 && freedomOfSpeechEnshrined)
         {
-            Debug.Log("You acted against the law.");
-            currentHealth--;
-            uiManager.SetHealthText(currentHealth);
+            LoseHealth();
         }
         else
         {
@@ -1006,9 +984,7 @@ public class GameManager : MonoBehaviour
         
         if (effect.separationOfPower < 0 && separationOfPowerEnshrined)
         {
-            Debug.Log("You acted against the law.");
-            currentHealth--;
-            uiManager.SetHealthText(currentHealth);
+            LoseHealth();
         }
         else
         {
@@ -1107,5 +1083,6 @@ public class GameManager : MonoBehaviour
         currentHealth--;
         audioManager.PlayLoseHealthSound();
         uiManager.SetHealthText(currentHealth);
+        uiManager.AnimateHealthText();
     }
 }

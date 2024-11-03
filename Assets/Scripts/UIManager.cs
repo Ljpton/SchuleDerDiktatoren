@@ -128,8 +128,6 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TMP_Text democracySumText;
     [SerializeField] private TMP_Text resourcesSumText;
-
-    [SerializeField] private TMP_Text healthRegenerationText;
     
     // NEW LAW SCREEN
     [Category("New Law Screen")]
@@ -627,9 +625,9 @@ public class UIManager : MonoBehaviour
         healthText.SetText("Leben: " + value);
     }
 
-    public void SetHealthRegenerationTextVisibility(bool visible)
+    public void AnimateHealthText()
     {
-        healthRegenerationText.gameObject.SetActive(visible);
+        healthText.GetComponent<Animator>().SetTrigger("flash");
     }
 
     public void SetGameOverScreenActive()

@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
@@ -11,6 +10,7 @@ public class Tutorial : MonoBehaviour
 
     [SerializeField] private TMP_Text backButtonText; 
     [SerializeField] private GameObject[] tutorialScreens;
+    [SerializeField] private GameObject loadingHint;
     
     // Start is called before the first frame update
     private void Start()
@@ -56,6 +56,7 @@ public class Tutorial : MonoBehaviour
         if (index >= tutorialScreens.Length)
         {
             SceneManager.LoadScene("Game");
+            loadingHint.SetActive(true);
             return;
         }
         
