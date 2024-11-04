@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -118,14 +117,6 @@ public class ConsultantData
                 {
                     response += ", verstößt gegen Gewaltenteilung";
                 }  
-            }
-        }
-        
-        if (response.Length == 0)
-        {
-            if (effect.GetCategoryValue(category1) == 0 && effect.GetCategoryValue(category2) == 0)
-            {
-                response = "Dazu kann ich nichts sagen.";
             }
         }
         

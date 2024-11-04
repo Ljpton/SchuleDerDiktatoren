@@ -86,6 +86,14 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Sprite participationDownIcon;
     [SerializeField] private Sprite separationOfPowerUpIcon;
     [SerializeField] private Sprite separationOfPowerDownIcon;
+    [SerializeField] private Sprite economyEqualIcon;
+    [SerializeField] private Sprite militaryEqualIcon;
+    [SerializeField] private Sprite scienceEqualIcon;
+    [SerializeField] private Sprite cultureEqualIcon;
+    [SerializeField] private Sprite civilRightsEqualIcon;
+    [SerializeField] private Sprite freedomOfSpeechEqualIcon;
+    [SerializeField] private Sprite participationEqualIcon;
+    [SerializeField] private Sprite separationOfPowerEqualIcon;
     
     [SerializeField] private Sprite economyIcon;
     [SerializeField] private Sprite militaryIcon;
@@ -195,149 +203,94 @@ public class UIManager : MonoBehaviour
         eventDescription.SetText(description);
     }
 
-    public void SetReaction1Consultant1Icon1(Categories category, bool isPositive, bool visible)
+    public void SetReaction1Consultant1Icon1(Categories category, int value)
     {
-        if (visible)
-        {
-            reaction1Consultant1Icon1.gameObject.SetActive(true);
-            reaction1Consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
-        }
-        else
-        {
-            reaction1Consultant1Icon1.gameObject.SetActive(false);
-        }
+        reaction1Consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value);
     }
     
-    public void SetReaction1Consultant1Icon2(Categories category, bool isPositive, bool visible)
+    public void SetReaction1Consultant1Icon2(Categories category, int value)
     {
-        if (visible)
-        {
-            reaction1Consultant1Icon2.gameObject.SetActive(true);
-            reaction1Consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
-        }
-        else
-        {
-            reaction1Consultant1Icon2.gameObject.SetActive(false);
-        }    }
-    
-    public void SetReaction1Consultant2Icon1(Categories category, bool isPositive, bool visible)
-    {
-        if (visible)
-        {
-            reaction1Consultant2Icon1.gameObject.SetActive(true);
-            reaction1Consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
-        }
-        else
-        {
-            reaction1Consultant2Icon1.gameObject.SetActive(false);
-        }   
+        reaction1Consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value);
     }
     
-    public void SetReaction1Consultant2Icon2(Categories category, bool isPositive, bool visible)
+    public void SetReaction1Consultant2Icon1(Categories category, int value)
     {
-        if (visible)
-        {
-            reaction1Consultant2Icon2.gameObject.SetActive(true);
-            reaction1Consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
-        }
-        else
-        {
-            reaction1Consultant2Icon2.gameObject.SetActive(false);
-        }   
+        reaction1Consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value);
     }
     
-    public void SetReaction2Consultant1Icon1(Categories category, bool isPositive, bool visible)
+    public void SetReaction1Consultant2Icon2(Categories category, int value)
     {
-        if (visible)
-        {
-            reaction2Consultant1Icon1.gameObject.SetActive(true);
-            reaction2Consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
-        }
-        else
-        {
-            reaction2Consultant1Icon1.gameObject.SetActive(false);
-        }
+        reaction1Consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value);
     }
     
-    public void SetReaction2Consultant1Icon2(Categories category, bool isPositive, bool visible)
+    public void SetReaction2Consultant1Icon1(Categories category, int value)
     {
-        if (visible)
-        {
-            reaction2Consultant1Icon2.gameObject.SetActive(true);
-            reaction2Consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
-        }
-        else
-        {
-            reaction2Consultant1Icon2.gameObject.SetActive(false);
-        }
+        reaction2Consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value);
     }
     
-    public void SetReaction2Consultant2Icon1(Categories category, bool isPositive, bool visible)
+    public void SetReaction2Consultant1Icon2(Categories category, int value)
     {
-        if (visible)
-        {
-            reaction2Consultant2Icon1.gameObject.SetActive(true);
-            reaction2Consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
-        }
-        else
-        {
-            reaction2Consultant2Icon1.gameObject.SetActive(false);
-        }
+        reaction2Consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value);
     }
     
-    public void SetReaction2Consultant2Icon2(Categories category, bool isPositive, bool visible)
+    public void SetReaction2Consultant2Icon1(Categories category, int value)
     {
-        if (visible)
-        {
-            reaction2Consultant2Icon2.gameObject.SetActive(true);
-            reaction2Consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, isPositive);
-        }
-        else
-        {
-            reaction2Consultant2Icon2.gameObject.SetActive(false);
-        }
+        reaction2Consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value);
+    }
+    
+    public void SetReaction2Consultant2Icon2(Categories category, int value)
+    {
+        reaction2Consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value);
     }
 
-    private Sprite ChooseSpriteFromCategoryAndValue(Categories category, bool isPositive)
+    private Sprite ChooseSpriteFromCategoryAndValue(Categories category, int value)
     {
         if (category == Categories.Economy)
         {
-            return isPositive ? economyUpIcon : economyDownIcon;
+            if (value == 0) return economyEqualIcon;
+            return value > 0 ? economyUpIcon : economyDownIcon;
         }
         
         if (category == Categories.Military)
         {
-            return isPositive ? militaryUpIcon : militaryDownIcon;
+            if (value == 0) return militaryEqualIcon;
+            return value > 0 ? militaryUpIcon : militaryDownIcon;
         }
         
         if (category == Categories.Science)
         {
-            return isPositive ? scienceUpIcon : scienceDownIcon;
+            if (value == 0) return scienceEqualIcon;
+            return value > 0 ? scienceUpIcon : scienceDownIcon;
         }
         
         if (category == Categories.Culture)
         {
-            return isPositive ? cultureUpIcon : cultureDownIcon;
+            if (value == 0) return cultureEqualIcon;
+            return value > 0 ? cultureUpIcon : cultureDownIcon;
         }
         
         if (category == Categories.CivilRights)
         {
-            return isPositive ? civilRightsUpIcon : civilRightsDownIcon;
+            if (value == 0) return civilRightsEqualIcon;
+            return value > 0 ? civilRightsUpIcon : civilRightsDownIcon;
         }
         
         if (category == Categories.FreedomOfSpeech)
         {
-            return isPositive ? freedomOfSpeechUpIcon : freedomOfSpeechDownIcon;
+            if (value == 0) return freedomOfSpeechEqualIcon;
+            return value > 0 ? freedomOfSpeechUpIcon : freedomOfSpeechDownIcon;
         }
         
         if (category == Categories.Participation)
         {
-            return isPositive ? participationUpIcon : participationDownIcon;
+            if (value == 0) return participationEqualIcon;
+            return value > 0 ? participationUpIcon : participationDownIcon;
         }
         
         if (category == Categories.SeparationOfPower)
         {
-            return isPositive ? separationOfPowerUpIcon : separationOfPowerDownIcon;
+            if (value == 0) return separationOfPowerEqualIcon;
+            return value > 0 ? separationOfPowerUpIcon : separationOfPowerDownIcon;
         }
 
         return null;
