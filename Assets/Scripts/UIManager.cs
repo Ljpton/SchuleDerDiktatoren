@@ -2,7 +2,6 @@ using System.ComponentModel;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -10,7 +9,7 @@ public class UIManager : MonoBehaviour
     private GameManager gameManager;
     private AudioManager audioManager;
     
-    private bool optionsMenuVisible = false;
+    private bool optionsMenuVisible;
     
     // INFO SCREEN
     [Category("Info Screen")]
@@ -58,6 +57,18 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Image consultant1CategoryIcon2;
     [SerializeField] private Image consultant2CategoryIcon1;
     [SerializeField] private Image consultant2CategoryIcon2;
+
+    [SerializeField] private Sprite[] economyConsultants;
+    [SerializeField] private Sprite[] militaryConsultants;
+    [SerializeField] private Sprite[] scienceConsultants;
+    [SerializeField] private Sprite[] cultureConsultants;
+    [SerializeField] private Sprite[] civilRightsConsultants;
+    [SerializeField] private Sprite[] freedomOfSpeechConsultants;
+    [SerializeField] private Sprite[] participationConsultants;
+    [SerializeField] private Sprite[] separationOfPowerConsultants;
+
+    [SerializeField] private Image consultant1Image;
+    [SerializeField] private Image consultant2Image;
     
     [SerializeField] private Sprite economyUpIcon;
     [SerializeField] private Sprite economyDownIcon;
@@ -159,14 +170,7 @@ public class UIManager : MonoBehaviour
             Debug.Log("GameManager couldn't be found.");
         }
         
-        if (audioManager.GetMasterVolume() > -1)
-        {
-            soundButtonImage.sprite = soundOnImage;
-        }
-        else
-        {
-            soundButtonImage.sprite = soundOffImage;
-        }
+        soundButtonImage.sprite = audioManager.GetMasterVolume() > -1 ? soundOnImage : soundOffImage;
     }
 
     public void SetEventScreenActive()
@@ -757,14 +761,7 @@ public class UIManager : MonoBehaviour
     {
         bool audioEnabled = audioManager.ToggleAudioVolume();
 
-        if (audioEnabled)
-        {
-            soundButtonImage.sprite = soundOnImage;
-        }
-        else
-        {
-            soundButtonImage.sprite = soundOffImage;
-        }
+        soundButtonImage.sprite = audioEnabled ? soundOnImage : soundOffImage;
         
         audioManager.PlayButtonSound();
     }
@@ -901,6 +898,68 @@ public class UIManager : MonoBehaviour
                 break;
             case Categories.SeparationOfPower:
                 consultant2CategoryIcon2.sprite = separationOfPowerIcon;
+                break;
+        }
+    }
+
+    public void SetConsultant1Image(Categories category)
+    {
+        switch (category)
+        {
+            case Categories.Culture:
+                consultant1Image.sprite = cultureConsultants[Random.Range(0, cultureConsultants.Length)];
+                break;
+            case Categories.CivilRights:
+                consultant1Image.sprite = civilRightsConsultants[Random.Range(0, civilRightsConsultants.Length)];
+                break;
+            case Categories.FreedomOfSpeech:
+                consultant1Image.sprite = freedomOfSpeechConsultants[Random.Range(0, freedomOfSpeechConsultants.Length)];
+                break;
+            case Categories.Participation:
+                consultant1Image.sprite = participationConsultants[Random.Range(0, participationConsultants.Length)];
+                break;
+            case Categories.Military:
+                consultant1Image.sprite = militaryConsultants[Random.Range(0, militaryConsultants.Length)];
+                break;
+            case Categories.Economy:
+                consultant1Image.sprite = economyConsultants[Random.Range(0, economyConsultants.Length)];
+                break;
+            case Categories.Science:
+                consultant1Image.sprite = scienceConsultants[Random.Range(0, scienceConsultants.Length)];
+                break;
+            case Categories.SeparationOfPower:
+                consultant1Image.sprite = separationOfPowerConsultants[Random.Range(0, separationOfPowerConsultants.Length)];
+                break;
+        }
+    }
+    
+    public void SetConsultant2Image(Categories category)
+    {
+        switch (category)
+        {
+            case Categories.Culture:
+                consultant2Image.sprite = cultureConsultants[Random.Range(0, cultureConsultants.Length)];
+                break;
+            case Categories.CivilRights:
+                consultant2Image.sprite = civilRightsConsultants[Random.Range(0, civilRightsConsultants.Length)];
+                break;
+            case Categories.FreedomOfSpeech:
+                consultant2Image.sprite = freedomOfSpeechConsultants[Random.Range(0, freedomOfSpeechConsultants.Length)];
+                break;
+            case Categories.Participation:
+                consultant2Image.sprite = participationConsultants[Random.Range(0, participationConsultants.Length)];
+                break;
+            case Categories.Military:
+                consultant2Image.sprite = militaryConsultants[Random.Range(0, militaryConsultants.Length)];
+                break;
+            case Categories.Economy:
+                consultant2Image.sprite = economyConsultants[Random.Range(0, economyConsultants.Length)];
+                break;
+            case Categories.Science:
+                consultant2Image.sprite = scienceConsultants[Random.Range(0, scienceConsultants.Length)];
+                break;
+            case Categories.SeparationOfPower:
+                consultant2Image.sprite = separationOfPowerConsultants[Random.Range(0, separationOfPowerConsultants.Length)];
                 break;
         }
     }

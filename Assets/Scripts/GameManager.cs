@@ -66,6 +66,9 @@ public class GameManager : MonoBehaviour
         uiManager.SetConsultant1Icons(consultant1.GetCategory1(), consultant1.GetCategory2());
         uiManager.SetConsultant2Icons(consultant2.GetCategory1(), consultant2.GetCategory2());
         
+        uiManager.SetConsultant1Image(consultant1.GetCategory1());
+        uiManager.SetConsultant2Image(consultant2.GetCategory1());
+        
         uiManager.SetHealthText(currentHealth);
         
         StartRound();
@@ -852,6 +855,8 @@ public class GameManager : MonoBehaviour
         consultant2 = new ConsultantData(consultant1.GetCategoriesList());
         uiManager.SetConsultant1Icons(consultant1.GetCategory1(), consultant1.GetCategory2());
         uiManager.SetConsultant2Icons(consultant2.GetCategory1(), consultant2.GetCategory2());
+        uiManager.SetConsultant1Image(consultant1.GetCategory1());
+        uiManager.SetConsultant2Image(consultant2.GetCategory1());
         
         // Reenable ExchangeConsultantButtons
         uiManager.SetExchangeConsultantButton1Enabled(true);
@@ -871,7 +876,7 @@ public class GameManager : MonoBehaviour
             {
                 uiManager.SetGameOverScreenActive();
             
-                uiManager.SetGameOverLabelText("Glückwunsch!");
+                uiManager.SetGameOverLabelText("Gratulation!");
                 uiManager.SetGameOverText("Du hast alle Grundwerte einer Demokratie etabliert und im Grundgesetz verankert. Natürlich musst du jetzt einem gewählten Parlament Platz machen. Dafür werden du und dieser Tag in die Geschichte dieses Landes eingehen.");
             }
         }
@@ -880,14 +885,15 @@ public class GameManager : MonoBehaviour
             uiManager.SetGameOverScreenActive();
             
             uiManager.SetGameOverLabelText("Game Over");
-            uiManager.SetGameOverText("Du hast es auf dem Weg zur Demokratie weit gebracht, aber dazu gehört auch, sich an die eigenen Gesetze zu halten. Du musst deinen Posten in der Regierung abgeben und joa.");
+            uiManager.SetGameOverText("Du hast es auf dem Weg zur Demokratie weit gebracht, aber dazu gehört auch, sich an die eigenen Gesetze zu halten. Leider hast du einmal zu oft gegen das Gesetz verstoßen und den Unmut des Volkes erregt.");
         }
         else if (civilRights <= 0 || participation <= 0 || freedomOfSpeech <= 0 || separationOfPower <= 0 ||
             economy <= 0 || military <= 0 || science <= 0 || culture <= 0)
         {
             uiManager.SetGameOverScreenActive();
             
-            // TODO: Set LabelText and GameOverText
+            uiManager.SetGameOverLabelText("Game Over");
+            uiManager.SetGameOverText("Es ist schwierig, so viele Dinge gleichzeitig im Auge zu behalten und letztendlich ist deiner Aufmerksamkeit wohl etwas entgangen. Das Volk hingegen hat das sehr wohl zu spüren bekommen und nutzt alle Mittel, um eine neue Führungsperson an deine Stelle zu setzen.");
         }
         else
         {
@@ -1011,6 +1017,7 @@ public class GameManager : MonoBehaviour
 
         consultant1 = new ConsultantData(categoriesToSkip);
         uiManager.SetConsultant1Icons(consultant1.GetCategory1(), consultant1.GetCategory2());
+        uiManager.SetConsultant1Image(consultant1.GetCategory1());
         
         uiManager.SetConsultant1Reaction1Text(consultant1.Consult(currentEvent.reaction1.effect,
             civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined));
@@ -1037,6 +1044,7 @@ public class GameManager : MonoBehaviour
 
         consultant2 = new ConsultantData(categoriesToSkip);
         uiManager.SetConsultant2Icons(consultant2.GetCategory1(), consultant2.GetCategory2());
+        uiManager.SetConsultant2Image(consultant2.GetCategory1());
         
         uiManager.SetConsultant2Reaction1Text(consultant2.Consult(currentEvent.reaction1.effect,
             civilRightsEnshrined, participationEnshrined, freedomOfSpeechEnshrined, separationOfPowerEnshrined)); 
@@ -1067,7 +1075,7 @@ public class GameManager : MonoBehaviour
         {
             uiManager.SetGameOverScreenActive();
             
-            uiManager.SetGameOverLabelText("Glückwunsch!");
+            uiManager.SetGameOverLabelText("Gratulation!");
             uiManager.SetGameOverText("Du hast alle Grundwerte einer Demokratie etabliert und im Grundgesetz verankert. Natürlich musst du jetzt einem gewählten Parlament Platz machen. Dafür werden du und dieser Tag in die Geschichte dieses Landes eingehen.");
         }
         else
