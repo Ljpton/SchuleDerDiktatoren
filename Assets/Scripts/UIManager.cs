@@ -276,28 +276,40 @@ public class UIManager : MonoBehaviour
         
         if (category == Categories.CivilRights)
         {
-            if (enshrined) return civilRightsLawIcon;
+            if (enshrined)
+            {
+                return value < 0 ? civilRightsLawIcon : civilRightsEqualIcon;
+            }
             if (value == 0) return civilRightsEqualIcon;
             return value > 0 ? civilRightsUpIcon : civilRightsDownIcon;
         }
         
         if (category == Categories.FreedomOfSpeech)
         {
-            if (enshrined) return freedomOfSpeechLawIcon;
+            if (enshrined)
+            {
+                return value < 0 ? freedomOfSpeechLawIcon : freedomOfSpeechEqualIcon;
+            }
             if (value == 0) return freedomOfSpeechEqualIcon;
             return value > 0 ? freedomOfSpeechUpIcon : freedomOfSpeechDownIcon;
         }
         
         if (category == Categories.Participation)
         {
-            if (enshrined) return participationLawIcon;
+            if (enshrined)
+            {
+                return value < 0 ? participationLawIcon : participationEqualIcon;
+            }
             if (value == 0) return participationEqualIcon;
             return value > 0 ? participationUpIcon : participationDownIcon;
         }
         
         if (category == Categories.SeparationOfPower)
         {
-            if (enshrined) return separationOfPowerLawIcon;
+            if (enshrined)
+            {
+                return value < 0 ? separationOfPowerLawIcon : separationOfPowerEqualIcon;
+            }
             if (value == 0) return separationOfPowerEqualIcon;
             return value > 0 ? separationOfPowerUpIcon : separationOfPowerDownIcon;
         }
