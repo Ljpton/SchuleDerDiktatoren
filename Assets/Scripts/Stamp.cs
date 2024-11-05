@@ -23,8 +23,16 @@ public class Stamp : MonoBehaviour, IPointerClickHandler
     {
         if (!spawnedStamp) // Check if stamp doesn't exist
         {
-            spawnedStamp = Instantiate(stampObject, eventData.position, Quaternion.Euler(0, 0, Random.Range(-15f, 15f)));
+            var canvas = FindObjectOfType<Canvas>();
+            var screenPosition = eventData.position;
+            var uiCamera = canvas.worldCamera;
+            var planeDistance = canvas.planeDistance;
+            
+            Vector3 worldPosition = uiCamera.ScreenToWorldPoint(new Vector3(screenPosition.x, screenPosition.y, planeDistance));
+            
+            spawnedStamp = Instantiate(stampObject, worldPosition, Quaternion.Euler(0, 0, Random.Range(-15f, 15f)));
             spawnedStamp.transform.SetParent(gameObject.transform);
+            spawnedStamp.transform.localScale = Vector3.one * 2;
         }
         
         Invoke(nameof(NotifyStamp), 2);

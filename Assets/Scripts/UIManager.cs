@@ -95,6 +95,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Sprite participationEqualIcon;
     [SerializeField] private Sprite separationOfPowerEqualIcon;
     
+    [SerializeField] private Sprite civilRightsLawIcon;
+    [SerializeField] private Sprite freedomOfSpeechLawIcon;
+    [SerializeField] private Sprite participationLawIcon;
+    [SerializeField] private Sprite separationOfPowerLawIcon;
+    
     [SerializeField] private Sprite economyIcon;
     [SerializeField] private Sprite militaryIcon;
     [SerializeField] private Sprite scienceIcon;
@@ -203,47 +208,47 @@ public class UIManager : MonoBehaviour
         eventDescription.SetText(description);
     }
 
-    public void SetReaction1Consultant1Icon1(Categories category, int value)
+    public void SetReaction1Consultant1Icon1(Categories category, int value, bool enshrined = false)
     {
-        reaction1Consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value);
+        reaction1Consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
     
-    public void SetReaction1Consultant1Icon2(Categories category, int value)
+    public void SetReaction1Consultant1Icon2(Categories category, int value, bool enshrined = false)
     {
-        reaction1Consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value);
+        reaction1Consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
     
-    public void SetReaction1Consultant2Icon1(Categories category, int value)
+    public void SetReaction1Consultant2Icon1(Categories category, int value, bool enshrined = false)
     {
-        reaction1Consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value);
+        reaction1Consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
     
-    public void SetReaction1Consultant2Icon2(Categories category, int value)
+    public void SetReaction1Consultant2Icon2(Categories category, int value, bool enshrined = false)
     {
-        reaction1Consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value);
+        reaction1Consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
     
-    public void SetReaction2Consultant1Icon1(Categories category, int value)
+    public void SetReaction2Consultant1Icon1(Categories category, int value, bool enshrined = false)
     {
-        reaction2Consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value);
+        reaction2Consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
     
-    public void SetReaction2Consultant1Icon2(Categories category, int value)
+    public void SetReaction2Consultant1Icon2(Categories category, int value, bool enshrined = false)
     {
-        reaction2Consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value);
+        reaction2Consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
     
-    public void SetReaction2Consultant2Icon1(Categories category, int value)
+    public void SetReaction2Consultant2Icon1(Categories category, int value, bool enshrined = false)
     {
-        reaction2Consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value);
+        reaction2Consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
     
-    public void SetReaction2Consultant2Icon2(Categories category, int value)
+    public void SetReaction2Consultant2Icon2(Categories category, int value, bool enshrined = false)
     {
-        reaction2Consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value);
+        reaction2Consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
 
-    private Sprite ChooseSpriteFromCategoryAndValue(Categories category, int value)
+    private Sprite ChooseSpriteFromCategoryAndValue(Categories category, int value, bool enshrined)
     {
         if (category == Categories.Economy)
         {
@@ -271,24 +276,28 @@ public class UIManager : MonoBehaviour
         
         if (category == Categories.CivilRights)
         {
+            if (enshrined) return civilRightsLawIcon;
             if (value == 0) return civilRightsEqualIcon;
             return value > 0 ? civilRightsUpIcon : civilRightsDownIcon;
         }
         
         if (category == Categories.FreedomOfSpeech)
         {
+            if (enshrined) return freedomOfSpeechLawIcon;
             if (value == 0) return freedomOfSpeechEqualIcon;
             return value > 0 ? freedomOfSpeechUpIcon : freedomOfSpeechDownIcon;
         }
         
         if (category == Categories.Participation)
         {
+            if (enshrined) return participationLawIcon;
             if (value == 0) return participationEqualIcon;
             return value > 0 ? participationUpIcon : participationDownIcon;
         }
         
         if (category == Categories.SeparationOfPower)
         {
+            if (enshrined) return separationOfPowerLawIcon;
             if (value == 0) return separationOfPowerEqualIcon;
             return value > 0 ? separationOfPowerUpIcon : separationOfPowerDownIcon;
         }

@@ -172,509 +172,269 @@ public class GameManager : MonoBehaviour
 
     private void SetConsultant1Reaction1Icons(Effect reactionEffect)
     {
-        // Skip first icon?
-        if (civilRightsEnshrined && consultant1.GetCategory1() == Categories.CivilRights ||
-            participationEnshrined && consultant1.GetCategory1() == Categories.Participation ||
-            freedomOfSpeechEnshrined && consultant1.GetCategory1() == Categories.FreedomOfSpeech ||
-            separationOfPowerEnshrined && consultant1.GetCategory1() == Categories.SeparationOfPower)
-        {
-            // Skip second icon?
-            if (civilRightsEnshrined && consultant1.GetCategory2() == Categories.CivilRights ||
-                participationEnshrined && consultant1.GetCategory2() == Categories.Participation ||
-                freedomOfSpeechEnshrined && consultant1.GetCategory2() == Categories.FreedomOfSpeech ||
-                separationOfPowerEnshrined && consultant1.GetCategory2() == Categories.SeparationOfPower)
-            {
-                // Skipped
-            }
-            else
-            {
-                // Set second icon as first icon
-                int value = reactionEffect.GetCategoryValue(consultant1.GetCategory2());
-                
-                switch (consultant1.GetCategory2())
-                {
-                    case Categories.Culture:
-                        uiManager.SetReaction1Consultant1Icon1(Categories.Culture, value);
-                        break;
-                    case Categories.CivilRights:
-                        uiManager.SetReaction1Consultant1Icon1(Categories.CivilRights, value);
-                        break;
-                    case Categories.Participation:
-                        uiManager.SetReaction1Consultant1Icon1(Categories.Participation, value);
-                        break;
-                    case Categories.FreedomOfSpeech:
-                        uiManager.SetReaction1Consultant1Icon1(Categories.FreedomOfSpeech, value);
-                        break;
-                    case Categories.SeparationOfPower:
-                        uiManager.SetReaction1Consultant1Icon1(Categories.SeparationOfPower, value);
-                        break;
-                    case Categories.Economy:
-                        uiManager.SetReaction1Consultant1Icon1(Categories.Economy, value);
-                        break;
-                    case Categories.Military:
-                        uiManager.SetReaction1Consultant1Icon1(Categories.Military, value);
-                        break;
-                    case Categories.Science:
-                        uiManager.SetReaction1Consultant1Icon1(Categories.Science, value);
-                        break;
-                }   
-            }
-        }
-        else
-        {
-            // Set first icon
-            int value = reactionEffect.GetCategoryValue(consultant1.GetCategory1());
-                
-            switch (consultant1.GetCategory1())
-            {
-                case Categories.Culture:
-                    uiManager.SetReaction1Consultant1Icon1(Categories.Culture, value);
-                    break;
-                case Categories.CivilRights:
-                    uiManager.SetReaction1Consultant1Icon1(Categories.CivilRights, value);
-                    break;
-                case Categories.Participation:
-                    uiManager.SetReaction1Consultant1Icon1(Categories.Participation, value);
-                    break;
-                case Categories.FreedomOfSpeech:
-                    uiManager.SetReaction1Consultant1Icon1(Categories.FreedomOfSpeech, value);
-                    break;
-                case Categories.SeparationOfPower:
-                    uiManager.SetReaction1Consultant1Icon1(Categories.SeparationOfPower, value);
-                    break;
-                case Categories.Economy:
-                    uiManager.SetReaction1Consultant1Icon1(Categories.Economy, value);
-                    break;
-                case Categories.Military:
-                    uiManager.SetReaction1Consultant1Icon1(Categories.Military, value);
-                    break;
-                case Categories.Science:
-                    uiManager.SetReaction1Consultant1Icon1(Categories.Science, value);
-                    break;
-            }   
-        }
+        // Category 1 value
+        int value = reactionEffect.GetCategoryValue(consultant1.GetCategory1());
         
-        // Skip second icon?
-        if (civilRightsEnshrined && consultant1.GetCategory2() == Categories.CivilRights ||
-            participationEnshrined && consultant1.GetCategory2() == Categories.Participation ||
-            freedomOfSpeechEnshrined && consultant1.GetCategory2() == Categories.FreedomOfSpeech ||
-            separationOfPowerEnshrined && consultant1.GetCategory2() == Categories.SeparationOfPower)
+        // Set first Icon
+        switch (consultant1.GetCategory1())
         {
-            // Skipped
-        }
-        else
-        {
-            // Set icon 2
-            int value = reactionEffect.GetCategoryValue(consultant1.GetCategory2());
+            case Categories.Culture:
+                uiManager.SetReaction1Consultant1Icon1(Categories.Culture, value);
+                break;
+            case Categories.Economy:
+                uiManager.SetReaction1Consultant1Icon1(Categories.Economy, value);
+                break;
+            case Categories.Military:
+                uiManager.SetReaction1Consultant1Icon1(Categories.Military, value);
+                break;
+            case Categories.Science:
+                uiManager.SetReaction1Consultant1Icon1(Categories.Science, value);
+                break;
+            case Categories.CivilRights:
+                uiManager.SetReaction1Consultant1Icon1(Categories.CivilRights, value, civilRightsEnshrined);
+                break;
+            case Categories.Participation:
+                uiManager.SetReaction1Consultant1Icon1(Categories.Participation, value, participationEnshrined);
+                break;
+            case Categories.FreedomOfSpeech:
+                uiManager.SetReaction1Consultant1Icon1(Categories.FreedomOfSpeech, value, freedomOfSpeechEnshrined);
+                break;
+            case Categories.SeparationOfPower:
+                uiManager.SetReaction1Consultant1Icon1(Categories.SeparationOfPower, value, separationOfPowerEnshrined);
+                break;
+        }   
+        
+        // Category 2 value
+        value = reactionEffect.GetCategoryValue(consultant1.GetCategory2());
                 
-            switch (consultant1.GetCategory2())
-            {
-                case Categories.Culture:
-                    uiManager.SetReaction1Consultant1Icon2(Categories.Culture, value);
-                    break;
-                case Categories.CivilRights:
-                    uiManager.SetReaction1Consultant1Icon2(Categories.CivilRights, value);
-                    break;
-                case Categories.Participation:
-                    uiManager.SetReaction1Consultant1Icon2(Categories.Participation, value);
-                    break;
-                case Categories.FreedomOfSpeech:
-                    uiManager.SetReaction1Consultant1Icon2(Categories.FreedomOfSpeech, value);
-                    break;
-                case Categories.SeparationOfPower:
-                    uiManager.SetReaction1Consultant1Icon2(Categories.SeparationOfPower, value);
-                    break;
-                case Categories.Economy:
-                    uiManager.SetReaction1Consultant1Icon2(Categories.Economy, value);
-                    break;
-                case Categories.Military:
-                    uiManager.SetReaction1Consultant1Icon2(Categories.Military, value);
-                    break;
-                case Categories.Science:
-                    uiManager.SetReaction1Consultant1Icon2(Categories.Science, value);
-                    break;
-            }
+        // Set second icon
+        switch (consultant1.GetCategory2())
+        {
+            case Categories.Culture:
+                uiManager.SetReaction1Consultant1Icon2(Categories.Culture, value);
+                break;
+            case Categories.Economy:
+                uiManager.SetReaction1Consultant1Icon2(Categories.Economy, value);
+                break;
+            case Categories.Military:
+                uiManager.SetReaction1Consultant1Icon2(Categories.Military, value);
+                break;
+            case Categories.Science:
+                uiManager.SetReaction1Consultant1Icon2(Categories.Science, value);
+                break;
+            case Categories.CivilRights:
+                uiManager.SetReaction1Consultant1Icon2(Categories.CivilRights, value, civilRightsEnshrined);
+                break;
+            case Categories.Participation:
+                uiManager.SetReaction1Consultant1Icon2(Categories.Participation, value, participationEnshrined);
+                break;
+            case Categories.FreedomOfSpeech:
+                uiManager.SetReaction1Consultant1Icon2(Categories.FreedomOfSpeech, value, freedomOfSpeechEnshrined);
+                break;
+            case Categories.SeparationOfPower:
+                uiManager.SetReaction1Consultant1Icon2(Categories.SeparationOfPower, value, separationOfPowerEnshrined);
+                break;
         }
     }
     
     private void SetConsultant1Reaction2Icons(Effect reactionEffect)
     {
-        // Skip first icon?
-        if (civilRightsEnshrined && consultant1.GetCategory1() == Categories.CivilRights ||
-            participationEnshrined && consultant1.GetCategory1() == Categories.Participation ||
-            freedomOfSpeechEnshrined && consultant1.GetCategory1() == Categories.FreedomOfSpeech ||
-            separationOfPowerEnshrined && consultant1.GetCategory1() == Categories.SeparationOfPower)
-        {
-            // Skip second icon?
-            if (civilRightsEnshrined && consultant1.GetCategory2() == Categories.CivilRights ||
-                participationEnshrined && consultant1.GetCategory2() == Categories.Participation ||
-                freedomOfSpeechEnshrined && consultant1.GetCategory2() == Categories.FreedomOfSpeech ||
-                separationOfPowerEnshrined && consultant1.GetCategory2() == Categories.SeparationOfPower)
-            {
-                // Skipped
-            }
-            else
-            {
-                // Set second icon as first icon
-                int value = reactionEffect.GetCategoryValue(consultant1.GetCategory2());
-                
-                switch (consultant1.GetCategory2())
-                {
-                    case Categories.Culture:
-                        uiManager.SetReaction2Consultant1Icon1(Categories.Culture, value);
-                        break;
-                    case Categories.CivilRights:
-                        uiManager.SetReaction2Consultant1Icon1(Categories.CivilRights, value);
-                        break;
-                    case Categories.Participation:
-                        uiManager.SetReaction2Consultant1Icon1(Categories.Participation, value);
-                        break;
-                    case Categories.FreedomOfSpeech:
-                        uiManager.SetReaction2Consultant1Icon1(Categories.FreedomOfSpeech, value);
-                        break;
-                    case Categories.SeparationOfPower:
-                        uiManager.SetReaction2Consultant1Icon1(Categories.SeparationOfPower, value);
-                        break;
-                    case Categories.Economy:
-                        uiManager.SetReaction2Consultant1Icon1(Categories.Economy, value);
-                        break;
-                    case Categories.Military:
-                        uiManager.SetReaction2Consultant1Icon1(Categories.Military, value);
-                        break;
-                    case Categories.Science:
-                        uiManager.SetReaction2Consultant1Icon1(Categories.Science, value);
-                        break;
-                }   
-            }
-        }
-        else
-        {
-            // Set first icon
-            int value = reactionEffect.GetCategoryValue(consultant1.GetCategory1());
-                
-            switch (consultant1.GetCategory1())
-            {
-                case Categories.Culture:
-                    uiManager.SetReaction2Consultant1Icon1(Categories.Culture, value);
-                    break;
-                case Categories.CivilRights:
-                    uiManager.SetReaction2Consultant1Icon1(Categories.CivilRights, value);
-                    break;
-                case Categories.Participation:
-                    uiManager.SetReaction2Consultant1Icon1(Categories.Participation, value);
-                    break;
-                case Categories.FreedomOfSpeech:
-                    uiManager.SetReaction2Consultant1Icon1(Categories.FreedomOfSpeech, value);
-                    break;
-                case Categories.SeparationOfPower:
-                    uiManager.SetReaction2Consultant1Icon1(Categories.SeparationOfPower, value);
-                    break;
-                case Categories.Economy:
-                    uiManager.SetReaction2Consultant1Icon1(Categories.Economy, value);
-                    break;
-                case Categories.Military:
-                    uiManager.SetReaction2Consultant1Icon1(Categories.Military, value);
-                    break;
-                case Categories.Science:
-                    uiManager.SetReaction2Consultant1Icon1(Categories.Science, value);
-                    break;
-            }   
-        }
+        // Category 1 value
+        int value = reactionEffect.GetCategoryValue(consultant1.GetCategory1());
         
-        // Skip second icon?
-        if (civilRightsEnshrined && consultant1.GetCategory2() == Categories.CivilRights ||
-            participationEnshrined && consultant1.GetCategory2() == Categories.Participation ||
-            freedomOfSpeechEnshrined && consultant1.GetCategory2() == Categories.FreedomOfSpeech ||
-            separationOfPowerEnshrined && consultant1.GetCategory2() == Categories.SeparationOfPower)
+        // Set first Icon
+        switch (consultant1.GetCategory1())
         {
-            // Skipped
-        }
-        else
-        {
-            // Set icon 2
-            int value = reactionEffect.GetCategoryValue(consultant1.GetCategory2());
+            case Categories.Culture:
+                uiManager.SetReaction2Consultant1Icon1(Categories.Culture, value);
+                break;
+            case Categories.Economy:
+                uiManager.SetReaction2Consultant1Icon1(Categories.Economy, value);
+                break;
+            case Categories.Military:
+                uiManager.SetReaction2Consultant1Icon1(Categories.Military, value);
+                break;
+            case Categories.Science:
+                uiManager.SetReaction2Consultant1Icon1(Categories.Science, value);
+                break;
+            case Categories.CivilRights:
+                uiManager.SetReaction2Consultant1Icon1(Categories.CivilRights, value, civilRightsEnshrined);
+                break;
+            case Categories.Participation:
+                uiManager.SetReaction2Consultant1Icon1(Categories.Participation, value, participationEnshrined);
+                break;
+            case Categories.FreedomOfSpeech:
+                uiManager.SetReaction2Consultant1Icon1(Categories.FreedomOfSpeech, value, freedomOfSpeechEnshrined);
+                break;
+            case Categories.SeparationOfPower:
+                uiManager.SetReaction2Consultant1Icon1(Categories.SeparationOfPower, value, separationOfPowerEnshrined);
+                break;
+        }   
+        
+        // Category 2 value
+        value = reactionEffect.GetCategoryValue(consultant1.GetCategory2());
                 
-            switch (consultant1.GetCategory2())
-            {
-                case Categories.Culture:
-                    uiManager.SetReaction2Consultant1Icon2(Categories.Culture, value);
-                    break;
-                case Categories.CivilRights:
-                    uiManager.SetReaction2Consultant1Icon2(Categories.CivilRights, value);
-                    break;
-                case Categories.Participation:
-                    uiManager.SetReaction2Consultant1Icon2(Categories.Participation, value);
-                    break;
-                case Categories.FreedomOfSpeech:
-                    uiManager.SetReaction2Consultant1Icon2(Categories.FreedomOfSpeech, value);
-                    break;
-                case Categories.SeparationOfPower:
-                    uiManager.SetReaction2Consultant1Icon2(Categories.SeparationOfPower, value);
-                    break;
-                case Categories.Economy:
-                    uiManager.SetReaction2Consultant1Icon2(Categories.Economy, value);
-                    break;
-                case Categories.Military:
-                    uiManager.SetReaction2Consultant1Icon2(Categories.Military, value);
-                    break;
-                case Categories.Science:
-                    uiManager.SetReaction2Consultant1Icon2(Categories.Science, value);
-                    break;
-            }
+        // Set second icon
+        switch (consultant1.GetCategory2())
+        {
+            case Categories.Culture:
+                uiManager.SetReaction2Consultant1Icon2(Categories.Culture, value);
+                break;
+            case Categories.Economy:
+                uiManager.SetReaction2Consultant1Icon2(Categories.Economy, value);
+                break;
+            case Categories.Military:
+                uiManager.SetReaction2Consultant1Icon2(Categories.Military, value);
+                break;
+            case Categories.Science:
+                uiManager.SetReaction2Consultant1Icon2(Categories.Science, value);
+                break;
+            case Categories.CivilRights:
+                uiManager.SetReaction2Consultant1Icon2(Categories.CivilRights, value, civilRightsEnshrined);
+                break;
+            case Categories.Participation:
+                uiManager.SetReaction2Consultant1Icon2(Categories.Participation, value, participationEnshrined);
+                break;
+            case Categories.FreedomOfSpeech:
+                uiManager.SetReaction2Consultant1Icon2(Categories.FreedomOfSpeech, value, freedomOfSpeechEnshrined);
+                break;
+            case Categories.SeparationOfPower:
+                uiManager.SetReaction2Consultant1Icon2(Categories.SeparationOfPower, value, separationOfPowerEnshrined);
+                break;
         }
     }
     
     private void SetConsultant2Reaction1Icons(Effect reactionEffect)
     {
-        // Skip first icon?
-        if (civilRightsEnshrined && consultant2.GetCategory1() == Categories.CivilRights ||
-            participationEnshrined && consultant2.GetCategory1() == Categories.Participation ||
-            freedomOfSpeechEnshrined && consultant2.GetCategory1() == Categories.FreedomOfSpeech ||
-            separationOfPowerEnshrined && consultant2.GetCategory1() == Categories.SeparationOfPower)
-        {
-            // Skip second icon?
-            if (civilRightsEnshrined && consultant2.GetCategory2() == Categories.CivilRights ||
-                participationEnshrined && consultant2.GetCategory2() == Categories.Participation ||
-                freedomOfSpeechEnshrined && consultant2.GetCategory2() == Categories.FreedomOfSpeech ||
-                separationOfPowerEnshrined && consultant2.GetCategory2() == Categories.SeparationOfPower)
-            {
-                // Skipped
-            }
-            else
-            {
-                // Set second icon as first icon
-                int value = reactionEffect.GetCategoryValue(consultant2.GetCategory2());
-                
-                switch (consultant2.GetCategory2())
-                {
-                    case Categories.Culture:
-                        uiManager.SetReaction1Consultant2Icon1(Categories.Culture, value);
-                        break;
-                    case Categories.CivilRights:
-                        uiManager.SetReaction1Consultant2Icon1(Categories.CivilRights, value);
-                        break;
-                    case Categories.Participation:
-                        uiManager.SetReaction1Consultant2Icon1(Categories.Participation, value);
-                        break;
-                    case Categories.FreedomOfSpeech:
-                        uiManager.SetReaction1Consultant2Icon1(Categories.FreedomOfSpeech, value);
-                        break;
-                    case Categories.SeparationOfPower:
-                        uiManager.SetReaction1Consultant2Icon1(Categories.SeparationOfPower, value);
-                        break;
-                    case Categories.Economy:
-                        uiManager.SetReaction1Consultant2Icon1(Categories.Economy, value);
-                        break;
-                    case Categories.Military:
-                        uiManager.SetReaction1Consultant2Icon1(Categories.Military, value);
-                        break;
-                    case Categories.Science:
-                        uiManager.SetReaction1Consultant2Icon1(Categories.Science, value);
-                        break;
-                }   
-            }
-        }
-        else
-        {
-            // Set first icon
-            int value = reactionEffect.GetCategoryValue(consultant2.GetCategory1());
-                
-            switch (consultant2.GetCategory1())
-            {
-                case Categories.Culture:
-                    uiManager.SetReaction1Consultant2Icon1(Categories.Culture, value);
-                    break;
-                case Categories.CivilRights:
-                    uiManager.SetReaction1Consultant2Icon1(Categories.CivilRights, value);
-                    break;
-                case Categories.Participation:
-                    uiManager.SetReaction1Consultant2Icon1(Categories.Participation, value);
-                    break;
-                case Categories.FreedomOfSpeech:
-                    uiManager.SetReaction1Consultant2Icon1(Categories.FreedomOfSpeech, value);
-                    break;
-                case Categories.SeparationOfPower:
-                    uiManager.SetReaction1Consultant2Icon1(Categories.SeparationOfPower, value);
-                    break;
-                case Categories.Economy:
-                    uiManager.SetReaction1Consultant2Icon1(Categories.Economy, value);
-                    break;
-                case Categories.Military:
-                    uiManager.SetReaction1Consultant2Icon1(Categories.Military, value);
-                    break;
-                case Categories.Science:
-                    uiManager.SetReaction1Consultant2Icon1(Categories.Science, value);
-                    break;
-            }   
-        }
+        // Category 1 value
+        int value = reactionEffect.GetCategoryValue(consultant2.GetCategory1());
         
-        // Skip second icon?
-        if (civilRightsEnshrined && consultant2.GetCategory2() == Categories.CivilRights ||
-            participationEnshrined && consultant2.GetCategory2() == Categories.Participation ||
-            freedomOfSpeechEnshrined && consultant2.GetCategory2() == Categories.FreedomOfSpeech ||
-            separationOfPowerEnshrined && consultant2.GetCategory2() == Categories.SeparationOfPower)
+        // Set first Icon
+        switch (consultant2.GetCategory1())
         {
-            // Skipped
-        }
-        else
-        {
-            // Set icon 2
-            int value = reactionEffect.GetCategoryValue(consultant2.GetCategory2());
+            case Categories.Culture:
+                uiManager.SetReaction1Consultant2Icon1(Categories.Culture, value);
+                break;
+            case Categories.Economy:
+                uiManager.SetReaction1Consultant2Icon1(Categories.Economy, value);
+                break;
+            case Categories.Military:
+                uiManager.SetReaction1Consultant2Icon1(Categories.Military, value);
+                break;
+            case Categories.Science:
+                uiManager.SetReaction1Consultant2Icon1(Categories.Science, value);
+                break;
+            case Categories.CivilRights:
+                uiManager.SetReaction1Consultant2Icon1(Categories.CivilRights, value, civilRightsEnshrined);
+                break;
+            case Categories.Participation:
+                uiManager.SetReaction1Consultant2Icon1(Categories.Participation, value, participationEnshrined);
+                break;
+            case Categories.FreedomOfSpeech:
+                uiManager.SetReaction1Consultant2Icon1(Categories.FreedomOfSpeech, value, freedomOfSpeechEnshrined);
+                break;
+            case Categories.SeparationOfPower:
+                uiManager.SetReaction1Consultant2Icon1(Categories.SeparationOfPower, value, separationOfPowerEnshrined);
+                break;
+        }   
+        
+        // Category 2 value
+        value = reactionEffect.GetCategoryValue(consultant2.GetCategory2());
                 
-            switch (consultant2.GetCategory2())
-            {
-                case Categories.Culture:
-                    uiManager.SetReaction1Consultant2Icon2(Categories.Culture, value);
-                    break;
-                case Categories.CivilRights:
-                    uiManager.SetReaction1Consultant2Icon2(Categories.CivilRights, value);
-                    break;
-                case Categories.Participation:
-                    uiManager.SetReaction1Consultant2Icon2(Categories.Participation, value);
-                    break;
-                case Categories.FreedomOfSpeech:
-                    uiManager.SetReaction1Consultant2Icon2(Categories.FreedomOfSpeech, value);
-                    break;
-                case Categories.SeparationOfPower:
-                    uiManager.SetReaction1Consultant2Icon2(Categories.SeparationOfPower, value);
-                    break;
-                case Categories.Economy:
-                    uiManager.SetReaction1Consultant2Icon2(Categories.Economy, value);
-                    break;
-                case Categories.Military:
-                    uiManager.SetReaction1Consultant2Icon2(Categories.Military, value);
-                    break;
-                case Categories.Science:
-                    uiManager.SetReaction1Consultant2Icon2(Categories.Science, value);
-                    break;
-            }
+        // Set second icon
+        switch (consultant2.GetCategory2())
+        {
+            case Categories.Culture:
+                uiManager.SetReaction1Consultant2Icon2(Categories.Culture, value);
+                break;
+            case Categories.Economy:
+                uiManager.SetReaction1Consultant2Icon2(Categories.Economy, value);
+                break;
+            case Categories.Military:
+                uiManager.SetReaction1Consultant2Icon2(Categories.Military, value);
+                break;
+            case Categories.Science:
+                uiManager.SetReaction1Consultant2Icon2(Categories.Science, value);
+                break;
+            case Categories.CivilRights:
+                uiManager.SetReaction1Consultant2Icon2(Categories.CivilRights, value, civilRightsEnshrined);
+                break;
+            case Categories.Participation:
+                uiManager.SetReaction1Consultant2Icon2(Categories.Participation, value, participationEnshrined);
+                break;
+            case Categories.FreedomOfSpeech:
+                uiManager.SetReaction1Consultant2Icon2(Categories.FreedomOfSpeech, value, freedomOfSpeechEnshrined);
+                break;
+            case Categories.SeparationOfPower:
+                uiManager.SetReaction1Consultant2Icon2(Categories.SeparationOfPower, value, separationOfPowerEnshrined);
+                break;
         }
     }
     
     private void SetConsultant2Reaction2Icons(Effect reactionEffect)
     {
-        // Skip first icon?
-        if (civilRightsEnshrined && consultant2.GetCategory1() == Categories.CivilRights ||
-            participationEnshrined && consultant2.GetCategory1() == Categories.Participation ||
-            freedomOfSpeechEnshrined && consultant2.GetCategory1() == Categories.FreedomOfSpeech ||
-            separationOfPowerEnshrined && consultant2.GetCategory1() == Categories.SeparationOfPower)
-        {
-            // Skip second icon?
-            if (civilRightsEnshrined && consultant2.GetCategory2() == Categories.CivilRights ||
-                participationEnshrined && consultant2.GetCategory2() == Categories.Participation ||
-                freedomOfSpeechEnshrined && consultant2.GetCategory2() == Categories.FreedomOfSpeech ||
-                separationOfPowerEnshrined && consultant2.GetCategory2() == Categories.SeparationOfPower)
-            {
-                // Skipped
-            }
-            else
-            {
-                // Set second icon as first icon
-                int value = reactionEffect.GetCategoryValue(consultant2.GetCategory2());
-            
-                switch (consultant2.GetCategory2())
-                {
-                    case Categories.Culture:
-                        uiManager.SetReaction2Consultant2Icon1(Categories.Culture, value);
-                        break;
-                    case Categories.CivilRights:
-                        uiManager.SetReaction2Consultant2Icon1(Categories.CivilRights, value);
-                        break;
-                    case Categories.Participation:
-                        uiManager.SetReaction2Consultant2Icon1(Categories.Participation, value);
-                        break;
-                    case Categories.FreedomOfSpeech:
-                        uiManager.SetReaction2Consultant2Icon1(Categories.FreedomOfSpeech, value);
-                        break;
-                    case Categories.SeparationOfPower:
-                        uiManager.SetReaction2Consultant2Icon1(Categories.SeparationOfPower, value);
-                        break;
-                    case Categories.Economy:
-                        uiManager.SetReaction2Consultant2Icon1(Categories.Economy, value);
-                        break;
-                    case Categories.Military:
-                        uiManager.SetReaction2Consultant2Icon1(Categories.Military, value);
-                        break;
-                    case Categories.Science:
-                        uiManager.SetReaction2Consultant2Icon1(Categories.Science, value);
-                        break;
-                }   
-            }
-        }
-        else
-        {
-            // Set first icon
-            int value = reactionEffect.GetCategoryValue(consultant2.GetCategory1());
-                
-            switch (consultant2.GetCategory1())
-            {
-                case Categories.Culture:
-                    uiManager.SetReaction2Consultant2Icon1(Categories.Culture, value);
-                    break;
-                case Categories.CivilRights:
-                    uiManager.SetReaction2Consultant2Icon1(Categories.CivilRights, value);
-                    break;
-                case Categories.Participation:
-                    uiManager.SetReaction2Consultant2Icon1(Categories.Participation, value);
-                    break;
-                case Categories.FreedomOfSpeech:
-                    uiManager.SetReaction2Consultant2Icon1(Categories.FreedomOfSpeech, value);
-                    break;
-                case Categories.SeparationOfPower:
-                    uiManager.SetReaction2Consultant2Icon1(Categories.SeparationOfPower, value);
-                    break;
-                case Categories.Economy:
-                    uiManager.SetReaction2Consultant2Icon1(Categories.Economy, value);
-                    break;
-                case Categories.Military:
-                    uiManager.SetReaction2Consultant2Icon1(Categories.Military, value);
-                    break;
-                case Categories.Science:
-                    uiManager.SetReaction2Consultant2Icon1(Categories.Science, value);
-                    break;
-            }   
-        }
+        // Category 1 value
+        int value = reactionEffect.GetCategoryValue(consultant2.GetCategory1());
         
-        // Skip second icon?
-        if (civilRightsEnshrined && consultant2.GetCategory2() == Categories.CivilRights ||
-            participationEnshrined && consultant2.GetCategory2() == Categories.Participation ||
-            freedomOfSpeechEnshrined && consultant2.GetCategory2() == Categories.FreedomOfSpeech ||
-            separationOfPowerEnshrined && consultant2.GetCategory2() == Categories.SeparationOfPower)
+        // Set first Icon
+        switch (consultant2.GetCategory1())
         {
-            // Skipped
-        }
-        else
-        {
-            // Set icon 2
-            int value = reactionEffect.GetCategoryValue(consultant2.GetCategory2());
+            case Categories.Culture:
+                uiManager.SetReaction2Consultant2Icon1(Categories.Culture, value);
+                break;
+            case Categories.Economy:
+                uiManager.SetReaction2Consultant2Icon1(Categories.Economy, value);
+                break;
+            case Categories.Military:
+                uiManager.SetReaction2Consultant2Icon1(Categories.Military, value);
+                break;
+            case Categories.Science:
+                uiManager.SetReaction2Consultant2Icon1(Categories.Science, value);
+                break;
+            case Categories.CivilRights:
+                uiManager.SetReaction2Consultant2Icon1(Categories.CivilRights, value, civilRightsEnshrined);
+                break;
+            case Categories.Participation:
+                uiManager.SetReaction2Consultant2Icon1(Categories.Participation, value, participationEnshrined);
+                break;
+            case Categories.FreedomOfSpeech:
+                uiManager.SetReaction2Consultant2Icon1(Categories.FreedomOfSpeech, value, freedomOfSpeechEnshrined);
+                break;
+            case Categories.SeparationOfPower:
+                uiManager.SetReaction2Consultant2Icon1(Categories.SeparationOfPower, value, separationOfPowerEnshrined);
+                break;
+        }   
+        
+        // Category 2 value
+        value = reactionEffect.GetCategoryValue(consultant2.GetCategory2());
                 
-            switch (consultant2.GetCategory2())
-            {
-                case Categories.Culture:
-                    uiManager.SetReaction2Consultant2Icon2(Categories.Culture, value);
-                    break;
-                case Categories.CivilRights:
-                    uiManager.SetReaction2Consultant2Icon2(Categories.CivilRights, value);
-                    break;
-                case Categories.Participation:
-                    uiManager.SetReaction2Consultant2Icon2(Categories.Participation, value);
-                    break;
-                case Categories.FreedomOfSpeech:
-                    uiManager.SetReaction2Consultant2Icon2(Categories.FreedomOfSpeech, value);
-                    break;
-                case Categories.SeparationOfPower:
-                    uiManager.SetReaction2Consultant2Icon2(Categories.SeparationOfPower, value);
-                    break;
-                case Categories.Economy:
-                    uiManager.SetReaction2Consultant2Icon2(Categories.Economy, value);
-                    break;
-                case Categories.Military:
-                    uiManager.SetReaction2Consultant2Icon2(Categories.Military, value);
-                    break;
-                case Categories.Science:
-                    uiManager.SetReaction2Consultant2Icon2(Categories.Science, value);
-                    break;
-            }
+        // Set second icon
+        switch (consultant2.GetCategory2())
+        {
+            case Categories.Culture:
+                uiManager.SetReaction2Consultant2Icon2(Categories.Culture, value);
+                break;
+            case Categories.Economy:
+                uiManager.SetReaction2Consultant2Icon2(Categories.Economy, value);
+                break;
+            case Categories.Military:
+                uiManager.SetReaction2Consultant2Icon2(Categories.Military, value);
+                break;
+            case Categories.Science:
+                uiManager.SetReaction2Consultant2Icon2(Categories.Science, value);
+                break;
+            case Categories.CivilRights:
+                uiManager.SetReaction2Consultant2Icon2(Categories.CivilRights, value, civilRightsEnshrined);
+                break;
+            case Categories.Participation:
+                uiManager.SetReaction2Consultant2Icon2(Categories.Participation, value, participationEnshrined);
+                break;
+            case Categories.FreedomOfSpeech:
+                uiManager.SetReaction2Consultant2Icon2(Categories.FreedomOfSpeech, value, freedomOfSpeechEnshrined);
+                break;
+            case Categories.SeparationOfPower:
+                uiManager.SetReaction2Consultant2Icon2(Categories.SeparationOfPower, value, separationOfPowerEnshrined);
+                break;
         }
     }
 

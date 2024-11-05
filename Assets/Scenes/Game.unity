@@ -8315,8 +8315,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4286611711
+  m_fontColor: {r: 1, g: 0.5, b: 0.5, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8600,8 +8600,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4286611711
+  m_fontColor: {r: 1, g: 0.5, b: 0.5, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10248,8 +10248,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4286611711
+  m_fontColor: {r: 1, g: 0.5, b: 0.5, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -13571,7 +13571,7 @@ GameObject:
   - component: {fileID: 1396748265}
   m_Layer: 5
   m_Name: UI
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13627,7 +13627,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 526427183}
-  m_PlaneDistance: 1
+  m_PlaneDistance: 10
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -13752,6 +13752,10 @@ MonoBehaviour:
   freedomOfSpeechEqualIcon: {fileID: 21300000, guid: 2eb0ae9da04818e4cb0dc2e163d56345, type: 3}
   participationEqualIcon: {fileID: 21300000, guid: 29902907fd5b6624a846eb46ce343275, type: 3}
   separationOfPowerEqualIcon: {fileID: 21300000, guid: 971701a33bb0e9840afe331891018965, type: 3}
+  civilRightsLawIcon: {fileID: 21300000, guid: df78517fdf48a5b46929090d5ece0160, type: 3}
+  freedomOfSpeechLawIcon: {fileID: 21300000, guid: cd3613c740a738e4487294b742381931, type: 3}
+  participationLawIcon: {fileID: 21300000, guid: 170988eddfc47e941a7f1466451404af, type: 3}
+  separationOfPowerLawIcon: {fileID: 21300000, guid: d218fb18423380c489acb7eab7707941, type: 3}
   economyIcon: {fileID: 21300000, guid: 41d84d785f58da24481f464964919e3f, type: 3}
   militaryIcon: {fileID: 21300000, guid: 3e7e0b81d30172e4f8efc6d7c1815f98, type: 3}
   scienceIcon: {fileID: 21300000, guid: aa2fc375e722a9845814f08735210eb3, type: 3}
@@ -14227,8 +14231,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4286611711
+  m_fontColor: {r: 1, g: 0.5, b: 0.5, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
