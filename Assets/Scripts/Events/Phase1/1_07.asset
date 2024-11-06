@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDescription: "Die Regierung erw\xE4gt, verf\xFCgbare Haushaltsmittel f\xFCr
     regionale Kunstfestivals, traditionelle Handwerksworkshops und historische Ausstellungen
-    bereitzustellen, um lokale Identit\xE4ten zu f\xF6rdern. Diese Initiative st\xF6\xDFt
-    auf Debatten, da Bedenken bestehen, dass die Mittel anderen dringlichen Bereichen
-    entzogen werden k\xF6nnten."
+    bereitzustellen, um lokale Identit\xE4ten zu f\xF6rdern.<br><br>Diese Initiative
+    st\xF6\xDFt auf Debatten, da Bedenken bestehen, dass die Mittel anderen dringlichen
+    Bereichen entzogen werden k\xF6nnten."
   reaction1:
     reactionDescription: Finanzierung von Kulturprojekten.
     effect:

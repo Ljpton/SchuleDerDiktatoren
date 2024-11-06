@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -11,6 +10,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioMixer audioMixer;
     [SerializeField] private GameObject buttonSound;
     [SerializeField] private GameObject loseHealthSound;
+    [SerializeField] private GameObject winMusic;
+    [SerializeField] private GameObject gameOverMusic;
     // Stamp Sound is handled in Stamp Object
 
     private void Awake()
@@ -70,5 +71,12 @@ public class AudioManager : MonoBehaviour
         }
 
         return audioEnabled;
+    }
+
+    public void PlayEndMusic(bool isWon)
+    {
+        Destroy(FindObjectOfType<GameMusic>().gameObject);
+
+        Instantiate(isWon ? winMusic : gameOverMusic);
     }
 }

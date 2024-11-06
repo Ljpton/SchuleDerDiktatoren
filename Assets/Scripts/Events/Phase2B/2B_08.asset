@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDescription: "Ein Festival wird organisiert, um die Verbindung zwischen Wissenschaft
     und Kultur zu st\xE4rken. Geplant ist, wissenschaftliche Erkenntnisse kreativ
-    darzustellen. Dabei k\xF6nnte der Fokus auf der Zusammenarbeit mit Bildungseinrichtungen
+    darzustellen.<br><br>Dabei k\xF6nnte der Fokus auf der Zusammenarbeit mit Bildungseinrichtungen
     liegen, um akademische Forschung k\xFCnstlerisch zu pr\xE4sentieren, oder es
     k\xF6nnte ein offener Aufruf an K\xFCnstler erfolgen, die wissenschaftliche Themen
     innovativ interpretieren."

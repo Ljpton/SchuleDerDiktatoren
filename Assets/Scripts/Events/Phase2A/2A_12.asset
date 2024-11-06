@@ -15,9 +15,9 @@ MonoBehaviour:
   eventDescription: "Die Regierung erw\xE4gt, den Ton einer bevorstehenden Rede an
     das Volk zu versch\xE4rfen, indem sie drastische Begriffe wie \u201Everhaften\u201C,
     \u201Eenteignen\u201C, \u201Esch\xE4nden\u201C, \u201Efoltern\u201C und \u201Emorden\u201C
-    verwendet. Dies soll zeigen, dass jede Form von Widerstand hart bestraft wird,
-    k\xF6nnte jedoch international kritisiert werden und eine Mobilisierung der Zivilgesellschaft
-    herbeif\xFChren."
+    verwendet.<br><br>Dies soll zeigen, dass jede Form von Widerstand hart bestraft
+    wird, k\xF6nnte jedoch international kritisiert werden und eine Mobilisierung
+    der Zivilgesellschaft herbeif\xFChren."
   reaction1:
     reactionDescription: "Rede mit drastischen Ma\xDFnahmen ank\xFCndigen."
     effect:

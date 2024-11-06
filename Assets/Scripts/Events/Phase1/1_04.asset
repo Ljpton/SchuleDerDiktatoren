@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDescription: "Eine neue Sicherheitspolitik soll der Polizei erlauben, Smartphones
     ohne Zustimmung der Besitzer zu konfiszieren und zu durchsuchen, um Bedrohungen
-    fr\xFChzeitig zu erkennen. Dies k\xF6nnte jedoch die freie Meinungs\xE4u\xDFerung
+    fr\xFChzeitig zu erkennen.<br><br>Dies k\xF6nnte jedoch die freie Meinungs\xE4u\xDFerung
     beeintr\xE4chtigen, da B\xFCrger aus Angst vor \xDCberwachung in ihrer Kommunikation
     vorsichtiger werden."
   reaction1:

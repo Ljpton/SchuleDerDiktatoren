@@ -164,7 +164,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject newsScreen;
 
     [SerializeField] private TMP_Text newsText;
-    [SerializeField] private Image newsImage;
     
     // GAME OVER SCREEN
     [Category("Game Over Screen")]
@@ -172,6 +171,11 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TMP_Text gameOverText;
     [SerializeField] private TMP_Text gameOverLabelText;
+    [SerializeField] private Image gameOverImage;
+
+    [SerializeField] private Sprite gameWonImage;
+    [SerializeField] private Sprite zeroHealthImage;
+    [SerializeField] private Sprite zeroResourcesImage;
     
     private void Start()
     {
@@ -210,41 +214,49 @@ public class UIManager : MonoBehaviour
 
     public void SetReaction1Consultant1Icon1(Categories category, int value, bool enshrined = false)
     {
+        reaction1Consultant1Icon1.GetComponent<IconTooltip>().currentCategory = category;
         reaction1Consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
     
     public void SetReaction1Consultant1Icon2(Categories category, int value, bool enshrined = false)
     {
+        reaction1Consultant1Icon2.GetComponent<IconTooltip>().currentCategory = category;
         reaction1Consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
     
     public void SetReaction1Consultant2Icon1(Categories category, int value, bool enshrined = false)
     {
+        reaction1Consultant2Icon1.GetComponent<IconTooltip>().currentCategory = category;
         reaction1Consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
     
     public void SetReaction1Consultant2Icon2(Categories category, int value, bool enshrined = false)
     {
+        reaction1Consultant2Icon2.GetComponent<IconTooltip>().currentCategory = category;
         reaction1Consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
     
     public void SetReaction2Consultant1Icon1(Categories category, int value, bool enshrined = false)
     {
+        reaction2Consultant1Icon1.GetComponent<IconTooltip>().currentCategory = category;
         reaction2Consultant1Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
     
     public void SetReaction2Consultant1Icon2(Categories category, int value, bool enshrined = false)
     {
+        reaction2Consultant1Icon2.GetComponent<IconTooltip>().currentCategory = category;
         reaction2Consultant1Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
     
     public void SetReaction2Consultant2Icon1(Categories category, int value, bool enshrined = false)
     {
+        reaction2Consultant2Icon1.GetComponent<IconTooltip>().currentCategory = category;
         reaction2Consultant2Icon1.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
     
     public void SetReaction2Consultant2Icon2(Categories category, int value, bool enshrined = false)
     {
+        reaction2Consultant2Icon2.GetComponent<IconTooltip>().currentCategory = category;
         reaction2Consultant2Icon2.sprite = ChooseSpriteFromCategoryAndValue(category, value, enshrined);
     }
 
@@ -760,6 +772,9 @@ public class UIManager : MonoBehaviour
     
     public void SetConsultant1Icons(Categories category1, Categories category2)
     {
+        consultant1CategoryIcon1.GetComponent<IconTooltip>().currentCategory = category1;
+        consultant1CategoryIcon2.GetComponent<IconTooltip>().currentCategory = category2;
+        
         switch (category1)
         {
             case Categories.Culture:
@@ -819,6 +834,9 @@ public class UIManager : MonoBehaviour
     
     public void SetConsultant2Icons(Categories category1, Categories category2)
     {
+        consultant2CategoryIcon1.GetComponent<IconTooltip>().currentCategory = category1;
+        consultant2CategoryIcon2.GetComponent<IconTooltip>().currentCategory = category2;
+        
         switch (category1)
         {
             case Categories.Culture:
@@ -935,6 +953,22 @@ public class UIManager : MonoBehaviour
             case Categories.SeparationOfPower:
                 consultant2Image.sprite = separationOfPowerConsultants[Random.Range(0, separationOfPowerConsultants.Length)];
                 break;
+        }
+    }
+
+    public void SetGameOverImage(bool isWon, bool zeroHealth)
+    {
+        if (isWon)
+        {
+            gameOverImage.sprite = gameWonImage;
+        }
+        else if (zeroHealth)
+        {
+            gameOverImage.sprite = zeroHealthImage;
+        }
+        else
+        {
+            gameOverImage.sprite = zeroResourcesImage;
         }
     }
 }

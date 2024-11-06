@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 2B_01
   m_EditorClassIdentifier: 
   eventDescription: "Ein Programm zur F\xF6rderung des Technologietransfers zwischen
-    f\xFChrenden Tech-Unternehmen und kleineren Betrieben wird gestartet. Die Priorit\xE4t
-    k\xF6nnte auf staatliche Partner gesetzt werden, um strategische Projekte zu
-    f\xF6rdern. Ein offener Zugang f\xFCr kleine Unternehmen und Start-ups k\xF6nnte
-    jedoch Innovationen st\xE4rker unterst\xFCtzen und die Wettbewerbsf\xE4higkeit
+    f\xFChrenden Tech-Unternehmen und kleineren Betrieben wird gestartet.<br><br>Die
+    Priorit\xE4t k\xF6nnte auf staatliche Partner gesetzt werden, um strategische
+    Projekte zu f\xF6rdern.<br><br>Ein offener Zugang f\xFCr kleine Unternehmen und
+    Start-ups k\xF6nnte jedoch Innovationen st\xE4rker unterst\xFCtzen und die Wettbewerbsf\xE4higkeit
     steigern."
   reaction1:
     reactionDescription: "Priorit\xE4t f\xFCr staatliche Partner."

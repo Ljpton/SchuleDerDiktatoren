@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDescription: "Forscher arbeiten an einem Projekt zur Entwicklung fortschrittlicher
     Algorithmen f\xFCr soziale Medien, die extreme Meinungen automatisch filtern
-    und entfernen sollen. Diese Technologie k\xF6nnte die Meinungsfreiheit einschr\xE4nken,
-    indem sie die Vielfalt legitimer \xC4u\xDFerungen gef\xE4hrdet und die Sichtbarkeit
-    von Minderheitenstimmen reduziert."
+    und entfernen sollen.<br><br>Diese Technologie k\xF6nnte die Meinungsfreiheit
+    einschr\xE4nken, indem sie die Vielfalt legitimer \xC4u\xDFerungen gef\xE4hrdet
+    und die Sichtbarkeit von Minderheitenstimmen reduziert."
   reaction1:
     reactionDescription: "Einschr\xE4nkungen implementieren."
     effect:

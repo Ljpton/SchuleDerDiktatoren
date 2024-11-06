@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 2B_07
   m_EditorClassIdentifier: 
   eventDescription: "Ein Sicherheitsnetzwerk zur Verbesserung der Katastrophenhilfe
-    wird aufgebaut. Dazu k\xF6nnten \xFCberwiegend milit\xE4rische Ressourcen eingesetzt
-    werden, um schnelle und koordinierte Reaktionen auf Notlagen sicherzustellen.
-    Eine andere Herangehensweise sieht den Aufbau eines zivilen Katastrophenschutzkorps
+    wird aufgebaut.<br><br>Dazu k\xF6nnten \xFCberwiegend milit\xE4rische Ressourcen
+    eingesetzt werden, um schnelle und koordinierte Reaktionen auf Notlagen sicherzustellen.<br><br>Eine
+    andere Herangehensweise sieht den Aufbau eines zivilen Katastrophenschutzkorps
     vor, \xE4hnlich zur freiwilligen Feuerwehr, der lokal agieren kann, jedoch weniger
     effizient ist."
   reaction1:

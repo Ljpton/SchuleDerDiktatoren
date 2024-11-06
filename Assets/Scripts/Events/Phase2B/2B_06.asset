@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 2B_06
   m_EditorClassIdentifier: 
   eventDescription: "Die Regierung plant die Schaffung eines Energieproduktionszentrums
-    f\xFCr Verteidigungszwecke, um die Wirtschaft zu st\xE4rken. Die Beteiligung
+    f\xFCr Verteidigungszwecke, um die Wirtschaft zu st\xE4rken.<br><br>Die Beteiligung
     ausl\xE4ndischer Firmen k\xF6nnte Wirtschaft und Milit\xE4r f\xF6rdern, aber
-    lokale Interessen vernachl\xE4ssigen. Eine Entwicklung durch lokale Unternehmen
+    lokale Interessen vernachl\xE4ssigen.<br><br>Eine Entwicklung durch lokale Unternehmen
     w\xFCrde diesen Interessen Rechnung tragen, k\xF6nnte jedoch das Wachstum und
     die milit\xE4rische Effizienz verz\xF6gern."
   reaction1:

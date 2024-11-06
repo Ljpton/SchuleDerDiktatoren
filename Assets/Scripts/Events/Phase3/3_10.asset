@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDescription: "Die Polizeif\xFChrung bem\xE4ngelt mangelndes Vertrauen der
     Bev\xF6lkerung in die Polizei und fordert, staatliche Sicherheitsma\xDFnahmen
-    besser mit der Bev\xF6lkerung zu kommunizieren. Ein unkonventioneller Ansatz,
-    schl\xE4gt regelm\xE4\xDFige Dialogrunden zwischen Polizei und B\xFCrgern vor,
-    um das gegenseitige Vertrauen zu st\xE4rken."
+    besser mit der Bev\xF6lkerung zu kommunizieren.<br><br>Ein unkonventioneller
+    Ansatz, schl\xE4gt regelm\xE4\xDFige Dialogrunden zwischen Polizei und B\xFCrgern
+    vor, um das gegenseitige Vertrauen zu st\xE4rken."
   reaction1:
     reactionDescription: "Umsetzung staatlicher Sicherheitsma\xDFnahmen in Abstimmung
       mit der lokalen Bev\xF6lkerung."

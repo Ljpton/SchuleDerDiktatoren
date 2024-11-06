@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 3_01
   m_EditorClassIdentifier: 
   eventDescription: "Die Regierung plant Reformen zur F\xF6rderung nachhaltiger Landwirtschaftspraktiken,
-    um Umwelt zu sch\xFCtzen und Ern\xE4hrungssicherheit zu st\xE4rken. Subventionen
+    um Umwelt zu sch\xFCtzen und Ern\xE4hrungssicherheit zu st\xE4rken.<br><br>Subventionen
     f\xFCr nachhaltige Methoden k\xF6nnten eingef\xFChrt werden, um umweltfreundliche
-    Innovationen zu f\xF6rdern. Eine deutliche Absage an Reformen k\xF6nnte den Landwirten
-    jedoch mehr Spielraum und Planungssicherheit geben."
+    Innovationen zu f\xF6rdern.<br><br>Eine deutliche Absage an Reformen k\xF6nnte
+    den Landwirten jedoch mehr Spielraum und Planungssicherheit geben."
   reaction1:
     reactionDescription: "Einf\xFChrung von Subventionen f\xFCr nachhaltige Landwirtschaft."
     effect:

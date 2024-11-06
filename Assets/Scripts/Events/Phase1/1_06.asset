@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDescription: "Neue Forschungsrichtlinien fordern eine detaillierte ethische
     Pr\xFCfung und Transparenzberichte f\xFCr alle Projekte, um \xF6ffentliche Sicherheit
-    und moralische Standards zu gew\xE4hrleisten. Diese Auflagen k\xF6nnten die Wissenschaft
-    verlangsamen und innovative Ans\xE4tze erschweren, da b\xFCrokratische H\xFCrden
-    den Forschungsprozess komplexer und langwieriger gestalten."
+    und moralische Standards zu gew\xE4hrleisten.<br><br>Diese Auflagen k\xF6nnten
+    die Wissenschaft verlangsamen und innovative Ans\xE4tze erschweren, da b\xFCrokratische
+    H\xFCrden den Forschungsprozess komplexer und langwieriger gestalten."
   reaction1:
     reactionDescription: "Flexibilit\xE4t der Richtlinien erhalten."
     effect:

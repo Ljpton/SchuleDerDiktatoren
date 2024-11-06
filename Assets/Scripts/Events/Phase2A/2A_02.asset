@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 2A_02
   m_EditorClassIdentifier: 
   eventDescription: "Angesichts einer nationalen Krise steht die Regierung vor der
-    Entscheidung, einen Ausnahmezustand auszurufen. Diese Ma\xDFnahme k\xF6nnte weitreichende
-    Folgen f\xFCr die Freiheitsrechte der B\xFCrger und die Wirtschaftsstruktur haben.
-    W\xE4hrend der Ausnahmezustand der Regierung erweiterte Befugnisse zur schnellen
-    Krisenbew\xE4ltigung verleihen k\xF6nnte, besteht die Gefahr signifikanter Einschr\xE4nkungen
-    der B\xFCrgerrechte und wirtschaftlicher Instabilit\xE4t."
+    Entscheidung, einen Ausnahmezustand auszurufen.<br><br>Diese Ma\xDFnahme k\xF6nnte
+    weitreichende Folgen f\xFCr die Freiheitsrechte der B\xFCrger und die Wirtschaftsstruktur
+    haben.<br><br>W\xE4hrend der Ausnahmezustand der Regierung erweiterte Befugnisse
+    zur schnellen Krisenbew\xE4ltigung verleihen k\xF6nnte, besteht die Gefahr signifikanter
+    Einschr\xE4nkungen der B\xFCrgerrechte und wirtschaftlicher Instabilit\xE4t."
   reaction1:
     reactionDescription: "Ausnahmezustand verh\xE4ngen."
     effect:

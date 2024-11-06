@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: 2A_09
   m_EditorClassIdentifier: 
   eventDescription: "Eine grundlegende Reform der staatlichen Kulturpolitik wird
-    erwogen, um Innovationen zu f\xF6rdern. Eine M\xF6glichkeit ist die Schaffung
-    kultureller Staatsinstitute, die zentral gelenkte Programme unterst\xFCtzen.
-    Alternativ k\xF6nnte die F\xF6rderung unabh\xE4ngiger Kulturorganisationen das
-    kreative Potenzial steigern, obwohl sie weniger Kontrolle und Einheitlichkeit
-    bieten k\xF6nnte."
+    erwogen, um Innovationen zu f\xF6rdern.<br><br>Eine M\xF6glichkeit ist die Schaffung
+    kultureller Staatsinstitute, die zentral gelenkte Programme unterst\xFCtzen.<br><br>Alternativ
+    k\xF6nnte die F\xF6rderung unabh\xE4ngiger Kulturorganisationen das kreative
+    Potenzial steigern, obwohl sie weniger Kontrolle und Einheitlichkeit bieten k\xF6nnte."
   reaction1:
     reactionDescription: Schaffung kultureller Staatsinstitute.
     effect:

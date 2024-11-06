@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 1_10
   m_EditorClassIdentifier: 
   eventDescription: "Angesichts territorialer Spannungen erw\xE4gt die Regierung,
-    ihre Grenzen durch einen milit\xE4rischen Konflikt auszuweiten. Diese Entscheidung
-    k\xF6nnte als notwendiger Schritt angesehen werden, um nationale Macht und kulturelle
-    Einheit zu demonstrieren, birgt jedoch das Risiko internationaler Kritik und
-    innerer Unruhen, die das soziale Gef\xFCge destabilisieren k\xF6nnten."
+    ihre Grenzen durch einen milit\xE4rischen Konflikt auszuweiten.<br><br>Diese
+    Entscheidung k\xF6nnte als notwendiger Schritt angesehen werden, um nationale
+    Macht und kulturelle Einheit zu demonstrieren, birgt jedoch das Risiko internationaler
+    Kritik und innerer Unruhen, die das soziale Gef\xFCge destabilisieren k\xF6nnten."
   reaction1:
     reactionDescription: "Krieg zur Grenzerweiterung erkl\xE4ren."
     effect:

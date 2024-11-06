@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDescription: "Mitten in Zeiten globaler Spannungen sieht sich das Land einer
     entscheidenden Frage gegen\xFCber: die Modernisierung seiner milit\xE4rischen
-    Kapazit\xE4ten. Eine M\xF6glichkeit besteht darin, durch die Aufr\xFCstung mit
-    erprobten Technologien rasch die Schlagkraft zu erh\xF6hen. Alternativ k\xF6nnte
-    das Land mit Forschungseinrichtungen kooperieren, um innovative Milit\xE4rtechnologien
+    Kapazit\xE4ten.<br><br>Eine M\xF6glichkeit besteht darin, durch die Aufr\xFCstung
+    mit erprobten Technologien rasch die Schlagkraft zu erh\xF6hen.<br><br>Alternativ
+    k\xF6nnte das Land mit Forschungseinrichtungen kooperieren, um innovative Milit\xE4rtechnologien
     zu entwickeln, die langfristige Vorteile bieten."
   reaction1:
     reactionDescription: "Aufr\xFCstung mit erprobten Technologien zur schnellen

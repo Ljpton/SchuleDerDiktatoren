@@ -485,7 +485,7 @@ public class GameManager : MonoBehaviour
         
         uiManager.SetCivilRightsBalanceSlider(civilRights);
         int civilRightsDelta = civilRights - civilRightsBalance;
-        democracySum += civilRightsDelta;
+        democracySum += civilRightsEnshrined ? 0 : civilRightsDelta;
         uiManager.SetCivilRightsDeltaText(civilRightsDelta);
         civilRightsBalance = civilRights;
 
@@ -513,7 +513,7 @@ public class GameManager : MonoBehaviour
         
         uiManager.SetParticipationBalanceSlider(participation);
         int participationDelta = participation - participationBalance;
-        democracySum += participationDelta;
+        democracySum += participationEnshrined ? 0 : participationDelta;
         uiManager.SetParticipationDeltaText(participationDelta);
         participationBalance = participation;
 
@@ -540,7 +540,7 @@ public class GameManager : MonoBehaviour
         
         uiManager.SetFreedomOfSpeechBalanceSlider(freedomOfSpeech);
         int freedomOfSpeechDelta = freedomOfSpeech - freedomOfSpeechBalance;
-        democracySum += freedomOfSpeechDelta;
+        democracySum += freedomOfSpeechEnshrined ? 0 : freedomOfSpeechDelta;
         uiManager.SetFreedomOfSpeechDeltaText(freedomOfSpeechDelta);
         freedomOfSpeechBalance = freedomOfSpeech;
 
@@ -567,7 +567,7 @@ public class GameManager : MonoBehaviour
         
         uiManager.SetSeparationOfPowerBalanceSlider(separationOfPower);
         int separationOfPowerDelta = separationOfPower - separationOfPowerBalance;
-        democracySum += separationOfPowerDelta;
+        democracySum += separationOfPowerEnshrined ? 0 : separationOfPowerDelta;
         uiManager.SetSeparationOfPowerDeltaText(separationOfPowerDelta);
         separationOfPowerBalance = separationOfPower;
 
@@ -619,25 +619,31 @@ public class GameManager : MonoBehaviour
             else
             {
                 uiManager.SetGameOverScreenActive();
-            
+                
+                audioManager.PlayEndMusic(true);
                 uiManager.SetGameOverLabelText("Gratulation!");
                 uiManager.SetGameOverText("Du hast alle Grundwerte einer Demokratie etabliert und im Grundgesetz verankert. Natürlich musst du jetzt einem gewählten Parlament Platz machen. Dafür werden du und dieser Tag in die Geschichte dieses Landes eingehen.");
+                uiManager.SetGameOverImage(true, false);
             }
         }
         else if (currentHealth <= 0)
         {
             uiManager.SetGameOverScreenActive();
             
+            audioManager.PlayEndMusic(false);
             uiManager.SetGameOverLabelText("Game Over");
             uiManager.SetGameOverText("Du hast es auf dem Weg zur Demokratie weit gebracht, aber dazu gehört auch, sich an die eigenen Gesetze zu halten. Leider hast du einmal zu oft gegen das Gesetz verstoßen und den Unmut des Volkes erregt.");
+            uiManager.SetGameOverImage(false, true);
         }
         else if (civilRights <= 0 || participation <= 0 || freedomOfSpeech <= 0 || separationOfPower <= 0 ||
             economy <= 0 || military <= 0 || science <= 0 || culture <= 0)
         {
             uiManager.SetGameOverScreenActive();
             
+            audioManager.PlayEndMusic(false);
             uiManager.SetGameOverLabelText("Game Over");
             uiManager.SetGameOverText("Es ist schwierig, so viele Dinge gleichzeitig im Auge zu behalten und letztendlich ist deiner Aufmerksamkeit wohl etwas entgangen. Das Volk hingegen hat das sehr wohl zu spüren bekommen und nutzt alle Mittel, um eine neue Führungsperson an deine Stelle zu setzen.");
+            uiManager.SetGameOverImage(false, false);
         }
         else
         {
@@ -819,8 +825,10 @@ public class GameManager : MonoBehaviour
         {
             uiManager.SetGameOverScreenActive();
             
+            audioManager.PlayEndMusic(true);
             uiManager.SetGameOverLabelText("Gratulation!");
             uiManager.SetGameOverText("Du hast alle Grundwerte einer Demokratie etabliert und im Grundgesetz verankert. Natürlich musst du jetzt einem gewählten Parlament Platz machen. Dafür werden du und dieser Tag in die Geschichte dieses Landes eingehen.");
+            uiManager.SetGameOverImage(true, false);
         }
         else
         {

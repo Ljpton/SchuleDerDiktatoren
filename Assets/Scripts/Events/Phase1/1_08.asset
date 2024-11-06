@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDescription: "Investitionen in Breitbandausbau und KI-Entwicklung k\xF6nnten
     das Land modernisieren, jedoch mit Herausforderungen f\xFCr Freiheitsrechte,
-    da erweiterter Zugang zu Informationen staatliche Kontrolle erschwert. Die Durchf\xFChrung
-    f\xF6rdert kulturelle Vielfalt, indem sie digitalen Zugang zu Bildung, Kunst
-    und globalem Austausch erm\xF6glicht und kreative Innovationen unterst\xFCtzt."
+    da erweiterter Zugang zu Informationen staatliche Kontrolle erschwert.<br><br>Die
+    Durchf\xFChrung f\xF6rdert kulturelle Vielfalt, indem sie digitalen Zugang zu
+    Bildung, Kunst und globalem Austausch erm\xF6glicht und kreative Innovationen
+    unterst\xFCtzt."
   reaction1:
     reactionDescription: "Durchf\xFChrung umfassender Digitalisierung."
     effect:

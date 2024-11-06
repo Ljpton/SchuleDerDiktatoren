@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDescription: "Ein neues staatliches Genforschungsvorhaben zielt darauf ab,
     Krankheiten auszurotten, wirft aber ethische Fragen zu genetischer Manipulation
-    und Datenschutz auf. Die Erhebung und Bearbeitung sensibler Genomdaten k\xF6nnte
-    Bedenken hinsichtlich Privatsph\xE4re, Einwilligung und den potenziellen Missbrauch
-    genetischer Informationen zur Folge haben."
+    und Datenschutz auf.<br><br>Die Erhebung und Bearbeitung sensibler Genomdaten
+    k\xF6nnte Bedenken hinsichtlich Privatsph\xE4re, Einwilligung und den potenziellen
+    Missbrauch genetischer Informationen zur Folge haben."
   reaction1:
     reactionDescription: "Projekt weiterf\xFChren trotz Bedenken."
     effect:

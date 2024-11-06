@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 3_09
   m_EditorClassIdentifier: 
   eventDescription: "Um den Glauben an die Demokratie zu st\xE4rken, plant die Stadt
-    ein Theaterprojekt, das integrative Werte f\xF6rdert. St\xE4dtische F\xF6rderungen
+    ein Theaterprojekt, das integrative Werte f\xF6rdert.<br><br>St\xE4dtische F\xF6rderungen
     k\xF6nnten lokalen K\xFCnstlern helfen, das St\xFCck zu entwickeln und Gemeinschaftsbindung
-    zu st\xE4rken. Allerdings k\xF6nnte eine gro\xDFe Auff\xFChrung durch Privatpartnerschaften
-    mehr Publikum erreichen und das Thema weiter verbreiten."
+    zu st\xE4rken.<br><br>Allerdings k\xF6nnte eine gro\xDFe Auff\xFChrung durch
+    Privatpartnerschaften mehr Publikum erreichen und das Thema weiter verbreiten."
   reaction1:
     reactionDescription: "Unterst\xFCtzung f\xFCr K\xFCnstler durch st\xE4dtische
       Kulturf\xF6rderungen."

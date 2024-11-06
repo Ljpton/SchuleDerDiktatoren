@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDescription: "Der Staat plant, ein Monopol auf die Sammlung und Analyse biometrischer
     Daten zu etablieren, um gesellschaftliche Entscheidungen zentral zu steuern und
-    Verhaltensprognosen zu erstellen. Dies k\xF6nnte zwar effiziente Verwaltung f\xF6rdern,
-    k\xF6nnte aber auch gesellschaftliche Partizipation einschr\xE4nken, da der Einfluss
-    auf individuelle Entfaltung und Mitbestimmung beschnitten wird."
+    Verhaltensprognosen zu erstellen.<br><br>Dies k\xF6nnte zwar effiziente Verwaltung
+    f\xF6rdern, k\xF6nnte aber auch gesellschaftliche Partizipation einschr\xE4nken,
+    da der Einfluss auf individuelle Entfaltung und Mitbestimmung beschnitten wird."
   reaction1:
     reactionDescription: "Monopol einf\xFChren."
     effect:

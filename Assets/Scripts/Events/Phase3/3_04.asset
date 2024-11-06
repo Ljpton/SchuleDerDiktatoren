@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 3_04
   m_EditorClassIdentifier: 
   eventDescription: "Nachrichtendienste berichten \xFCber Pl\xE4ne zur besseren Wasserressourcenverwaltung
-    angesichts drohender Knappheit. Gro\xDFprojekte zur Wasserumverteilung zielen
-    darauf, \xDCberschussgebiete mit bed\xFCrftigen Regionen zu verbinden. Alternativ
+    angesichts drohender Knappheit.<br><br>Gro\xDFprojekte zur Wasserumverteilung
+    zielen darauf, \xDCberschussgebiete mit bed\xFCrftigen Regionen zu verbinden.<br><br>Alternativ
     k\xF6nnten kommunale Wassersparinitiativen gef\xF6rdert werden, um klimafreundliche,
     lokale L\xF6sungen und Bewusstsein f\xFCr Ressourcenschonung zu st\xE4rken."
   reaction1:

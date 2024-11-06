@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDescription: "In der angespannten politischen Atmosph\xE4re steht die Regierung
     vor der Entscheidung, ein fingiertes Attentat auf den Diktator zu inszenieren,
-    um die \xF6ffentliche Meinung zu manipulieren und die Kontrolle zu verst\xE4rken.
-    Diese riskante Aktion k\xF6nnte das Bild des Diktators als M\xE4rtyrer st\xE4rken
-    und die nationale Sicherheit betonen, birgt jedoch bei Entlarvung die Gefahr
-    eines dramatischen Vertrauensverlusts in die Regierung."
+    um die \xF6ffentliche Meinung zu manipulieren und die Kontrolle zu verst\xE4rken.<br><br>Diese
+    riskante Aktion k\xF6nnte das Bild des Diktators als M\xE4rtyrer st\xE4rken und
+    die nationale Sicherheit betonen, birgt jedoch bei Entlarvung die Gefahr eines
+    dramatischen Vertrauensverlusts in die Regierung."
   reaction1:
     reactionDescription: Attentat inszenieren.
     effect:

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 2A_10
   m_EditorClassIdentifier: 
   eventDescription: "Zur Verbesserung der Wohnsituation gr\xFCndet der Staat neue,
-    staatseigene Firmen. Diese k\xF6nnten direkt Wohnungen bauen und vermieten, um
-    schnelle L\xF6sungen zu bieten und die Mietpreise zu kontrollieren. Alternativ
+    staatseigene Firmen.<br><br>Diese k\xF6nnten direkt Wohnungen bauen und vermieten,
+    um schnelle L\xF6sungen zu bieten und die Mietpreise zu kontrollieren.<br><br>Alternativ
     k\xF6nnten sie Grundst\xFCcke erwerben und diese g\xFCnstig ausschreiben, um
     private Vermieter zum Bau zu ermutigen, wobei Mietrechtvorgaben die Mieter sch\xFCtzen
     sollen."

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 1_03
   m_EditorClassIdentifier: 
   eventDescription: "Ein Milit\xE4rabkommen bietet Zugang zu moderner Ausr\xFCstung
-    und Ausbildung durch einen Partnerstaat. Im Gegenzug soll dein Land Truppen im
-    Partnerstaat stationieren, was die Unabh\xE4ngigkeit beeintr\xE4chtigt und den
-    Einfluss externer M\xE4chte auf nationale Entscheidungsprozesse erh\xF6ht."
+    und Ausbildung durch einen Partnerstaat.<br><br>Im Gegenzug soll dein Land Truppen
+    im Partnerstaat stationieren, was die Unabh\xE4ngigkeit beeintr\xE4chtigt und
+    den Einfluss externer M\xE4chte auf nationale Entscheidungsprozesse erh\xF6ht."
   reaction1:
     reactionDescription: "St\xE4rkung der milit\xE4rischen Zusammenarbeit."
     effect:

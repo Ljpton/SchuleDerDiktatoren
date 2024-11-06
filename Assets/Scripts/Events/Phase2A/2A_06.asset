@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2A_06
   m_EditorClassIdentifier: 
-  eventDescription: "Es wird eine neue Steuerpolitik f\xFCr hohe Einkommen vorgeschlagen.
-    Eine Option sieht vor, die zus\xE4tzlichen Einnahmen in \xF6ffentliche Projekte
-    und soziale Programme zu investieren. Steuersenkungen f\xFCr hohe Einkommen higegen
-    k\xF6nnten private Investitionen und Unternehmenswachstum anregen."
+  eventDescription: "Es wird eine neue Steuerpolitik f\xFCr hohe Einkommen vorgeschlagen.<br><br>Eine
+    Option sieht vor, die zus\xE4tzlichen Einnahmen in \xF6ffentliche Projekte und
+    soziale Programme zu investieren.<br><br>Steuersenkungen f\xFCr hohe Einkommen
+    higegen k\xF6nnten private Investitionen und Unternehmenswachstum anregen."
   reaction1:
     reactionDescription: "Einf\xFChrung der Steuererleichterungen."
     effect:

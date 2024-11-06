@@ -31,4 +31,11 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("Menu");
         audioManager.PlayButtonSound();
     }
+
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("Credits");
+        audioManager.PlayButtonSound();
+        loadingHint.SetActive(true);
+    }
 }

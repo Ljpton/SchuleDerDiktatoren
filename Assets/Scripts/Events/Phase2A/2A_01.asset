@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDescription: "Die Regierung erw\xE4gt Subventionen f\xFCr gro\xDFe Industriekonglomerate
     in den Bereichen Automobilbau und Schwerindustrie, um Arbeitspl\xE4tze zu sichern
-    und die wirtschaftliche Stabilit\xE4t zu gew\xE4hrleisten. Alternativ k\xF6nnte
-    sie kleine Unternehmen und Start-ups f\xF6rdern, was die Wirtschaft kurzfristig
-    belasten k\xF6nnte, aber langfristig Innovation und Diversifizierung st\xE4rken
-    w\xFCrde."
+    und die wirtschaftliche Stabilit\xE4t zu gew\xE4hrleisten.<br><br>Alternativ
+    k\xF6nnte sie kleine Unternehmen und Start-ups f\xF6rdern, was die Wirtschaft
+    kurzfristig belasten k\xF6nnte, aber langfristig Innovation und Diversifizierung
+    st\xE4rken w\xFCrde."
   reaction1:
     reactionDescription: Subventionen bereitstellen.
     effect:

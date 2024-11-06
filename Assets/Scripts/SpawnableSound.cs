@@ -5,11 +5,13 @@ using Random = UnityEngine.Random;
 public class SpawnableSound : MonoBehaviour
 {
     private AudioSource audioSource;
+
+    [SerializeField] private bool dontDestroyOnLoad = true;
     
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this);
+        if (dontDestroyOnLoad) DontDestroyOnLoad(this);
 
         audioSource = GetComponent<AudioSource>();
         

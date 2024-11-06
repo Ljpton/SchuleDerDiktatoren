@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 2B_09
   m_EditorClassIdentifier: 
   eventDescription: "Ein Projekt zur Errichtung eines Denkmals, das sowohl das milit\xE4rische
-    Erbe als auch kulturelle Errungenschaften w\xFCrdigt, wird ins Leben gerufen.
-    Das Verteidigungsministerium k\xF6nnte die Gestaltung und Leitung \xFCbernehmen
-    und den Fokus auf milit\xE4rische Historie legen. Ein Komitee aus Historikern
+    Erbe als auch kulturelle Errungenschaften w\xFCrdigt, wird ins Leben gerufen.<br><br>Das
+    Verteidigungsministerium k\xF6nnte die Gestaltung und Leitung \xFCbernehmen und
+    den Fokus auf milit\xE4rische Historie legen.<br><br>Ein Komitee aus Historikern
     und K\xFCnstlern w\xFCrde kulturelle Aspekte und historischen Kontext in den
     Vordergrund stellen."
   reaction1:

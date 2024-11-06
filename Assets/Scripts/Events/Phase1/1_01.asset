@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 1_01
   m_EditorClassIdentifier: 
   eventDescription: "Auf einer internationalen Konferenz kannst du in den Erneuerbare-Energien-Sektor
-    Afrikas investieren. Das w\xE4re wirtschaftlich vorteilhaft, aber die Umverteilung
-    von Subventionen k\xF6nnte im Inland zu Spannungen und Protesten f\xFChren, da
-    von K\xFCrzungen betroffene Sektoren Widerstand leisten und die gesellschaftliche
-    Stabilit\xE4t gef\xE4hrden."
+    Afrikas investieren.<br><br>Das w\xE4re wirtschaftlich vorteilhaft, aber die
+    Umverteilung von Subventionen k\xF6nnte im Inland zu Spannungen und Protesten
+    f\xFChren, da von K\xFCrzungen betroffene Sektoren Widerstand leisten und die
+    gesellschaftliche Stabilit\xE4t gef\xE4hrden."
   reaction1:
     reactionDescription: "Expansion auf neue M\xE4rkte."
     effect:
