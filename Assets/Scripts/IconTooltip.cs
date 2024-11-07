@@ -22,7 +22,7 @@ public class IconTooltip : MonoBehaviour
         
         text.SetText(currentCategory.GetDescription());
         
-        Invoke(nameof(HideTooltip), 5);
+        Invoke(nameof(HideTooltip), 3);
     }
 
     private void HideTooltip()

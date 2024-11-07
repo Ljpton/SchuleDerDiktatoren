@@ -481,6 +481,8 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 4fa1c0ff7e005bf4b8dbc6402c68e560, type: 2}
   buttonSound: {fileID: 7511440862944332633, guid: fef581eb696a97e4c8e4bd28d197c0c9, type: 3}
   loseHealthSound: {fileID: 6622885994317977724, guid: a6abcb6243109cd44a9f56e5074e391d, type: 3}
+  winMusic: {fileID: 6622885994317977724, guid: 741105c82725fce41b3fea560324e7f5, type: 3}
+  gameOverMusic: {fileID: 6622885994317977724, guid: ea12db6304458954d95ebb0ae2b68520, type: 3}
 --- !u!4 &370151060
 Transform:
   m_ObjectHideFlags: 0

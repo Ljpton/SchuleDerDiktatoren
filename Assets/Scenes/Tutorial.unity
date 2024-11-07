@@ -157,7 +157,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 120, y: 0}
-  m_SizeDelta: {x: 275, y: 100}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2682631
 MonoBehaviour:
@@ -181,8 +181,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Meinungsfreiheit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2682632
@@ -352,8 +352,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Kultur
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &80553639
@@ -519,10 +519,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Polit. Partizipation
+  m_text: Politische Partizipation
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -631,7 +631,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 120, y: 0}
-  m_SizeDelta: {x: 275, y: 50}
+  m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &161014381
 MonoBehaviour:
@@ -655,8 +655,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menschenrechte
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -719,7 +719,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &161014382
@@ -1380,6 +1380,8 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 4fa1c0ff7e005bf4b8dbc6402c68e560, type: 2}
   buttonSound: {fileID: 7511440862944332633, guid: fef581eb696a97e4c8e4bd28d197c0c9, type: 3}
   loseHealthSound: {fileID: 6622885994317977724, guid: a6abcb6243109cd44a9f56e5074e391d, type: 3}
+  winMusic: {fileID: 6622885994317977724, guid: 741105c82725fce41b3fea560324e7f5, type: 3}
+  gameOverMusic: {fileID: 6622885994317977724, guid: ea12db6304458954d95ebb0ae2b68520, type: 3}
 --- !u!4 &400245026
 Transform:
   m_ObjectHideFlags: 0
@@ -1644,8 +1646,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Forschung
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1708,7 +1710,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &588620382
@@ -1778,8 +1780,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Beispielentscheidung
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1947,8 +1949,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Gewaltenteilung
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2011,7 +2013,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &660378013
@@ -2081,8 +2083,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Demokratie
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2145,7 +2147,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &687477231
@@ -2215,8 +2217,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Ressourcen
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2279,7 +2281,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &722411529
@@ -2349,8 +2351,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Wirtschaft
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2413,7 +2415,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &749531724
@@ -2558,8 +2560,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Zur\xFCck"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2692,8 +2694,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Weiter
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2937,7 +2939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 092e5e109aebc2041906f8ab79fb488a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ae0a180a1a0cf244f9b443e25034a80b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3020,8 +3022,8 @@ MonoBehaviour:
     k\xF6nnen.\n\nFalls deine Berater:innen nicht die richtigen Kompetenzen haben,
     kannst du sie einmal pro Regierungszeit (4 Runden) austauschen."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3152,7 +3154,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2582fc27eaaf5474093ae3665fa1a8d3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5792cefecbead7149acd8a0e22113053, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3736,7 +3738,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "L\xE4dt neue Szene..."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3800,7 +3802,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1470356464
@@ -3845,7 +3847,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000033326, y: -100}
+  m_AnchoredPosition: {x: 0.000033326, y: -150}
   m_SizeDelta: {x: 1345, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1534554694
@@ -4161,7 +4163,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 092e5e109aebc2041906f8ab79fb488a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ca8389dcf5530d44497be6a503072fb1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4538,8 +4540,8 @@ MonoBehaviour:
     Aber achte auch darauf, dass du immer genug <#FF4488>Ressourcen</color> zur Verf\xFCgung
     hast."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4602,7 +4604,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1855187495
@@ -4674,11 +4676,13 @@ MonoBehaviour:
   m_text: "Alle 4 Runden (eine Regierungszeit) erh\xE4ltst du einen Bericht, in dem
     du genau einsehen kannst, wie sich das Land entwickelt hat.\n\nMerke dir gut,
     wie es um deine Ressourcen und um die Demokratie steht, damit du wei\xDFt, worauf
-    du in den n\xE4chsten Runden besonders achten musst.\n\nWenn du bereit bist,
-    klicke auf Weiter, um deinen Regierungsposten anzutreten."
+    du in den n\xE4chsten Runden besonders achten musst.\n\nTipp: Du kannst alle
+    Symbole antippen, um zu sehen f\xFCr welche Ressource oder welchen Demokratie-Wert
+    sie stehen.\n\nWenn du bereit bist, klicke auf Weiter, um deinen Regierungsposten
+    anzutreten."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4741,7 +4745,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1867595699
@@ -4844,10 +4848,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tutorial
+  m_text: "Einf\xFChrung"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f72ceaf426c2835479ac2b9c0bbd15d8, type: 2}
+  m_sharedMaterial: {fileID: -6451449012691617964, guid: f72ceaf426c2835479ac2b9c0bbd15d8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4879,7 +4883,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4998,7 +5002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 475, y: -100}
+  m_AnchoredPosition: {x: 475, y: -150}
   m_SizeDelta: {x: 650, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1972764161
@@ -5078,7 +5082,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: -100}
+  m_AnchoredPosition: {x: -350, y: -150}
   m_SizeDelta: {x: 900, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2039680939
@@ -5215,8 +5219,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Milit\xE4r"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
-  m_sharedMaterial: {fileID: 9193152276324000392, guid: aa1218e446c9e02408a41b8ab39d9e43, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
+  m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5279,7 +5283,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2071728191
