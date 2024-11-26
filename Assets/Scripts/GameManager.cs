@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -43,7 +44,9 @@ public class GameManager : MonoBehaviour
     public ConsultantData consultant2;
 
     private bool lawEnshrinedThisRound = false;
-    
+
+    public ArrayList categoriesEnshrined;
+
     [SerializeField] private EventData[] eventsPhase1;
     [SerializeField] private EventData[] eventsPhase2A;
     [SerializeField] private EventData[] eventsPhase2B;
@@ -71,6 +74,8 @@ public class GameManager : MonoBehaviour
         
         uiManager.SetHealthText(currentHealth);
         
+        categoriesEnshrined = new ArrayList();
+        
         StartRound();
     }
 
@@ -85,8 +90,6 @@ public class GameManager : MonoBehaviour
 
         if (civilRightsEnshrined || freedomOfSpeechEnshrined || participationEnshrined || separationOfPowerEnshrined)
         {
-            Debug.Log("We are in Phase 3.");
-            
             EventData nextEvent = eventsPhase3[Random.Range(0, eventsPhase3.Length)];
 
             while (currentEvent == nextEvent)
@@ -98,8 +101,6 @@ public class GameManager : MonoBehaviour
         }
         else if (civilRights + freedomOfSpeech + participation + separationOfPower >= 275)
         {
-            Debug.Log("We are in Phase 2B.");
-            
             EventData nextEvent = eventsPhase2B[Random.Range(0, eventsPhase2B.Length)];
 
             while (currentEvent == nextEvent)
@@ -111,8 +112,6 @@ public class GameManager : MonoBehaviour
         }
         else if (economy + science + culture + military >= 250)
         {
-            Debug.Log("We are in Phase 2A.");
-            
             EventData nextEvent = eventsPhase2A[Random.Range(0, eventsPhase2A.Length)];
 
             while (currentEvent == nextEvent)
@@ -124,8 +123,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("We are in Phase 1.");
-            
             EventData nextEvent = eventsPhase1[Random.Range(0, eventsPhase1.Length)];
 
             while (currentEvent == nextEvent)
@@ -498,9 +495,9 @@ public class GameManager : MonoBehaviour
         {
             if (!civilRightsEnshrined)
             {
-                Debug.Log("Civil Rights got enshrined into our constitution.");
                 civilRightsEnshrined = true;
-
+                categoriesEnshrined.Add(Categories.CivilRights);
+                
                 uiManager.SetLawText(
                     "Menschenrechtsgesetz\n\nArtikel 1: Die Würde des Menschen ist unantastbar. Sie zu achten und zu schützen ist Verpflichtung aller staatlichen Gewalt.\n\nArtikel 2: Jeder hat das Recht auf Leben und körperliche Unversehrtheit. Die Freiheit der Person ist unverletzlich.");
                 uiManager.SetNewsText("Die Regierung hat ein Menschenrechtsgesetz verabschiedet, das die grundlegende Bürgerrechte sichern soll. Menschenrechts-gruppen feiern dies als Fortschritt, doch die Bevölkerung bleibt skeptisch. Internationale Beobachter betonen, dass jetzt Taten folgen müssen.");
@@ -526,8 +523,8 @@ public class GameManager : MonoBehaviour
         {
             if (!participationEnshrined)
             {
-                Debug.Log("Political Participation got enshrined into our constitution.");
                 participationEnshrined = true;
+                categoriesEnshrined.Add(Categories.Participation);
                 
                 uiManager.SetLawText("Gesetz für Politische Partizipation\n\nArtikel 1: Alle Bürger haben das Recht, an der politischen Willensbildung des Staates durch Wahlen und Abstimmungen mitzuwirken.\n\nArtikel 2: Das aktive und passive Wahlrecht steht allen volljährigen Bürgern gleichermaßen zu. Diskriminierung ist unzulässig.");
                 uiManager.SetNewsText("Das Gesetz zur politischen Partizipation erweitert die Möglichkeiten der Bürger, an Wahlen teilzunehmen. Experten sehen darin eine Stärkung der Demokratie. Bürger sind motiviert, aktiv am politischen Leben teilzuhaben.");
@@ -553,8 +550,8 @@ public class GameManager : MonoBehaviour
         {
             if (!freedomOfSpeechEnshrined)
             {
-                Debug.Log("Freedom of Speech got enshrined into our constitution.");
                 freedomOfSpeechEnshrined = true;
+                categoriesEnshrined.Add(Categories.FreedomOfSpeech);
                 
                 uiManager.SetLawText("Gesetz für Meinungs- und Pressefreiheit\n\nArtikel 1: Jeder hat das Recht, seine Meinung in Wort, Schrift und Bild frei zu äußern und zu verbreiten.\n\nArtikel 2: Die Pressefreiheit und die Freiheit der Berichterstattung durch Rundfunk und Film werden gewährleistet. Eine Zensur findet nicht statt.");
                 uiManager.SetNewsText("Das Gesetz für Meinungs- und Pressefreiheit wird als Meilenstein gefeiert. Journalisten fühlen sich rechtlich abgesichert, und Bürger äußern freier ihre Meinung. Es wird als Schritt zu mehr Transparenz gesehen.");
@@ -580,8 +577,8 @@ public class GameManager : MonoBehaviour
         {
             if (!separationOfPowerEnshrined)
             {
-                Debug.Log("Separation of Power got enshrined into our constitution.");
                 separationOfPowerEnshrined = true;
+                categoriesEnshrined.Add(Categories.SeparationOfPower);
                 
                 uiManager.SetLawText("Gesetz zur Gewaltenteilung\n\nArtikel 1: Die Staatsgewalt ist in Legislative, Exekutive und Judikative unterteilt. Sie wirken eigenständig und kontrollieren sich gegenseitig.\n\nArtikel 2: Keine der Gewaltenteilungsinstanzen darf die Aufgaben einer anderen dauerhaft und vollumfänglich übernehmen.");
                 uiManager.SetNewsText("Das Gesetz zur Gewaltenteilung fördert eine gerechte Machtverteilung. Experten sehen dies als wichtigen Schritt zu einem demokratischeren System. In der Bevölkerung gibt es Hoffnung auf stärkere demokratische Prozesse, während Skeptiker die Umsetzung abwarten.");

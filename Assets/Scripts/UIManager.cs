@@ -1,5 +1,6 @@
 using System.ComponentModel;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -165,6 +166,10 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TMP_Text newsText;
     
+    // PROGRESS SCREEN
+    [SerializeField] private GameObject progressScreen;
+    [SerializeField] private Timeline timeline;
+    
     // GAME OVER SCREEN
     [Category("Game Over Screen")]
     [SerializeField] private GameObject gameOverScreen;
@@ -200,6 +205,7 @@ public class UIManager : MonoBehaviour
         newsScreen.SetActive(false);
         gameOverScreen.SetActive(false);
         newLawScreen.SetActive(false);
+        progressScreen.SetActive(false);
     }
     
     public void SetRoundCounter(int round)
@@ -574,6 +580,7 @@ public class UIManager : MonoBehaviour
         newsScreen.SetActive(false);
         gameOverScreen.SetActive(false);
         newLawScreen.SetActive(false);
+        progressScreen.SetActive(false);
     }
 
     public void PressContinueButton()
@@ -630,6 +637,19 @@ public class UIManager : MonoBehaviour
         gameOverScreen.SetActive(true);
         
         newLawScreen.SetActive(false);
+        progressScreen.SetActive(false);
+    }
+
+    public void SetProgressScreenActive()
+    {
+        balanceScreen.SetActive(false);
+        decisionScreen.SetActive(false);
+        eventScreen.SetActive(false);
+        newsScreen.SetActive(false);
+        gameOverScreen.SetActive(false);
+        newLawScreen.SetActive(false);
+        
+        progressScreen.SetActive(true);
     }
 
     public void SetGameOverText(string text)
@@ -658,6 +678,7 @@ public class UIManager : MonoBehaviour
         newsScreen.SetActive(false);
         gameOverScreen.SetActive(false);
         newLawScreen.SetActive(false);
+        progressScreen.SetActive(false);
     }
 
     public void SetLegislativeTermSliderValue(int value)
@@ -680,6 +701,7 @@ public class UIManager : MonoBehaviour
         gameOverScreen.SetActive(false);
         
         newLawScreen.SetActive(true);
+        progressScreen.SetActive(false);
     }
 
     public void SetLawText(string text)
@@ -697,6 +719,9 @@ public class UIManager : MonoBehaviour
         
         gameOverScreen.SetActive(false);
         newLawScreen.SetActive(false);
+        progressScreen.SetActive(false);
+        
+        SetHealthTextVisible();
     }
 
     public void SetNewsText(string text)
@@ -704,7 +729,7 @@ public class UIManager : MonoBehaviour
         newsText.SetText(text);
     }
 
-    public void PressNewsContinueButton()
+    public void PressProgressContinueButton()
     {
         audioManager.PlayButtonSound();
         gameManager.StartRoundAfterNewLaw();
@@ -970,5 +995,20 @@ public class UIManager : MonoBehaviour
         {
             gameOverImage.sprite = zeroResourcesImage;
         }
+    }
+
+    public void PressNewsContinueButton()
+    {
+        audioManager.PlayButtonSound();
+        
+        SetProgressScreenActive();
+        
+        timeline.SetProgressText(gameManager.categoriesEnshrined);
+        timeline.StartCheckpointAnimation(gameManager.categoriesEnshrined.Count);
+    }
+
+    public void SetHealthTextVisible()
+    {
+        healthText.fontSize = 48;
     }
 }

@@ -67,7 +67,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Medal1
+    path: Timeline1/Medal1
   m_FloatCurves:
   - serializedVersion: 2
     curve:
@@ -108,7 +108,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 907126270
+      path: 3292425426
       attribute: 3
       script: {fileID: 0}
       typeID: 4
@@ -230,7 +230,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.x
-    path: Medal1
+    path: Timeline1/Medal1
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -287,7 +287,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.y
-    path: Medal1
+    path: Timeline1/Medal1
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -344,7 +344,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.z
-    path: Medal1
+    path: Timeline1/Medal1
     classID: 224
     script: {fileID: 0}
     flags: 0
