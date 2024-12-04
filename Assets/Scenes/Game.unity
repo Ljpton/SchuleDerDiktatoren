@@ -498,8 +498,8 @@ RectTransform:
   - {fileID: 2099162010}
   m_Father: {fileID: 919036952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1907,7 +1907,7 @@ GameObject:
   - component: {fileID: 193744881}
   - component: {fileID: 193744880}
   m_Layer: 5
-  m_Name: BG
+  m_Name: BG01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2323,7 +2323,7 @@ RectTransform:
   m_Father: {fileID: 70592874}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2885,8 +2885,8 @@ RectTransform:
   - {fileID: 2130602121}
   m_Father: {fileID: 1998018654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3650,8 +3650,8 @@ RectTransform:
   - {fileID: 519256378}
   m_Father: {fileID: 90469608}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5627,7 +5627,7 @@ GameObject:
   - component: {fileID: 430122948}
   - component: {fileID: 430122947}
   m_Layer: 5
-  m_Name: BG (1)
+  m_Name: BG02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7315,7 +7315,7 @@ GameObject:
   - component: {fileID: 549830068}
   - component: {fileID: 549830067}
   m_Layer: 5
-  m_Name: EventLabel (1)
+  m_Name: DemocracyLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7604,8 +7604,8 @@ RectTransform:
   - {fileID: 457552085}
   m_Father: {fileID: 805503509}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7659,7 +7659,7 @@ GameObject:
   - component: {fileID: 568126807}
   - component: {fileID: 568126806}
   m_Layer: 5
-  m_Name: BG (2)
+  m_Name: ScreenBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8356,8 +8356,8 @@ RectTransform:
   - {fileID: 1567199426}
   m_Father: {fileID: 709329726}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10284,7 +10284,7 @@ RectTransform:
   m_Father: {fileID: 666732225}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11516,7 +11516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &741863968
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13472,8 +13472,8 @@ RectTransform:
   - {fileID: 2047632767}
   m_Father: {fileID: 205832095}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15548,7 +15548,7 @@ RectTransform:
   m_Father: {fileID: 770345967}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -17436,7 +17436,7 @@ RectTransform:
   m_Father: {fileID: 642076837}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -20801,7 +20801,7 @@ RectTransform:
   m_Father: {fileID: 1274421139}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -21088,6 +21088,14 @@ MonoBehaviour:
   participationLawText: {fileID: 2100360592}
   freedomOfSpeechLawText: {fileID: 649617789}
   separationOfPowerLawText: {fileID: 345556095}
+  balanceCivilRightsIcon: {fileID: 1526535005}
+  balanceParticipationIcon: {fileID: 1125112468}
+  balanceFreedomOfSpeechIcon: {fileID: 1082249021}
+  balanceSeparationOfPowerIcon: {fileID: 2056028806}
+  civilRightsMedalIcon: {fileID: 21300000, guid: 19ad4af0870107f459629b821f18c2cf, type: 3}
+  participationMedalIcon: {fileID: 21300000, guid: 5d726cd1a7dfae94ca95b8c596b28771, type: 3}
+  freedomOfSpeechMedalIcon: {fileID: 21300000, guid: 22a1dac142806d14eb6a769a427c6bb8, type: 3}
+  separationOfPowerMedalIcon: {fileID: 21300000, guid: 1606b6c5f73f0ca4e9347f3cf726181e, type: 3}
   continueButton: {fileID: 1535075030}
   democracySumText: {fileID: 265376474}
   resourcesSumText: {fileID: 517978433}
@@ -22256,8 +22264,8 @@ RectTransform:
   - {fileID: 1100553432}
   m_Father: {fileID: 65063218}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -24191,7 +24199,7 @@ RectTransform:
   m_Father: {fileID: 1863359948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -24381,11 +24389,11 @@ RectTransform:
   - {fileID: 193744879}
   - {fileID: 430122946}
   - {fileID: 568126805}
-  - {fileID: 1131952807}
   - {fileID: 1775972031}
+  - {fileID: 549830066}
+  - {fileID: 1131952807}
   - {fileID: 1535075029}
   - {fileID: 372580558}
-  - {fileID: 549830066}
   m_Father: {fileID: 741863968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
@@ -24524,7 +24532,7 @@ GameObject:
   - component: {fileID: 1775972033}
   - component: {fileID: 1775972032}
   m_Layer: 5
-  m_Name: EventLabel
+  m_Name: RessourcesLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25233,7 +25241,7 @@ RectTransform:
   m_Father: {fileID: 1768136388}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -25308,7 +25316,7 @@ RectTransform:
   m_Father: {fileID: 1486742338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -26591,8 +26599,8 @@ RectTransform:
   - {fileID: 1154756505}
   m_Father: {fileID: 933889109}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
