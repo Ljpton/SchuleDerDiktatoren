@@ -5002,7 +5002,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Gut gemacht! Du hast einen Demokratie-Wert ins Gesetz \xFCbernommen. Dieser
     Wert kann jetzt nicht mehr durch Entscheidungen beeinflusst werden. Daf\xFCr
-    verlierst du ein Leben, wenn eine Entscheidung gegen dieses Gesetz versto\xDFen
+    verlierst du Gesetzestreue, wenn eine Entscheidung gegen dieses Gesetz versto\xDFen
     w\xFCrde. Deine Berater:innen werden dich darauf hinweisen."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
@@ -8483,8 +8483,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
-  m_fontSizeBase: 48
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12076,7 +12076,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 50, y: 0}
-  m_SizeDelta: {x: 250, y: 50}
+  m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784395820
 MonoBehaviour:
@@ -12098,7 +12098,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Leben: 5'
+  m_text: 'Gesetzestreue: 5'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}
   m_sharedMaterial: {fileID: -6747505995523559974, guid: 91d1caba695f62c4fa3fee2d3dd64316, type: 2}

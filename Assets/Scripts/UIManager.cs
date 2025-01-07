@@ -629,7 +629,7 @@ public class UIManager : MonoBehaviour
 
     public void SetHealthText(int value)
     {
-        healthText.SetText("Leben: " + value);
+        healthText.SetText("Gesetzestreue: " + value);
     }
 
     public void AnimateHealthText()
@@ -1023,6 +1023,6 @@ public class UIManager : MonoBehaviour
 
     public void SetHealthTextVisible()
     {
-        healthText.fontSize = 48;
+        healthText.fontSize = 36;
     }
 }
