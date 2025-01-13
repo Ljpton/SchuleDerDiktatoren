@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class Timeline : MonoBehaviour
 {
     Animator animator;
-
+    
+    private AudioManager audioManager;
+    
     [SerializeField] private GameObject[] checkpoints;
     [SerializeField] private TMP_Text[] texts;
     [SerializeField] private Image[] images;
@@ -19,6 +21,12 @@ public class Timeline : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
+        animator.keepAnimatorStateOnDisable = true;
+    }
+
+    private void Start()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     public void StartCheckpointAnimation(int checkpointNumber)
@@ -29,6 +37,13 @@ public class Timeline : MonoBehaviour
         }
 
         animator.SetInteger("Progress", checkpointNumber);
+        
+        Invoke(nameof(PlayMedalSound), 1.7f);
+    }
+
+    private void PlayMedalSound()
+    {
+        audioManager.PlayMedalSound();
     }
 
     public void SetProgressText(ArrayList categoriesEnshrined)

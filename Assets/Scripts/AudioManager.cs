@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private GameObject loseHealthSound;
     [SerializeField] private GameObject winMusic;
     [SerializeField] private GameObject gameOverMusic;
+    [SerializeField] private GameObject medalSound;
     // Stamp Sound is handled in Stamp Object
 
     private void Awake()
@@ -78,5 +79,10 @@ public class AudioManager : MonoBehaviour
         Destroy(FindObjectOfType<GameMusic>().gameObject);
 
         Instantiate(isWon ? winMusic : gameOverMusic);
+    }
+
+    public void PlayMedalSound()
+    {
+        Instantiate(medalSound);
     }
 }

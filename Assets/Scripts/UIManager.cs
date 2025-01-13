@@ -143,11 +143,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text participationDeltaText;
     [SerializeField] private TMP_Text freedomOfSpeechDeltaText;
     [SerializeField] private TMP_Text separationOfPowerDeltaText;
-    
-    [SerializeField] private TMP_Text civilRightsLawText;
-    [SerializeField] private TMP_Text participationLawText;
-    [SerializeField] private TMP_Text freedomOfSpeechLawText;
-    [SerializeField] private TMP_Text separationOfPowerLawText;
 
     [SerializeField] private Image balanceCivilRightsIcon;
     [SerializeField] private Image balanceParticipationIcon;
@@ -757,28 +752,24 @@ public class UIManager : MonoBehaviour
     public void SetCivilRightsEnshrined()
     {
         civilRightsBalanceSlider.gameObject.SetActive(false);
-        civilRightsLawText.gameObject.SetActive(true);
         balanceCivilRightsIcon.sprite = civilRightsMedalIcon;
     }
     
     public void SetFreedomOfSpeechEnshrined()
     {
         freedomOfSpeechBalanceSlider.gameObject.SetActive(false);
-        freedomOfSpeechLawText.gameObject.SetActive(true);
         balanceFreedomOfSpeechIcon.sprite = freedomOfSpeechMedalIcon;
     }
     
     public void SetParticipationEnshrined()
     {
         participationBalanceSlider.gameObject.SetActive(false);
-        participationLawText.gameObject.SetActive(true);
         balanceParticipationIcon.sprite = participationMedalIcon;
     }
     
     public void SetSeparationOfPowerEnshrined()
     {
         separationOfPowerBalanceSlider.gameObject.SetActive(false);
-        separationOfPowerLawText.gameObject.SetActive(true);
         balanceSeparationOfPowerIcon.sprite = separationOfPowerMedalIcon;
     }
 
