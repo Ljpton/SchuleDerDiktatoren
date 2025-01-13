@@ -500,7 +500,7 @@ public class GameManager : MonoBehaviour
                 
                 uiManager.SetLawText(
                     "Menschenrechtsgesetz\n\nArtikel 1: Die Würde des Menschen ist unantastbar. Sie zu achten und zu schützen ist Verpflichtung aller staatlichen Gewalt.\n\nArtikel 2: Jeder hat das Recht auf Leben und körperliche Unversehrtheit. Die Freiheit der Person ist unverletzlich.");
-                uiManager.SetNewsText("Die Regierung hat ein Menschenrechtsgesetz verabschiedet, das die grundlegende Bürgerrechte sichern soll. Menschenrechts-gruppen feiern dies als Fortschritt, doch die Bevölkerung bleibt skeptisch. Internationale Beobachter betonen, dass jetzt Taten folgen müssen.");
+                uiManager.SetNewsText("Die Regierung hat ein Menschenrechtsgesetz verabschiedet, das die grundlegende Bürgerrechte sichern soll. Menschenrechts-gruppen feiern dies als Fortschritt, doch die Bevölkerung bleibt skeptisch. Internationale Stimmen betonen, dass jetzt Taten folgen müssen.");
 
                 lawEnshrinedThisRound = true;
             }
@@ -526,8 +526,8 @@ public class GameManager : MonoBehaviour
                 participationEnshrined = true;
                 categoriesEnshrined.Add(Categories.Participation);
                 
-                uiManager.SetLawText("Gesetz für Politische Partizipation\n\nArtikel 1: Alle Bürger haben das Recht, an der politischen Willensbildung des Staates durch Wahlen und Abstimmungen mitzuwirken.\n\nArtikel 2: Das aktive und passive Wahlrecht steht allen volljährigen Bürgern gleichermaßen zu. Diskriminierung ist unzulässig.");
-                uiManager.SetNewsText("Das Gesetz zur politischen Partizipation erweitert die Möglichkeiten der Bürger, an Wahlen teilzunehmen. Experten sehen darin eine Stärkung der Demokratie. Bürger sind motiviert, aktiv am politischen Leben teilzuhaben.");
+                uiManager.SetLawText("Gesetz für Politische Partizipation\n\nArtikel 1: Alle Bürger und Bürgerinnen haben das Recht, an der politischen Willensbildung des Staates durch Wahlen und Abstimmungen mitzuwirken.\n\nArtikel 2: Das aktive und passive Wahlrecht steht allen volljährigen Personen gleichermaßen zu. Diskriminierung ist unzulässig.");
+                uiManager.SetNewsText("Das Gesetz zur politischen Partizipation erweitert die Möglichkeiten der Bürger und Bürgerinnen, an Wahlen teilzunehmen. Expert:innen sehen darin eine Stärkung der Demokratie. Viele sind motiviert, aktiv am politischen Leben teilzuhaben.");
                 
                 lawEnshrinedThisRound = true;
             }
@@ -553,8 +553,8 @@ public class GameManager : MonoBehaviour
                 freedomOfSpeechEnshrined = true;
                 categoriesEnshrined.Add(Categories.FreedomOfSpeech);
                 
-                uiManager.SetLawText("Gesetz für Meinungs- und Pressefreiheit\n\nArtikel 1: Jeder hat das Recht, seine Meinung in Wort, Schrift und Bild frei zu äußern und zu verbreiten.\n\nArtikel 2: Die Pressefreiheit und die Freiheit der Berichterstattung durch Rundfunk und Film werden gewährleistet. Eine Zensur findet nicht statt.");
-                uiManager.SetNewsText("Das Gesetz für Meinungs- und Pressefreiheit wird als Meilenstein gefeiert. Journalisten fühlen sich rechtlich abgesichert, und Bürger äußern freier ihre Meinung. Es wird als Schritt zu mehr Transparenz gesehen.");
+                uiManager.SetLawText("Gesetz für Meinungs- und Pressefreiheit\n\nArtikel 1: Alle haben das Recht, ihre Meinung in Wort, Schrift und Bild frei zu äußern und zu verbreiten.\n\nArtikel 2: Die Pressefreiheit und die Freiheit der Berichterstattung durch Rundfunk und Film werden gewährleistet. Eine Zensur findet nicht statt.");
+                uiManager.SetNewsText("Das Gesetz für Meinungs- und Pressefreiheit wird als Meilenstein gefeiert. Journalist:innen fühlen sich rechtlich abgesichert, und Bürger:innen äußern freier ihre Meinung. Es wird als Schritt zu mehr Transparenz gesehen.");
                 
                 lawEnshrinedThisRound = true;
             }
@@ -581,7 +581,7 @@ public class GameManager : MonoBehaviour
                 categoriesEnshrined.Add(Categories.SeparationOfPower);
                 
                 uiManager.SetLawText("Gesetz zur Gewaltenteilung\n\nArtikel 1: Die Staatsgewalt ist in Legislative, Exekutive und Judikative unterteilt. Sie wirken eigenständig und kontrollieren sich gegenseitig.\n\nArtikel 2: Keine der Gewaltenteilungsinstanzen darf die Aufgaben einer anderen dauerhaft und vollumfänglich übernehmen.");
-                uiManager.SetNewsText("Das Gesetz zur Gewaltenteilung fördert eine gerechte Machtverteilung. Experten sehen dies als wichtigen Schritt zu einem demokratischeren System. In der Bevölkerung gibt es Hoffnung auf stärkere demokratische Prozesse, während Skeptiker die Umsetzung abwarten.");
+                uiManager.SetNewsText("Das Gesetz zur Gewaltenteilung fördert eine gerechte Machtverteilung. Expert:innen sehen dies als wichtigen Schritt zu einem demokratischeren System. In der Bevölkerung gibt es Hoffnung auf stärkere demokratische Prozesse, während Skeptiker die Umsetzung abwarten.");
                 
                 lawEnshrinedThisRound = true;
             }
@@ -619,7 +619,7 @@ public class GameManager : MonoBehaviour
                 
                 audioManager.PlayEndMusic(true);
                 uiManager.SetGameOverLabelText("Gratulation!");
-                uiManager.SetGameOverText("Du hast alle Grundwerte einer Demokratie etabliert und im Grundgesetz verankert. Natürlich musst du jetzt einem gewählten Parlament Platz machen. Dafür werden du und dieser Tag in die Geschichte dieses Landes eingehen.");
+                uiManager.SetGameOverText("Du hast alle Grundwerte einer Demokratie etabliert und im Grundgesetz verankert. Natürlich musst du jetzt einem gewählten Parlament Platz machen. Dafür werden du und dieser Tag in die Geschichte des Landes eingehen.");
                 uiManager.SetGameOverImage(true, false);
             }
         }
@@ -639,7 +639,7 @@ public class GameManager : MonoBehaviour
             
             audioManager.PlayEndMusic(false);
             uiManager.SetGameOverLabelText("Game Over");
-            uiManager.SetGameOverText("Es ist schwierig, so viele Dinge gleichzeitig im Auge zu behalten und letztendlich ist deiner Aufmerksamkeit wohl etwas entgangen. Das Volk hingegen hat das sehr wohl zu spüren bekommen und nutzt alle Mittel, um eine neue Führungsperson an deine Stelle zu setzen.");
+            uiManager.SetGameOverText("Es ist schwierig, so viele Dinge gleichzeitig im Auge zu behalten und letztendlich ist deiner Aufmerksamkeit wohl etwas entgangen. Das Volk hingegen hat deine Nachlässigkeit sehr wohl zu spüren bekommen und nutzt alle Mittel, um eine neue Führungsperson an deine Stelle zu setzen.");
             uiManager.SetGameOverImage(false, false);
         }
         else

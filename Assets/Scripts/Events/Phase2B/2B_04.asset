@@ -15,8 +15,8 @@ MonoBehaviour:
   eventDescription: "Das Kultusministerium plant ein gro\xDFes Festival zur Feier
     der kulturellen Vielfalt des Landes.<br><br>W\xE4hrend die Regierung eine Konzentration
     auf traditionelle Kulturinstitutionen bevorzugt, um bekannten K\xFCnsten Raum
-    zu geben, schlagen Kritiker vor, auch einen Aufruf an Minderheiten und diverse
-    K\xFCnstlergruppen zu richten, um aktuelle Themen und vielf\xE4ltige Ausdrucksformen
+    zu geben, schlagen einige vor, auch einen Aufruf an Minderheiten und diverse
+    K\xFCnstler:innengruppen zu richten, um aktuelle Themen und vielf\xE4ltige Ausdrucksformen
     zu integrieren."
   reaction1:
     reactionDescription: Konzentration auf traditionelle Kulturinstitutionen.
@@ -30,7 +30,7 @@ MonoBehaviour:
       participation: 0
       separationOfPower: 0
   reaction2:
-    reactionDescription: "Aufruf an Minderheiten und diverse K\xFCnstlergruppen."
+    reactionDescription: "Aufruf an Minderheiten und diverse K\xFCnstler:innen."
     effect:
       economy: 0
       military: 0

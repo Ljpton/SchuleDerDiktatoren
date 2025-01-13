@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8ddb61b5a176f4ba29ac5eead21c77, type: 3}
   m_Name: 2A_03
   m_EditorClassIdentifier: 
-  eventDescription: "Forscher arbeiten an einem Projekt zur Entwicklung fortschrittlicher
+  eventDescription: "Forschende arbeiten an einem Projekt zur Entwicklung fortschrittlicher
     Algorithmen f\xFCr soziale Medien, die extreme Meinungen automatisch filtern
     und entfernen sollen.<br><br>Diese Technologie k\xF6nnte die Meinungsfreiheit
     einschr\xE4nken, indem sie die Vielfalt legitimer \xC4u\xDFerungen gef\xE4hrdet
@@ -29,7 +29,7 @@ MonoBehaviour:
       participation: 0
       separationOfPower: 0
   reaction2:
-    reactionDescription: Autonomie der Forscher erweitern.
+    reactionDescription: Autonomie der Forschenden erweitern.
     effect:
       economy: 0
       military: 0

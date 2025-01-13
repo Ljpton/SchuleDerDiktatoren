@@ -16,8 +16,8 @@ MonoBehaviour:
     und Kultur zu st\xE4rken. Geplant ist, wissenschaftliche Erkenntnisse kreativ
     darzustellen.<br><br>Dabei k\xF6nnte der Fokus auf der Zusammenarbeit mit Bildungseinrichtungen
     liegen, um akademische Forschung k\xFCnstlerisch zu pr\xE4sentieren, oder es
-    k\xF6nnte ein offener Aufruf an K\xFCnstler erfolgen, die wissenschaftliche Themen
-    innovativ interpretieren."
+    k\xF6nnte ein offener Aufruf an Kunstschaffende erfolgen, die wissenschaftliche
+    Themen innovativ interpretieren."
   reaction1:
     reactionDescription: "Zusammenarbeit mit \xF6ffentlichen Bildungseinrichtungen."
     effect:
@@ -30,7 +30,7 @@ MonoBehaviour:
       participation: 0
       separationOfPower: -5
   reaction2:
-    reactionDescription: "Offener Aufruf an K\xFCnstler und Wissenschafts-Influencer."
+    reactionDescription: Offener Aufruf an Kunstschaffende und Wissenschafts-Influencer:innen.
     effect:
       economy: 0
       military: 0

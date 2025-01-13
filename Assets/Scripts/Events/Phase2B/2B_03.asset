@@ -15,8 +15,8 @@ MonoBehaviour:
   eventDescription: "In der Debatte \xFCber das nationale Forum zur Umsetzung innovativer
     Bildungskonzepte weist die Presse darauf hin, dass eine durch die Regierung festgelegte
     Themenvorgabe zwar schneller zu Ergebnissen f\xFChren k\xF6nnte, jedoch ohne
-    die Einbeziehung von Beitr\xE4gen der Sch\xFCler- und Lehrergruppen wichtige
-    Einsichten der direkt Betroffenen verloren gehen w\xFCrden."
+    die Einbeziehung von Beitr\xE4gen der Schul- und Lehrendengruppen wichtige Einsichten
+    der direkt Betroffenen verloren gehen w\xFCrden."
   reaction1:
     reactionDescription: Festlegung des Themenspektrums durch die Regierung.
     effect:
@@ -29,7 +29,7 @@ MonoBehaviour:
       participation: -5
       separationOfPower: 0
   reaction2:
-    reactionDescription: "Beitr\xE4ge von Sch\xFCler- und Lehrergruppen f\xF6rdern."
+    reactionDescription: "Beitr\xE4ge von Schul- und Lehrendengruppen f\xF6rdern."
     effect:
       economy: 0
       military: 0

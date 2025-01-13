@@ -15,7 +15,7 @@ MonoBehaviour:
   eventDescription: "Die Polizeif\xFChrung bem\xE4ngelt mangelndes Vertrauen der
     Bev\xF6lkerung in die Polizei und fordert, staatliche Sicherheitsma\xDFnahmen
     besser mit der Bev\xF6lkerung zu kommunizieren.<br><br>Ein unkonventioneller
-    Ansatz, schl\xE4gt regelm\xE4\xDFige Dialogrunden zwischen Polizei und B\xFCrgern
+    Ansatz, schl\xE4gt regelm\xE4\xDFige Dialogrunden zwischen Polizei und B\xFCrger:innen
     vor, um das gegenseitige Vertrauen zu st\xE4rken."
   reaction1:
     reactionDescription: "Umsetzung staatlicher Sicherheitsma\xDFnahmen in Abstimmung
@@ -31,7 +31,7 @@ MonoBehaviour:
       separationOfPower: -5
   reaction2:
     reactionDescription: "F\xF6rdern regelm\xE4\xDFiger Dialogrunden zwischen Polizei
-      und B\xFCrgern zur St\xE4rkung des Gemeinschaftsgef\xFChls."
+      und B\xFCrger:innen zur St\xE4rkung des Gemeinschaftsgef\xFChls."
     effect:
       economy: 0
       military: 0

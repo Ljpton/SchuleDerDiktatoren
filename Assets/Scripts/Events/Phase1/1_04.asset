@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 1_04
   m_EditorClassIdentifier: 
   eventDescription: "Eine neue Sicherheitspolitik soll der Polizei erlauben, Smartphones
-    ohne Zustimmung der Besitzer zu konfiszieren und zu durchsuchen, um Bedrohungen
+    ohne Zustimmung der Besitzer:innen zu konfiszieren und zu durchsuchen, um Bedrohungen
     fr\xFChzeitig zu erkennen.<br><br>Dies k\xF6nnte jedoch die freie Meinungs\xE4u\xDFerung
-    beeintr\xE4chtigen, da B\xFCrger aus Angst vor \xDCberwachung in ihrer Kommunikation
-    vorsichtiger werden."
+    beeintr\xE4chtigen, da B\xFCrger:innen aus Angst vor \xDCberwachung in ihrer
+    Kommunikation vorsichtiger werden."
   reaction1:
     reactionDescription: Durchsetzung der Sicherheitspolitik.
     effect:

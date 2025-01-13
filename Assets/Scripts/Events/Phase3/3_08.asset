@@ -16,7 +16,7 @@ MonoBehaviour:
     Bildung und Wirtschaft. Eine neue Strategie will Abhilfe schaffen.<br><br>Anreize
     f\xFCr Telekommunikationsfirmen k\xF6nnten die Marktexpansion f\xF6rdern und
     schnelle L\xF6sungen bieten.<br><br>Alternativ k\xF6nnte ein kommunales Breitbandnetz
-    mit B\xFCrgerbeteiligung ma\xDFgeschneiderte und lokal kontrollierte L\xF6sungen
+    mit B\xFCrger:innenbeteiligung ma\xDFgeschneiderte und lokal kontrollierte L\xF6sungen
     erm\xF6glichen."
   reaction1:
     reactionDescription: "Anreize f\xFCr Telekommunikationsunternehmen zur Marktexpansion."
@@ -30,7 +30,7 @@ MonoBehaviour:
       participation: -5
       separationOfPower: 0
   reaction2:
-    reactionDescription: "Aufbau von kommunalem Breitband unter breiter B\xFCrgerbeteiligung."
+    reactionDescription: "Aufbau von kommunalem Breitband unter breiter B\xFCrger:innenbeteiligung."
     effect:
       economy: -5
       military: 0

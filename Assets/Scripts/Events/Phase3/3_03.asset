@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDescription: "Ein Plan zur Reduzierung von Verkehrsstau und Umweltbelastung
     wird entwickelt.<br><br>Der Ausbau des \xF6ffentlichen Nahverkehrs k\xF6nnte
-    durch B\xFCrgerbeteiligung und technische Innovationen vorangetrieben werden,
+    durch B\xFCrger:innenbeteiligung und technische Innovationen vorangetrieben werden,
     um nachhaltige Mobilit\xE4t zu f\xF6rdern.<br><br>Alternativ wird der Bau neuer
     Stra\xDFen in Ballungsr\xE4umen diskutiert, um den Automobilverkehr zu unterst\xFCtzen
     und Engp\xE4sse zu verringern."
   reaction1:
-    reactionDescription: "Ausbau des \xF6ffentlichen Nahverkehrs mit B\xFCrgerbeteiligung
+    reactionDescription: "Ausbau des \xF6ffentlichen Nahverkehrs mit B\xFCrger:innenbeteiligung
       und technologischen L\xF6sungen."
     effect:
       economy: -10

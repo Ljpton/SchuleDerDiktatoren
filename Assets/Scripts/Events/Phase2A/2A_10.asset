@@ -16,8 +16,8 @@ MonoBehaviour:
     staatseigene Firmen.<br><br>Diese k\xF6nnten direkt Wohnungen bauen und vermieten,
     um schnelle L\xF6sungen zu bieten und die Mietpreise zu kontrollieren.<br><br>Alternativ
     k\xF6nnten sie Grundst\xFCcke erwerben und diese g\xFCnstig ausschreiben, um
-    private Vermieter zum Bau zu ermutigen, wobei Mietrechtvorgaben die Mieter sch\xFCtzen
-    sollen."
+    private Vermieter:innen zum Bau zu ermutigen, wobei Mietrechtvorgaben die Mietenden
+    sch\xFCtzen sollen."
   reaction1:
     reactionDescription: Konstruktionen durch staatseigene Firmen.
     effect:
@@ -30,7 +30,7 @@ MonoBehaviour:
       participation: 0
       separationOfPower: 0
   reaction2:
-    reactionDescription: "\xD6ffentliche Ausschreibung und Mieterrechte st\xE4rken."
+    reactionDescription: "\xD6ffentliche Ausschreibung und Mieter:innenrechte st\xE4rken."
     effect:
       economy: -10
       military: 0

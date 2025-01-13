@@ -15,7 +15,7 @@ MonoBehaviour:
   eventDescription: "Die Regierung plant Infrastrukturprojekte, um Wirtschaft und
     Forschung zu st\xE4rken.<br><br>Schnellma\xDFnahmen ohne Ausschreibungen k\xF6nnten
     den Fortschritt beschleunigen, f\xFChren jedoch zu Bedenken hinsichtlich Transparenz.<br><br>Alternativ
-    k\xF6nnten Wettbewerbsverfahren mit B\xFCrgerbeteiligung die lokale Mitbestimmung
+    k\xF6nnten Wettbewerbsverfahren mit B\xFCrger:innenbeteiligung die lokale Mitbestimmung
     f\xF6rdern, aber das Tempo und die Wirtschaft verlangsamen."
   reaction1:
     reactionDescription: "Schnellma\xDFnahmen ohne Ausschreibungen."
@@ -29,7 +29,7 @@ MonoBehaviour:
       participation: -10
       separationOfPower: 0
   reaction2:
-    reactionDescription: "Wettbewerbsverfahren mit B\xFCrgerbeteiligung."
+    reactionDescription: "Wettbewerbsverfahren mit B\xFCrger:innenbeteiligung."
     effect:
       economy: -10
       military: 0
