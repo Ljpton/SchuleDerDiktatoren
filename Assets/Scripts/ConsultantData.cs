@@ -142,8 +142,6 @@ public class ConsultantData
 
         return list;
     }
-    
-    // TODO: Add GameObject (?) which will be instantiated and contains visualisation and animation stuff
 }
 
 public enum Categories
